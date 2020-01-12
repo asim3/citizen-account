@@ -1,0 +1,273 @@
+:root {
+  --font-main: #3D3D3D;
+  --font-header: #21BCBA;
+  --font-sub: #1EBBB9;
+  --font-light: #FFFFFF;
+  --font-fff: #FFFFFF;
+  --bg-main: #003C77;
+  --bg-border: #00A3DD;
+  --bg-border-side: #21BCBA;
+  --bg-gray: #F7F7F7;
+  --bg-button: #BFD145;
+  font-size: 1vw;
+}
+
+@font-face {
+	font-family:'cairo-regular';
+  src: local('cairo-regular'), local('Cairo-Regular'), local('Cairo Regular'),
+    url('../fonts/cairo/Cairo-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+	font-family:'cairo-bold';
+  src: local('cairo-bold'), local('Cairo-Bold'), local('Cairo Bold'),
+    url('../fonts/cairo/Cairo-Bold.ttf') format('TrueType');
+}
+
+.regular {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+}
+
+.bold {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+}
+
+.no_select
+{
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+head, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+  font-size: 1rem;
+  direction: rtl;
+  text-align: right;
+  line-height: 3rem;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--font-color-1);
+  text-decoration: none!important;
+}
+
+.body_root {
+  position: relative;
+  color: var(--font-color-1);
+  overflow: hidden;
+}
+
+.app_root {
+  position: relative;
+  margin: 27rem 0 0 0;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  margin: 0;
+  width: 100vw;
+  height: 45rem;
+  color: var(--font-color-1);
+  fill: var(--font-color-1);
+  background-image: url(../img/header_left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0rem 0rem;
+}
+
+.header_menu {
+  display: none;
+  position: absolute;
+  top: 15rem;
+  right: 5rem;
+  margin: 1rem;
+  width: 2.5rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 9;
+}
+
+.header_logo {
+  margin: 4rem;
+  width: 23rem;
+  height: 11rem;
+  background-image: url(../img/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 9;
+}
+
+.header_languages {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.header_login {
+  position: absolute;
+  top: 10rem;
+  left: 13rem;
+  padding: 0 1rem;
+  background: var(--bg-color-1);
+  color: var(--font-color-2);
+}
+
+.header_search {
+  position: absolute;
+  top: 10rem;
+  left: 9rem;
+  padding: 0 1rem;
+  background: var(--bg-color-1);
+  color: var(--font-color-2);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  background: var(--bg-color-main);
+  color: var(--font-color-2);
+}
+
+footer section {
+  margin: 0 2rem;
+}
+
+footer footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.max_width {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 1000px;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .max_width {
+    width: 100vw;
+  }
+
+  .header_menu {
+    display: block;
+  }
+
+  .header_logo {
+    margin: 2rem 0rem;
+  }
+
+  .header_login {
+    top: 5rem;
+    left: 10rem;
+  }
+  
+  .header_search {
+    top: 5rem;
+    left: 5rem;
+  }
+
+  .side_links_root {
+    position: fixed;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    padding: 100vh;
+    background: #ffffffaa;
+    overflow: hidden;
+    z-index: 15;
+  }
+  
+  .side_links {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 4rem;
+    width: 30rem;
+    padding: 2rem;
+    background: var(--bg-color-1);
+    overflow: hidden;
+  }
+  
+  .side_links_close {
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+  }
+  
+  .side_links a {
+    display: block;
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+    color: var(--font-color-2)!important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 8px;
+  }
+
+  .max_width {
+    width: 100vw;
+  }
+
+  header {
+    background-position: -5rem 0rem;
+  }
+
+  .header_logo {
+    width: 15rem;
+    height: 13rem;
+  }
+}
+
+
+@media (min-width: 1001px) {
+  .side_links_root {
+    display: block!important;
+  }
+
+  .side_links {
+    display: block!important;
+    margin: 0 10rem;
+  }
+
+  .side_links a {
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid #ffffff;
+  }
+
+  .side_links a:hover {
+    border: 0.2rem solid green;
+  }
+
+  .side_links .selected {
+    font-weight: bold;
+    border: 0.2rem solid green;
+  }
+
+  .side_links_close {
+    display: none;
+  }
+}

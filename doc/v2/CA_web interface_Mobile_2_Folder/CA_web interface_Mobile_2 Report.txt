@@ -1,0 +1,88 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: CA_web interface_Mobile_2.ai
+Color Mode: RGB color
+Color Profile: none
+Ruler Units: pixels
+Artboard Dimensions: 375 px x 1556.1462 px
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+TheSans Plain (OTF)
+TheSans Bold (OTF)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+
+/Users/sawsan/Downloads/shutterstock_1011225043.jpg
+Type: Other
+
+/Users/sawsan/Downloads/shutterstock_1011225043.jpg
+Type: Other
+
+/Users/sawsan/Downloads/shutterstock_1011225043.jpg
+Type: Other
+
+/Users/sawsan/Downloads/shutterstock_1011225043.jpg
+Type: Other
+
+/Users/sawsan/Downloads/shutterstock_1011225043.jpg
+Type: Other
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+/Users/nora/Desktop/desktop/Screen Shot 2019-12-29 at 6.19.03 PM
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 9734K, 1686 by 1478 pixels
+Dimensions: 522.647 by 458.168 points 
+Resolution: 232.264 by 232.264 pixels per inch
+
+
+/Users/nora/Downloads/???????? ?????? 25 (1)?.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 450K, 480 by 320 pixels
+Dimensions: 213.201 by 169.923 points 
+Resolution: 162.101 by 135.591 pixels per inch
+
+
+/Users/nora/Downloads/#11 (1).jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 20740K, 2374 by 2982 pixels
+Dimensions: 133.274 by 133.274 points 
+Resolution: 1282.531 by 1610.997 pixels per inch
+
+
+/Users/nora/Desktop/desktop/Screen Shot 2019-12-29 at 6.19.03 PM
+Type: Transparent RGB
+Bits per Pixel: 32
+Channels: 4
+Size: 9734K, 1686 by 1478 pixels
+Dimensions: 522.647 by 458.168 points 
+Resolution: 232.264 by 232.264 pixels per inch
