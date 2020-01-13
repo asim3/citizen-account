@@ -10,6 +10,10 @@
   font-size: 1vw;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
 	font-family:'cairo-regular';
   src: local('cairo-regular'), local('Cairo-Regular'), local('Cairo Regular'),
@@ -140,22 +144,52 @@ header {
   fill: var(--color-blue);
 }
 
-footer {
+.side_links a,
+.side_links > nav {
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.side_links > nav {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.side_links nav > a:first-child::after {
+  content: " ";
+  display: inline-block;
+  padding: 0 1rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-image: url(../img/side_menu_2.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.body_root > footer {
+  background-image: url(../img/footer_left.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+footer > div {
+  background-image: url(../img/footer_right.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 1.5rem;
+}
+
+footer > footer {
   display: flex;
   flex-wrap: wrap;
   padding-top: 5rem;
-  background: var(--color-blue);
   color: var(--color-white);
-}
-
-footer section {
-  margin: 0 2rem;
-}
-
-footer footer {
-  display: block;
-  width: 100%;
-  text-align: center;
 }
 
 .max_width {
@@ -229,13 +263,17 @@ footer footer {
     background-position: center;
     cursor: pointer;
   }
-  
+
   .side_links a {
     display: block;
-    padding: 1rem 0;
     font-size: 1.3rem;
     line-height: 2.7rem;
     border-top: 1px solid var(--color-gray);
+  }
+
+  .side_links nav:hover {
+    height: auto;
+    background-color: var(--color-gray);
   }
 }
 
@@ -250,7 +288,8 @@ footer footer {
   }
 
   header {
-    background-position: -5rem 0rem;
+    background-image: url(../img/header_left_600_2.svg);
+    background-position: -1rem 0rem;
   }
 
   .header_logo {
@@ -271,12 +310,19 @@ footer footer {
   }
 
   .side_links a {
-    padding: 0.5rem 1rem;
+    display: inline-block;
+    padding: 0 1rem;
     border: 0.1rem solid var(--color-white);
   }
 
   .side_links a:hover {
+    font-weight: bold;
     border: 0.1rem solid var(--color-yellow);
+  }
+
+  .side_links nav:hover {
+    height: auto;
+    background-color: var(--color-yellow);
   }
 
   .side_links .selected {

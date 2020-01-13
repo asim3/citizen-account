@@ -62,11 +62,15 @@ function add_video_to_home() {
 
 
 window.onload = function() {
+
   document.getElementById("show_side_links")
     .addEventListener("click", toggle_side_links);
 
   document.getElementById("side_links_root")
     .addEventListener("click", toggle_side_links);
+
+  document.getElementById("side_links")
+    .addEventListener("click", e => e.stopPropagation());
 
   document.getElementById("side_links_close")
   .addEventListener("click", function(event) {
