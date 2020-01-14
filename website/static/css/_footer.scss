@@ -1,0 +1,95 @@
+.body_root > footer {
+  background-image: url(../img/footer_left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+footer > footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8rem 1rem 0 15rem;
+  height: 5rem;
+  color: var(--color-white);
+}
+
+footer > footer *:nth-child(1n+2) {
+  margin: 0 1rem;
+}
+
+footer > footer *:nth-child(2) {
+  margin: 0 auto 0 0;
+}
+
+footer .apple {
+  background-image: url(../img/apple.svg);
+}
+
+footer .android {
+  background-image: url(../img/android.svg);
+}
+
+footer .apple,
+footer .android {
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+@media (max-width: 1000px) {
+ 
+}
+
+
+@media (max-width: 600px) {
+  .body_root > footer {
+    background-position: -5rem 0rem;
+  }
+
+  footer > footer {
+    display: grid;
+    grid-template-areas: 
+      'first first first' 
+      'mid2 mid3 mid4' 
+      '. app1 app2';
+    padding: 2rem 1rem 0 11rem;
+    height: 10rem;
+  }
+
+  footer > footer > * {
+    margin: 0!important;
+    text-align: center!important;
+  }
+
+  footer > footer > div:nth-child(1) {
+    grid-area: first;
+  }
+
+  footer > footer > div:nth-child(2) {
+    grid-area: mid2;
+  }
+
+  footer > footer > div:nth-child(3) {
+    grid-area: mid3;
+  }
+
+  footer > footer > div:nth-child(4) {
+    grid-area: mid4;
+  }
+
+  footer .apple {
+    grid-area: app1;
+  }
+
+  footer .android {
+    grid-area: app2;
+  }
+}
+
+
+@media (min-width: 1001px) {
+  
+}

@@ -1,0 +1,108 @@
+:root {
+  --color-blue: #003C77;
+  --color-cyan: #00A3DD;
+  --color-green: #21BCBA;
+  --color-green-sub: #1EBBB9;
+  --color-yellow: #BFD145;
+  --color-white: #FFFFFF;
+  --color-gray: #F7F7F7;
+  --color-black: #000000;
+  font-size: 1vw;
+}
+
+
+@font-face {
+	font-family:"cairo-regular";
+  src: local("cairo-regular"), local("Cairo-Regular"), local("Cairo Regular"),
+    url("../fonts/cairo/Cairo-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+	font-family:"cairo-bold";
+  src: local("cairo-bold"), local("Cairo-Bold"), local("Cairo Bold"),
+    url("../fonts/cairo/Cairo-Bold.ttf") format("TrueType");
+}
+
+.regular {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+}
+
+.bold {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+}
+
+.no_select
+{
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+head, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+  font-size: 1rem;
+  direction: rtl;
+  text-align: right;
+  line-height: 3rem;
+  background: var(--color-blue);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit!important;
+  text-decoration: none!important;
+}
+
+.body_root {
+  position: relative;
+  color: var(--color-blue);
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+.app_root {
+  position: relative;
+  margin: 27rem 0 0 0;
+  overflow: hidden;
+}
+
+.max_width {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 1000px;
+}
+
+
+@media (max-width: 1000px) {
+  :root {
+    font-size: 10px;
+  }
+
+  .max_width {
+    width: 100vw;
+  }
+}
+
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 8px;
+  }
+  
+  .max_width {
+    width: 100vw;
+  }
+}
+
+
+@media (min-width: 1001px) {
+  
+}
