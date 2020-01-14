@@ -37,11 +37,11 @@ $black: #000000;
     url("../fonts/cairo/Cairo-Bold.ttf") format("TrueType");
 }
 
-.regular {
+@mixin regular {
   font-family: cairo-regular, TimesNewRoman, sans-serif;
 }
 
-.bold {
+@mixin bold {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
 }
 

@@ -17,14 +17,6 @@
   src: local("cairo-bold"), local("Cairo-Bold"), local("Cairo Bold"), url("../fonts/cairo/Cairo-Bold.ttf") format("TrueType");
 }
 
-.regular {
-  font-family: cairo-regular, TimesNewRoman, sans-serif;
-}
-
-.bold {
-  font-family: cairo-bold, TimesNewRoman, sans-serif;
-}
-
 .no_select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -214,7 +206,7 @@ header {
   .side_links_root {
     position: relative;
     display: none;
-    top: 0px;
+    top: 0rem;
     left: 0px;
     width: 100vw;
     padding: 100vh;
@@ -244,7 +236,7 @@ header {
     top: 0rem;
     right: 5rem;
     margin: 1rem;
-    width: 2.5rem;
+    width: 3rem;
     height: 3rem;
     background-color: #FFFFFF;
     background-image: url(../img/side_menu_2.svg);
@@ -273,6 +265,9 @@ header {
   .header_logo {
     width: 15rem;
     height: 13rem;
+  }
+  .side_links_root {
+    top: -2rem;
   }
 }
 
@@ -307,6 +302,7 @@ header {
 }
 
 .body_root > footer {
+  padding-top: 1rem;
   background-image: url(../img/footer_left.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -468,7 +464,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -511,5 +507,155 @@ footer .android {
     margin: 0 3rem;
     padding: 0;
   }
+}
+
+.banner_root {
+  position: relative;
+  margin: 2rem auto 4rem auto;
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 1000px;
+  height: 33rem;
+}
+
+.banner_title {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  position: absolute;
+  top: 4rem;
+  right: 8rem;
+  font-size: 3rem;
+  color: #003C77;
+}
+
+.banner_sub {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  position: absolute;
+  top: 9rem;
+  right: 8rem;
+  width: 17rem;
+  font-size: 1.3rem;
+  color: #21BCBA;
+}
+
+.banner_right {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 19rem;
+  right: 4rem;
+  background-image: url(../img/banner_right.svg);
+  cursor: pointer;
+}
+
+.banner_left {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 19rem;
+  left: 4rem;
+  background-image: url(../img/banner_left.svg);
+  cursor: pointer;
+}
+
+.banner_img div {
+  width: 100%;
+  height: 33rem;
+  background-image: url(../img/home_banner_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sections_nav_root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.sections_text,
+.sections_nav {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  text-align: center;
+  width: 30%;
+  cursor: pointer;
+}
+
+.sections_nav {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 10rem;
+  background-size: 5rem 5rem;
+}
+
+.sections_text {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sections_nav:nth-child(1) {
+  background-image: url(../img/logo_3.svg);
+}
+
+.sections_nav:nth-child(2) {
+  background-image: url(../img/logo_2.svg);
+}
+
+.sections_nav:nth-child(3) {
+  background-image: url(../img/logo_1.svg);
+}
+
+.sections_text:nth-child(1) {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  color: #003C77;
+  font-size: 2rem;
+}
+
+.sections_text:nth-child(2) {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  color: #21BCBA;
+  font-size: 2rem;
+}
+
+.sections_text:nth-child(3) {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  color: #00A3DD;
+  font-size: 2rem;
+}
+
+.sections_root section {
+  padding: 2rem;
+  border: 1px solid #00A3DD;
+}
+
+.fixed_massege {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../img/massege.svg);
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,19 @@
 @import './root';
 @import './header';
 @import './footer';
+@import './index';
 
 
-
+.fixed_massege {
+    @include bg_icon;
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+    background-image: url(../img/massege.svg);
+    cursor: pointer;
+}
 
 @media (max-width: 1000px) {
 

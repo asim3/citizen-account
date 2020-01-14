@@ -1,0 +1,118 @@
+$banner_height: 33rem;
+
+.banner_root {
+  position: relative;
+  margin: 2rem auto 4rem auto;
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 1000px;
+  height: $banner_height;
+}
+
+.banner_title {
+  @include bold;
+  position: absolute;
+  top: 4rem;
+  right: 8rem;
+  font-size: 3rem;
+  color: $blue;
+}
+
+.banner_sub {
+  @include bold;
+  position: absolute;
+  top: 9rem;
+  right: 8rem;
+  width: 17rem;
+  font-size: 1.3rem;
+  color: $green;
+}
+
+.banner_right {
+  @include bg_icon;
+  position: absolute;
+  top: 19rem;
+  right: 4rem;
+  background-image: url(../img/banner_right.svg);
+  cursor: pointer;
+}
+
+.banner_left {
+  @include bg_icon;
+  position: absolute;
+  top: 19rem;
+  left: 4rem;
+  background-image: url(../img/banner_left.svg);
+  cursor: pointer;
+}
+
+.banner_img div {
+  width: 100%;
+  height: $banner_height;
+  background-image: url(../img/home_banner_1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sections_nav_root {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.sections_text,
+.sections_nav {
+  flex: auto;
+  text-align: center;
+  width: 30%;
+  cursor: pointer;
+}
+
+.sections_nav {
+  @include bg_icon;
+  padding-top: 10rem;
+  background-size: 5rem 5rem;
+}
+
+.sections_text {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sections_nav:nth-child(1) {
+  background-image: url(../img/logo_3.svg);
+}
+
+.sections_nav:nth-child(2) {
+  background-image: url(../img/logo_2.svg);
+}
+
+.sections_nav:nth-child(3) {
+  background-image: url(../img/logo_1.svg);
+}
+
+.sections_text:nth-child(1) {
+  @include bold;
+  color: $blue;
+  font-size: 2rem;
+}
+
+.sections_text:nth-child(2) {
+  @include bold;
+  color: $green;
+  font-size: 2rem;
+}
+
+.sections_text:nth-child(3) {
+  @include bold;
+  color: $cyan;
+  font-size: 2rem;
+}
+
+
+
+.sections_root section {
+  padding: 2rem;
+  border: 1px solid $cyan;
+}
