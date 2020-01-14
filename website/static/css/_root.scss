@@ -1,15 +1,29 @@
+$blue: #003C77;
+$cyan: #00A3DD;
+$green: #21BCBA;
+$green-sub: #1EBBB9;
+$yellow: #BFD145;
+$white: #FFFFFF;
+$gray: #F7F7F7;
+$black: #000000;
+
+
 :root {
-  --color-blue: #003C77;
-  --color-cyan: #00A3DD;
-  --color-green: #21BCBA;
-  --color-green-sub: #1EBBB9;
-  --color-yellow: #BFD145;
-  --color-white: #FFFFFF;
-  --color-gray: #F7F7F7;
-  --color-black: #000000;
   font-size: 1vw;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@mixin bg_icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 @font-face {
 	font-family:"cairo-regular";
@@ -52,7 +66,7 @@ head, body {
   direction: rtl;
   text-align: right;
   line-height: 3rem;
-  background: var(--color-blue);
+  background: $blue;
   overflow-x: hidden;
 }
 
@@ -63,8 +77,8 @@ a {
 
 .body_root {
   position: relative;
-  color: var(--color-blue);
-  background: var(--color-white);
+  color: $blue;
+  background: $white;
   overflow: hidden;
 }
 
@@ -76,7 +90,7 @@ a {
 
 .max_width {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   width: 1000px;
 }
 

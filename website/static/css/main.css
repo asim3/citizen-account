@@ -1,13 +1,10 @@
 :root {
-  --color-blue: #003C77;
-  --color-cyan: #00A3DD;
-  --color-green: #21BCBA;
-  --color-green-sub: #1EBBB9;
-  --color-yellow: #BFD145;
-  --color-white: #FFFFFF;
-  --color-gray: #F7F7F7;
-  --color-black: #000000;
   font-size: 1vw;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
@@ -47,7 +44,7 @@ head, body {
   direction: rtl;
   text-align: right;
   line-height: 3rem;
-  background: var(--color-blue);
+  background: #003C77;
   overflow-x: hidden;
 }
 
@@ -58,8 +55,8 @@ a {
 
 .body_root {
   position: relative;
-  color: var(--color-blue);
-  background: var(--color-white);
+  color: #003C77;
+  background: #FFFFFF;
   overflow: hidden;
 }
 
@@ -71,7 +68,7 @@ a {
 
 .max_width {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   width: 1000px;
 }
 
@@ -100,8 +97,8 @@ header {
   margin: 0;
   width: 100vw;
   height: 45rem;
-  color: var(--color-white);
-  fill: var(--color-white);
+  color: #FFFFFF;
+  fill: #FFFFFF;
   background-image: url(../img/header_left.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,17 +106,20 @@ header {
 }
 
 .header_menu {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 15rem;
   right: 5rem;
   margin: 1rem;
   width: 2.5rem;
   height: 3rem;
   background-image: url(../img/side_menu_1.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
   z-index: 9;
 }
@@ -145,7 +145,7 @@ header {
   top: 10rem;
   left: 13rem;
   padding: 0 1rem;
-  background: var(--color-blue);
+  background: #003C77;
 }
 
 .header_search {
@@ -153,13 +153,13 @@ header {
   top: 10rem;
   left: 9rem;
   padding: 0 1rem;
-  background: var(--color-blue);
-  color: var(--color-white);
+  background: #003C77;
+  color: #FFFFFF;
 }
 
 .side_links {
-  color: var(--color-blue);
-  fill: var(--color-blue);
+  color: #003C77;
+  fill: #003C77;
 }
 
 .side_links a,
@@ -182,15 +182,18 @@ header {
 }
 
 .side_links nav > a:first-child::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   content: " ";
   display: inline-block;
   padding: 0 1rem;
   width: 0.7rem;
   height: 0.7rem;
   background-image: url(../img/side_menu_2.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 @media (max-width: 1000px) {
@@ -209,7 +212,7 @@ header {
     left: 5rem;
   }
   .side_links_root {
-    position: fixed;
+    position: relative;
     display: none;
     top: 0px;
     left: 0px;
@@ -219,43 +222,46 @@ header {
     z-index: 15;
   }
   .side_links {
-    position: fixed;
+    position: absolute;
     display: none;
-    top: 20rem;
+    top: 5rem;
     left: 4rem;
     width: 100vw;
     height: 100vh;
     max-width: 50rem;
     padding: 2rem;
-    background: var(--color-white);
+    background: #FFFFFF;
     overflow: hidden;
   }
   .side_links_close {
-    position: fixed;
-    top: 15rem;
+    width: 2rem;
+    height: 2rem;
+    background-image: url(../img/favicon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0rem;
     right: 5rem;
     margin: 1rem;
     width: 2.5rem;
     height: 3rem;
-    background-color: var(--color-white);
+    background-color: #FFFFFF;
     background-image: url(../img/side_menu_2.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
   }
   .side_links a {
     display: block;
     font-size: 1.3rem;
     line-height: 2.7rem;
-    border-top: 1px solid var(--color-gray);
+    border-top: 1px solid #F7F7F7;
   }
   .side_links > nav {
     width: 100%;
   }
   .side_links nav:hover {
     height: auto;
-    background-color: var(--color-gray);
+    background-color: #F7F7F7;
   }
 }
 
@@ -281,19 +287,19 @@ header {
   .side_links a {
     display: inline-block;
     padding: 0 1rem;
-    border: 0.1rem solid var(--color-white);
+    border: 0.1rem solid #FFFFFF;
   }
   .side_links a:hover {
     font-weight: bold;
-    border: 0.1rem solid var(--color-yellow);
+    border: 0.1rem solid #BFD145;
   }
   .side_links nav:hover {
     height: auto;
-    background-color: var(--color-yellow);
+    background-color: #BFD145;
   }
   .side_links .selected {
     font-weight: bold;
-    border: 0.1rem solid var(--color-yellow);
+    border: 0.1rem solid #BFD145;
   }
   .side_links_close {
     display: none;
@@ -305,6 +311,105 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
+  height: 23rem;
+}
+
+.body_root > footer > div {
+  padding: 0 10rem;
+  height: 4rem;
+  color: #000000;
+  clear: both;
+}
+
+.body_root > footer > div > div {
+  float: left;
+}
+
+.thumb-up {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  background-image: url(../img/thumb-up.svg);
+  cursor: pointer;
+}
+
+.thumb-down {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  background-image: url(../img/thumb-down.svg);
+  cursor: pointer;
+}
+
+.youtube {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 7px;
+  padding: 0 1rem;
+  background-image: url(../img/youtube.svg);
+}
+
+.twitter_icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 7px;
+  padding: 0 3rem;
+  background-image: url(../img/twitter.svg);
+}
+
+.twitter_id {
+  padding: 0 2rem;
+  direction: ltr;
+  color: #00A3DD;
+  border: 1px solid #00A3DD;
+}
+
+.twitter_text_big {
+  position: relative;
+  padding: 0 2rem;
+  color: #FFFFFF;
+  border: 1px solid #00A3DD;
+  background-color: #00A3DD;
+}
+
+.twitter_text {
+  position: relative;
+  padding: 0 2rem;
+  color: #FFFFFF;
+  border: 1px solid #00A3DD;
+  background-color: #00A3DD;
+  display: none;
+}
+
+.twitter_text_big::after,
+.twitter_text::after {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #00A3DD;
 }
 
 footer > footer {
@@ -313,9 +418,10 @@ footer > footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 8rem 1rem 0 15rem;
+  padding: 8rem 3rem 0 15rem;
   height: 5rem;
-  color: var(--color-white);
+  color: #FFFFFF;
+  clear: both;
 }
 
 footer > footer *:nth-child(1n+2) {
@@ -327,19 +433,32 @@ footer > footer *:nth-child(2) {
 }
 
 footer .apple {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url(../img/apple.svg);
 }
 
 footer .android {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   background-image: url(../img/android.svg);
 }
 
-footer .apple,
-footer .android {
-  width: 2rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
+@media (max-width: 1000px) {
+  .twitter_text_big {
+    display: none;
+  }
+  .twitter_text {
+    display: block;
+  }
 }
 
 @media (max-width: 600px) {
@@ -350,7 +469,7 @@ footer .android {
     display: -ms-grid;
     display: grid;
         grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
-    padding: 2rem 1rem 0 11rem;
+    padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
   footer > footer > * {
@@ -387,6 +506,10 @@ footer .android {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: app2;
+  }
+  .body_root > footer > div {
+    margin: 0 3rem;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

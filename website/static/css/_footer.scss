@@ -3,14 +3,93 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
+  height: 23rem;
+}
+
+.body_root > footer > div {
+  padding: 0 10rem;
+  height: 4rem;
+  color: $black;
+  clear: both;
+}
+
+.body_root > footer > div > div {
+  float: left;
+}
+
+.thumb-up {
+  @include bg_icon;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  background-image: url(../img/thumb-up.svg);
+  cursor: pointer;
+}
+
+.thumb-down {
+  @include bg_icon;
+  margin: 0 1rem;
+  padding: 0 1rem;
+  background-image: url(../img/thumb-down.svg);
+  cursor: pointer;
+}
+
+.youtube {
+  @include bg_icon;
+  margin-top: 7px;
+  padding: 0 1rem;
+  background-image: url(../img/youtube.svg);
+}
+
+.twitter_icon {
+  @include bg_icon;
+  margin-top: 7px;
+  padding: 0 3rem;
+  background-image: url(../img/twitter.svg);
+}
+
+.twitter_id {
+  padding: 0 2rem;
+  direction: ltr;
+  color: $cyan;
+  border: 1px solid $cyan;
+}
+
+@mixin twitter_text {
+  position: relative;
+  padding: 0 2rem;
+  color: $white;
+  border: 1px solid $cyan;
+  background-color: $cyan;
+}
+
+.twitter_text_big {
+  @include twitter_text;
+}
+
+.twitter_text {
+  @include twitter_text;
+  display: none;
+}
+
+.twitter_text_big::after,
+.twitter_text::after {
+  content: " ";
+  position: absolute;
+  top: 1rem;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  background: $cyan;
 }
 
 footer > footer {
   display: flex;
   flex-wrap: wrap;
-  padding: 8rem 1rem 0 15rem;
+  padding: 8rem 3rem 0 15rem;
   height: 5rem;
-  color: var(--color-white);
+  color: $white;
+  clear: both;
 }
 
 footer > footer *:nth-child(1n+2) {
@@ -22,25 +101,24 @@ footer > footer *:nth-child(2) {
 }
 
 footer .apple {
+  @include bg_icon;
   background-image: url(../img/apple.svg);
 }
 
 footer .android {
+  @include bg_icon;
   background-image: url(../img/android.svg);
 }
 
-footer .apple,
-footer .android {
-  width: 2rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-
 
 @media (max-width: 1000px) {
- 
+  .twitter_text_big {
+    display: none;
+  }
+
+  .twitter_text {
+    display: block;
+  }
 }
 
 
@@ -55,7 +133,7 @@ footer .android {
       'first first first' 
       'mid2 mid3 mid4' 
       '. app1 app2';
-    padding: 2rem 1rem 0 11rem;
+    padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
 
@@ -86,6 +164,11 @@ footer .android {
 
   footer .android {
     grid-area: app2;
+  }
+
+  .body_root > footer > div {
+    margin: 0 3rem;
+    padding: 0;
   }
 }
 

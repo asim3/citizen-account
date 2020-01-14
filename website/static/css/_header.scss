@@ -5,8 +5,8 @@ header {
   margin: 0;
   width: 100vw;
   height: 45rem;
-  color: var(--color-white);
-  fill: var(--color-white);
+  color: $white;
+  fill: $white;
   background-image: url(../img/header_left.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -14,17 +14,15 @@ header {
 }
 
 .header_menu {
+  @include bg_icon;
   display: none;
-  position: fixed;
+  position: absolute;
   top: 15rem;
   right: 5rem;
   margin: 1rem;
   width: 2.5rem;
   height: 3rem;
   background-image: url(../img/side_menu_1.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   cursor: pointer;
   z-index: 9;
 }
@@ -50,7 +48,7 @@ header {
   top: 10rem;
   left: 13rem;
   padding: 0 1rem;
-  background: var(--color-blue);
+  background: $blue;
 }
 
 .header_search {
@@ -58,13 +56,13 @@ header {
   top: 10rem;
   left: 9rem;
   padding: 0 1rem;
-  background: var(--color-blue);
-  color: var(--color-white);
+  background: $blue;
+  color: $white;
 }
 
 .side_links {
-  color: var(--color-blue);
-  fill: var(--color-blue);
+  color: $blue;
+  fill: $blue;
 }
 
 .side_links a,
@@ -82,15 +80,13 @@ header {
 }
 
 .side_links nav > a:first-child::after {
+  @include bg_icon;
   content: " ";
   display: inline-block;
   padding: 0 1rem;
   width: 0.7rem;
   height: 0.7rem;
   background-image: url(../img/side_menu_2.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 
@@ -114,7 +110,7 @@ header {
   }
 
   .side_links_root {
-    position: fixed;
+    position: relative;
     display: none;
     top: 0px;
     left: 0px;
@@ -125,30 +121,28 @@ header {
   }
   
   .side_links {
-    position: fixed;
+    position: absolute;
     display: none;
-    top: 20rem;
+    top: 5rem;
     left: 4rem;
     width: 100vw;
     height: 100vh;
     max-width: 50rem;
     padding: 2rem;
-    background: var(--color-white);
+    background: $white;
     overflow: hidden;
   }
   
   .side_links_close {
-    position: fixed;
-    top: 15rem;
+    @include bg_icon;
+    position: absolute;
+    top: 0rem;
     right: 5rem;
     margin: 1rem;
     width: 2.5rem;
     height: 3rem;
-    background-color: var(--color-white);
+    background-color: $white;
     background-image: url(../img/side_menu_2.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
   }
 
@@ -156,7 +150,7 @@ header {
     display: block;
     font-size: 1.3rem;
     line-height: 2.7rem;
-    border-top: 1px solid var(--color-gray);
+    border-top: 1px solid $gray;
   }
 
   .side_links > nav {
@@ -165,7 +159,7 @@ header {
 
   .side_links nav:hover {
     height: auto;
-    background-color: var(--color-gray);
+    background-color: $gray;
   }
 }
 
@@ -196,22 +190,22 @@ header {
   .side_links a {
     display: inline-block;
     padding: 0 1rem;
-    border: 0.1rem solid var(--color-white);
+    border: 0.1rem solid $white;
   }
 
   .side_links a:hover {
     font-weight: bold;
-    border: 0.1rem solid var(--color-yellow);
+    border: 0.1rem solid $yellow;
   }
 
   .side_links nav:hover {
     height: auto;
-    background-color: var(--color-yellow);
+    background-color: $yellow;
   }
 
   .side_links .selected {
     font-weight: bold;
-    border: 0.1rem solid var(--color-yellow);
+    border: 0.1rem solid $yellow;
   }
 
   .side_links_close {
