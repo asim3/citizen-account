@@ -43,36 +43,72 @@
 
 <div class="app_root">
   <div class="banner_root">
+    <div class="banner_img">
+      <div id="banner_img_1" class="fade active"></div>
+      <div id="banner_img_2" class="fade"></div>
+      <div id="banner_img_3" class="fade"></div>
+      <div id="banner_img_4" class="fade"></div>
+    </div>
+    
     <div class="banner_title">لوريم إيبسوم</div>
     <div class="banner_sub">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة</div>
-    <div class="banner_right"></div>
-    <div class="banner_left"></div>
-
-    <div class="banner_img">
-      <div id="banner_img_1"></div>
-    </div>
+    <div id="banner_right" class="banner_right"></div>
+    <div id="banner_left" class="banner_left"></div>
   </div>
 
   <div class="sections_nav_root">
-    <div class="sections_nav"></div>
-    <div class="sections_nav"></div>
-    <div class="sections_nav"></div>
+    <div class="sections_nav" onclick="show_sections_box([5]);"></div>
+    <div class="sections_nav" onclick="show_sections_box([4]);"></div>
+    <div class="sections_nav" onclick="show_sections_box([1,2]);"></div>
   </div>
 
   <div class="sections_nav_root">
-    <div class="sections_text">عن البرنامج</div>
-    <div class="sections_text">المركز الإعلامي</div>
-    <div class="sections_text">الحاسبة التقديرية</div>
+    <div class="sections_text" onclick="show_sections_box([5]);">عن البرنامج</div>
+    <div class="sections_text" onclick="show_sections_box([4]);">المركز الإعلامي</div>
+    <div class="sections_text sections_nav_selected" 
+      onclick="show_sections_box([1,2]);">الحاسبة التقديرية</div>
   </div>
 
 
-  <div class="sections_root">
-    <section>
-      <div>يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة  البرنامج فقط قم بملء الحقول لتظهر لك النتيجة</div>
+  <div class="sections_box_root">
+    <section id="section_1" style="display:flex;">
+      <div style="flex-grow: 10;">
+        يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة  البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
+        <br>
+          يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة
+          <label class="container">مستقل
+            <input type="radio">
+            <span class="checkmark">11</span>
+          </label>
+          <label class="container">رب أسرة
+            <input type="radio">
+            <span class="checkmark">22</span>
+          </label>
+        <hr>
+          البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
 
+          <label class="container">مستقل
+            <input type="radio">
+            <span class="checkmark">33</span>
+          </label>
+          <label class="container">رب أسرة
+            <input type="radio">
+            <span class="checkmark">44</span>
+          </label>
+        <br>
+      </div>
+      <div>
+        <div class="section_alert">
+          يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة  البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
+        </div>
+      </div>
     </section>
-    <section></section>
-    <section></section>
+    <section id="section_2">2222222</section>
+    <section id="section_3">3333333</section>
+    <section id="section_4">4444444</section>
+    <section id="section_5">5555555</section>
+    <section id="section_6">6666666</section>
+    <section id="section_7">7777777</section>
   </div>
 
 

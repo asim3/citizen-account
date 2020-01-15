@@ -31,7 +31,7 @@ $banner_height: 33rem;
 .banner_right {
   @include bg_icon;
   position: absolute;
-  top: 19rem;
+  top: 50%;
   right: 4rem;
   background-image: url(../img/banner_right.svg);
   cursor: pointer;
@@ -40,20 +40,53 @@ $banner_height: 33rem;
 .banner_left {
   @include bg_icon;
   position: absolute;
-  top: 19rem;
+  top: 50%;
   left: 4rem;
   background-image: url(../img/banner_left.svg);
   cursor: pointer;
 }
 
+.banner_img {
+  position: relative;
+}
+
 .banner_img div {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
   width: 100%;
   height: $banner_height;
-  background-image: url(../img/home_banner_1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+
+.banner_img .active {
+  display: block;
+}
+
+#banner_img_1 {
+  background-image: url(../img/home_banner_1.jpg);
+}
+
+#banner_img_2 {
+  background-image: url(../img/home_banner_2.png);
+}
+
+#banner_img_3 {
+  background-image: url(../img/home_banner_1.jpg);
+}
+
+#banner_img_4 {
+  background-image: url(../img/home_banner_2.png);
+}
+
+.sections_box_root section div {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
 
 .sections_nav_root {
   display: flex;
@@ -76,6 +109,7 @@ $banner_height: 33rem;
 }
 
 .sections_text {
+  position: relative;
   padding: 2rem;
   text-align: center;
 }
@@ -110,9 +144,84 @@ $banner_height: 33rem;
   font-size: 2rem;
 }
 
-
-
-.sections_root section {
-  padding: 2rem;
+.sections_text::after {
+  content: " ";
+  position: absolute;
+  bottom: calc(-0.5rem - 2px);
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background: $white;
   border: 1px solid $cyan;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+.sections_nav_selected::after {
+  background: $cyan;
+}
+
+.section_alert {
+  position: relative;
+  padding: 1rem;
+  width: 15rem;
+  border: 1px solid $yellow;
+}
+
+.section_alert::after {
+  @include bg_icon;
+  content: " ";
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  background-image: url(../img/logo_1.svg);
+}
+
+.sections_box_root section {
+  @include fade;
+  display: none;
+  margin: 0 auto;
+  max-width: 1000px;
+  border: 1px solid $cyan;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+.container input {
+  display: none;
+}
+
+.container::after {
+  @include bg_icon;
+  content: " ";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.container input:checked ~ .container {
+  background: red;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+@media (max-width: 1000px) {
+  .sections_box_root section {
+    flex-direction: column;
+    max-width: 98%;
+  }
+
+  .section_alert {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
 }

@@ -30,7 +30,7 @@ head, body {
   position: relative;
   margin: 0;
   padding: 0;
-  width: 100vw;
+  width: 100%;
   font-family: cairo-regular, TimesNewRoman, sans-serif;
   font-size: 1rem;
   direction: rtl;
@@ -62,6 +62,31 @@ a {
   margin: 0 auto;
   padding: 2rem;
   width: 1000px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -464,7 +489,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -545,7 +570,7 @@ footer .android {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 19rem;
+  top: 50%;
   right: 4rem;
   background-image: url(../img/banner_right.svg);
   cursor: pointer;
@@ -559,19 +584,53 @@ footer .android {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 19rem;
+  top: 50%;
   left: 4rem;
   background-image: url(../img/banner_left.svg);
   cursor: pointer;
 }
 
+.banner_img {
+  position: relative;
+}
+
 .banner_img div {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 33rem;
-  background-image: url(../img/home_banner_1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.banner_img .active {
+  display: block;
+}
+
+#banner_img_1 {
+  background-image: url(../img/home_banner_1.jpg);
+}
+
+#banner_img_2 {
+  background-image: url(../img/home_banner_2.png);
+}
+
+#banner_img_3 {
+  background-image: url(../img/home_banner_1.jpg);
+}
+
+#banner_img_4 {
+  background-image: url(../img/home_banner_2.png);
+}
+
+.sections_box_root section div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 2rem;
 }
 
 .sections_nav_root {
@@ -604,6 +663,7 @@ footer .android {
 }
 
 .sections_text {
+  position: relative;
   padding: 2rem;
   text-align: center;
 }
@@ -638,9 +698,99 @@ footer .android {
   font-size: 2rem;
 }
 
-.sections_root section {
-  padding: 2rem;
+.sections_text::after {
+  content: " ";
+  position: absolute;
+  bottom: calc(-0.5rem - 2px);
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background: #FFFFFF;
   border: 1px solid #00A3DD;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+}
+
+.sections_nav_selected::after {
+  background: #00A3DD;
+}
+
+.section_alert {
+  position: relative;
+  padding: 1rem;
+  width: 15rem;
+  border: 1px solid #BFD145;
+}
+
+.section_alert::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: " ";
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  background-image: url(../img/logo_1.svg);
+}
+
+.sections_box_root section {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  display: none;
+  margin: 0 auto;
+  max-width: 1000px;
+  border: 1px solid #00A3DD;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+.container input {
+  display: none;
+}
+
+.container::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: " ";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.container input:checked ~ .container {
+  background: red;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+@media (max-width: 1000px) {
+  .sections_box_root section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 98%;
+  }
+  .section_alert {
+    padding: 1rem;
+    width: 100%;
+  }
 }
 
 .fixed_massege {
