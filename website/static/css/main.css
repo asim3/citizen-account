@@ -119,6 +119,20 @@ input[type=radio]:checked + label::after {
   }
 }
 
+ul {
+  margin: 0 2rem;
+  padding: 0;
+  font-size: 1rem;
+}
+
+pre {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  white-space: pre-line;
+}
+
 @media (max-width: 1000px) {
   :root {
     font-size: 10px;
@@ -519,7 +533,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -808,7 +822,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
+      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
   grid-gap: 1rem;
 }
 
@@ -865,7 +879,7 @@ footer .android {
     padding: 1rem 0;
   }
   .calculator_root {
-        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
+        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
     grid-gap: 0;
   }
   .calculator_root input[type=submit],
@@ -888,6 +902,40 @@ footer .android {
   }
 }
 
+.download {
+  margin: 5%;
+  width: 40%;
+  float: right;
+}
+
+.download > div {
+  position: relative;
+  margin: 2rem 0;
+  padding: 2rem;
+  border: 1px solid #00A3DD;
+}
+
+.download > div::after {
+  content: " ";
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 40%;
+  right: -1rem;
+  background-image: url(../img/pdf_logo.png);
+}
+
+@media (max-width: 600px) {
+  .download {
+    width: 90%;
+    float: none;
+  }
+}
+
 .fixed_massege {
   width: 2rem;
   height: 2rem;
@@ -906,7 +954,7 @@ footer .android {
 
 article {
   position: relative;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 2%;
   padding-bottom: 3rem;
   width: 95%;
@@ -919,6 +967,17 @@ article a {
   bottom: 0;
   left: 2rem;
   color: #003C77 !important;
+}
+
+article img {
+  float: right;
+  width: 7rem;
+  height: 7rem;
+}
+
+article ul,
+article img + pre {
+  padding-right: 8rem;
 }
 
 aside {
@@ -950,6 +1009,57 @@ h1 img {
   height: 5rem;
 }
 
+.title {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  margin: 2rem auto;
+  color: #21BCBA;
+  font-size: 2rem;
+}
+
+.title a {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+  color: #003C77 !important;
+  font-size: 1rem;
+}
+
+.title br {
+  display: none;
+}
+
+.title a::after {
+  content: " >";
+}
+
+.title a:last-child::after {
+  content: " ";
+}
+
+.title a:first-of-type {
+  padding-right: 3rem;
+}
+
+.button {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  color: #003C77 !important;
+  background: #BFD145;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    margin: 2rem 10%;
+    width: 80%;
+  }
+  article img {
+    float: none;
+  }
+  article img + pre,
+  article ul {
+    padding-right: 0;
+  }
+}
+
 @media (max-width: 600px) {
   aside {
     float: right;
@@ -962,6 +1072,12 @@ h1 img {
     float: right;
     margin-top: 1rem;
     width: 70%;
+  }
+  .title br {
+    display: block;
+  }
+  .title a:first-of-type {
+    padding-right: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

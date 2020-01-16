@@ -2,6 +2,7 @@
 @import './header';
 @import './footer';
 @import './index';
+@import './policies';
 
 
 .fixed_massege {
@@ -17,7 +18,7 @@
 
 article {
   position: relative;
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 2%;
   padding-bottom: 3rem;
   width: 95%;
@@ -30,6 +31,17 @@ article a {
   bottom: 0;
   left: 2rem;
   color: $blue!important;
+}
+
+article img {
+  float: right;
+  width: 7rem;
+  height: 7rem;
+}
+
+article ul,
+article img + pre {
+  padding-right: 8rem;
 }
 
 aside {
@@ -61,8 +73,57 @@ h1 img {
   height: 5rem;
 }
 
-@media (max-width: 1000px) {
+.title {
+  @include bold;
+  margin: 2rem auto;
+  color: $green;
+  font-size: 2rem;
+}
 
+.title a {
+  @include regular;
+  color: $blue!important;
+  font-size: 1rem;
+}
+
+.title br {
+  display: none;
+}
+
+.title a::after {
+  content: " >";
+}
+
+.title a:last-child::after {
+  content: " ";
+}
+
+.title a:first-of-type {
+  padding-right: 3rem;
+}
+
+.button {
+  @include bold;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  color: $blue!important;
+  background: $yellow;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    margin: 2rem 10%;
+    width: 80%;
+  }
+
+  article img {
+    float: none;
+  }
+
+  article img + pre,
+  article ul {
+    padding-right: 0;
+  }
 }
 
 
@@ -79,6 +140,14 @@ h1 img {
     float: right;
     margin-top: 1rem;
     width: 70%;
+  }
+
+  .title br {
+    display: block;
+  }
+
+  .title a:first-of-type {
+    padding-right: 0;
   }
 }
 
