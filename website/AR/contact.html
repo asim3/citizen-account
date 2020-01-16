@@ -44,11 +44,32 @@
 <div class="app_root">
   <div class="max_width">
     <div class="title">
-      عن حساب المواطن
+      اتصل بنا
       <br>
       <a href="./">الرئيسية</a>
-      <a href="#">عن حساب المواطن</a>
+      <a href="#">اتصل بنا</a>
     </div>
+    <form method="POST">
+      <aside>اسمك *</aside>
+      <input name="name" type="text" />
+      
+      <aside>عنوان بريدك الإلكتروني *</aside>
+      <input name="mail" type="email" />
+
+      <aside>الموضوع *</aside>
+      <input name="subject" type="text" />
+      
+      <aside>رسالة *</aside>
+      <input name="message" type="text" />
+
+      <img class="CAPTCHA" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA">
+
+      <aside>أدخل الرموز في الصورة</aside>
+      <input name="" type="text" />
+      
+      <input class="button" value="إرسال" type="submit" />
+    </form>
+
   <!-- max_width end -->
   </div>
 <!-- app_root end -->

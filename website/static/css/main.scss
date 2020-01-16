@@ -3,6 +3,7 @@
 @import './footer';
 @import './index';
 @import './policies';
+@import './media_center';
 
 
 .fixed_massege {
@@ -39,7 +40,7 @@ article img {
   height: 7rem;
 }
 
-article ul,
+article img ~ ul,
 article img + pre {
   padding-right: 8rem;
 }
@@ -55,6 +56,7 @@ input[type=submit] {
   background: $yellow;
 }
 
+input[type=email],
 input[type=text],
 input[type=number] {
   @include regular;
@@ -62,6 +64,12 @@ input[type=number] {
 }
 
 h1 {
+  @include bold;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+h3 {
   @include bold;
   font-size: 1.5rem;
   line-height: 5rem;
@@ -104,10 +112,16 @@ h1 img {
 
 .button {
   @include bold;
+  margin: 1rem 0;
   padding: 0.5rem 2rem;
   text-align: center;
   color: $blue!important;
   background: $yellow;
+}
+
+.CAPTCHA {
+  width: 15rem;
+  height: 6rem;
 }
 
 @media (max-width: 1000px) {
@@ -135,7 +149,14 @@ h1 img {
   }
 
   input[type=submit],
+  .CAPTCHA {
+    float: right;
+    margin-right: 30%;
+  }
+
+  input[type=submit],
   input[type=text],
+  input[type=email],
   input[type=number] {
     float: right;
     margin-top: 1rem;

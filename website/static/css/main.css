@@ -533,7 +533,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -822,7 +822,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
+      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
   grid-gap: 1rem;
 }
 
@@ -846,8 +846,9 @@ footer .android {
 
 #section_5 > div {
   float: right;
-  width: 48%;
+  margin: 2%;
   padding: 0;
+  width: 45%;
 }
 
 #section_5 img {
@@ -879,7 +880,7 @@ footer .android {
     padding: 1rem 0;
   }
   .calculator_root {
-        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
+        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
     grid-gap: 0;
   }
   .calculator_root input[type=submit],
@@ -924,8 +925,10 @@ footer .android {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  top: 40%;
-  right: -1rem;
+  top: 2rem;
+  right: -1.5rem;
+  width: 3rem;
+  height: 3rem;
   background-image: url(../img/pdf_logo.png);
 }
 
@@ -934,6 +937,17 @@ footer .android {
     width: 90%;
     float: none;
   }
+}
+
+.news_root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.news_root div:first-child {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
 }
 
 .fixed_massege {
@@ -975,7 +989,7 @@ article img {
   height: 7rem;
 }
 
-article ul,
+article img ~ ul,
 article img + pre {
   padding-right: 8rem;
 }
@@ -991,6 +1005,7 @@ input[type=submit] {
   background: #BFD145;
 }
 
+input[type=email],
 input[type=text],
 input[type=number] {
   font-family: cairo-regular, TimesNewRoman, sans-serif;
@@ -998,6 +1013,12 @@ input[type=number] {
 }
 
 h1 {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+h3 {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
   font-size: 1.5rem;
   line-height: 5rem;
@@ -1040,10 +1061,16 @@ h1 img {
 
 .button {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
+  margin: 1rem 0;
   padding: 0.5rem 2rem;
   text-align: center;
   color: #003C77 !important;
   background: #BFD145;
+}
+
+.CAPTCHA {
+  width: 15rem;
+  height: 6rem;
 }
 
 @media (max-width: 1000px) {
@@ -1067,7 +1094,13 @@ h1 img {
     clear: both;
   }
   input[type=submit],
+  .CAPTCHA {
+    float: right;
+    margin-right: 30%;
+  }
+  input[type=submit],
   input[type=text],
+  input[type=email],
   input[type=number] {
     float: right;
     margin-top: 1rem;

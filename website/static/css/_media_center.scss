@@ -1,0 +1,7 @@
+.news_root {
+  display: flex;
+}
+
+.news_root div:first-child {
+  flex-basis: 70%;
+}
