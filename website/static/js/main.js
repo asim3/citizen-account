@@ -60,28 +60,41 @@ function add_video_to_home() {
   }
 }
 
-function show_banner_img(dir) {
-  const all_img = document.querySelectorAll(".banner_img div");
+const show_banner_img = (function() {
   let img_index = 0;
-  return function() {
+  return function(dir) {
+    const all_img = document.querySelectorAll(".banner_img div");
     for(let i=0;i < all_img.length;i++) {
       all_img[i].className = all_img[i].className.replace(" active", "");
-    }
+    }    
     img_index = (dir === "next" ? img_index+1 : img_index-1);
     img_index = (img_index >= all_img.length ? 0 : img_index)
+    console.log(img_index)
     all_img[img_index].className += " active";
+    img_index = (img_index === 0 ? all_img.length : img_index)
   }
-}
+})()
 
 function show_sections_box(ids) {
-  const all_sections = document.querySelectorAll(".sections_box_root section");
+  const all_sections = document.querySelectorAll(".sections_box_root > section");
+  const all_sections_nav = document.querySelectorAll(".sections_nav_root > .sections_text");
   for(let i=0;i < all_sections.length;i++) {
     all_sections[i].style.display = "none";
   }
+  for(let i=0;i < all_sections_nav.length;i++) {
+    all_sections_nav[i].className = "sections_text";
+  }
   ids.map(function(id) {
-    const section_box = document.getElementById("section_" + id);
-    section_box.style.display = "flex";
+    document.getElementById("section_" + id).style.display = "flex";
+         if(id === 4) {all_sections_nav[1].className = "sections_text sections_nav_selected";}
+    else if(id === 5) {all_sections_nav[0].className = "sections_text sections_nav_selected";}
+                  else {all_sections_nav[2].className = "sections_text sections_nav_selected";}
   })
+}
+
+
+function show_calculator() {
+  document.getElementById("calculator_root").style.display = "grid";
 }
 
 
@@ -122,12 +135,9 @@ window.onload = function() {
   
   setTimeout(add_video_to_home, 0);
 
-  const next_banner_img = show_banner_img("next");
-  const previous_banner_img = show_banner_img("previous");
-
   document.getElementById("banner_right")
-    .addEventListener("click", next_banner_img);
+    .addEventListener("click", _ => show_banner_img("next"));
 
   document.getElementById("banner_left")
-    .addEventListener("click", previous_banner_img);
+    .addEventListener("click", _ => show_banner_img("previous"));
 };

@@ -23,19 +23,19 @@
     <div id="side_links_close" class="side_links_close"></div>
     
     <div id="side_links" class="side_links">
-      <a href="#" class="selected">الرئيسية</a>
-      <a href="#">عن حساب المواطن</a>
+      <a href="./index.html" class="selected">الرئيسية</a>
+      <a href="./about.html">عن حساب المواطن</a>
       <nav>
-        <a href="#">السياسات</a>
-        <a href="#">مصطلحات تهمك</a>
+        <a href="./policies.html">السياسات</a>
+        <a href="./terms.html">مصطلحات تهمك</a>
       </nav>
-      <a href="#">صوتك مسموع</a>
-      <a href="#">المركز الإعلامي</a>
+      <a href="./urv.html">صوتك مسموع</a>
+      <a href="urv.html">المركز الإعلامي</a>
       <nav>
-        <a href="#">الأسئلة الشائعة</a>
-        <a href="#">دليل المستخدم</a>
+        <a href="./faq.html">الأسئلة الشائعة</a>
+        <a href="./userGuide.html">دليل المستخدم</a>
       </nav>
-      <a href="#">اتصل بنا</a>
+      <a href="./contact.html">اتصل بنا</a>
     </div>
   </div>
 </header>
@@ -71,44 +71,100 @@
 
 
   <div class="sections_box_root">
-    <section id="section_1" style="display:flex;">
-      <div style="flex-grow: 10;">
-        يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة  البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
-        <br>
-          يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة
-          <label class="container">مستقل
-            <input type="radio">
-            <span class="checkmark">11</span>
-          </label>
-          <label class="container">رب أسرة
-            <input type="radio">
-            <span class="checkmark">22</span>
-          </label>
-        <hr>
-          البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
+    <section id="section_1" style="display:flex;flex-wrap: wrap;">
+      <div class="home_inputs_root">
+        <b style="grid-column: 1 / 4;">يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة البرنامج فقط قم بملء الحقول لتظهر لك النتيجة</b>
+        <span style="grid-column: 1;">هل أنت مسجل في برنامج حساب المواطن ؟</span>
+        <input type="radio" id="radio_1" name="option_1" onchange="show_calculator()" />
+        <label for="radio_1">مستقل</label>
 
-          <label class="container">مستقل
-            <input type="radio">
-            <span class="checkmark">33</span>
-          </label>
-          <label class="container">رب أسرة
-            <input type="radio">
-            <span class="checkmark">44</span>
-          </label>
-        <br>
+        <input type="radio" id="radio_2" name="option_1" onchange="show_calculator()" />
+        <label for="radio_2">رب أسرة</label>
+        <span style="grid-column: 1;">هل أنت؟	</span>
+        <input type="radio" id="radio_3" name="option_2" onchange="show_calculator()" />
+        <label for="radio_3">مستقل</label>
+
+        <input type="radio" id="radio_4" name="option_2" onchange="show_calculator()" />
+        <label for="radio_4">رب أسرة</label>
       </div>
       <div>
         <div class="section_alert">
-          يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة  البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
+          تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين)
         </div>
       </div>
+      <div id="calculator_root" class="calculator_root">
+          <span style="grid-area: text_1;">أدخل مجموع دخلك</span>
+          <input style="grid-area: input_1;" type="number" />
+          <span style="grid-area: text_2;">مبلغ الدعم التقديري</span>
+          
+          <input style="grid-area: input_2;" type="number" disabled />
+          <input style="grid-area: submit_1;" type="submit" value="احسب" />
+          
+          <span style="grid-area: text_3;">عدد أفراد الأسرة</span>
+          <span style="grid-area: text_4;">حد الإعفاء من التناقص</span>
+          <span style="grid-area: text_5;">الحد المانع</span>
+
+          <input style="grid-area: input_3;" type="number" disabled />
+          <input style="grid-area: input_4;" type="number" disabled />
+          <input style="grid-area: input_5;" type="number" disabled />
+      </div>
     </section>
-    <section id="section_2">2222222</section>
-    <section id="section_3">3333333</section>
-    <section id="section_4">4444444</section>
-    <section id="section_5">5555555</section>
-    <section id="section_6">6666666</section>
-    <section id="section_7">7777777</section>
+
+
+    <section id="section_2"  style="display:flex;" onclick="show_sections_box([1,2,3]);">
+      <h1>
+        <img src="../static/img/logo_4.svg">
+        طريقة استخدام الآلة الحاسبة التقديرية
+      </h1>
+    </section>
+
+
+    <section id="section_3">
+      <img class="video_root" src="../static/img/home_banner_1.jpg" />
+    </section>
+
+
+    <section id="section_4">
+      <article>
+        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+        <a href="#">اقرأ المزيد</a>
+      </article>
+      <article>
+        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+        <a href="#">اقرأ المزيد</a>
+      </article>
+      <article>
+        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+        <a href="#">اقرأ المزيد</a>
+      </article>
+    </section>
+
+
+    <section id="section_5">
+      <div>
+        <img src="../static/img/logo_51.svg" />
+        <h2>عن البرنامج</h2>
+        <p>إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع الحكومية بأسلوب يضمن تحقيق كفاءة عالية.</p>
+      </div>
+      <div>
+        <img src="../static/img/logo_52.svg" />
+        <h2>أهداف البرنامج</h2>
+        <p>يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع ترشيد الإستهلاك.</p>
+      </div>
+      <div>
+        <img src="../static/img/logo_53.svg" />
+        <h2>المبادئ التوجيهية</h2>
+        <p>توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم قبل أي تغير في أسعار الطاقة.</p>
+      </div>
+      <div>
+        <img src="../static/img/logo_54.svg" />
+        <h2>الرؤية المستقبيلة</h2>
+        <p>أن يكون حساب المواطن بوابة شاملة لكافة برامج الدعم الحكومي.</p>
+      </div>
+    </section>
   </div>
 
 

@@ -165,6 +165,7 @@ $banner_height: 33rem;
   position: relative;
   padding: 1rem;
   width: 15rem;
+  line-height: 2rem;
   border: 1px solid $yellow;
 }
 
@@ -174,41 +175,75 @@ $banner_height: 33rem;
   position: absolute;
   top: -1rem;
   right: 2rem;
-  background-image: url(../img/logo_1.svg);
+  background-image: url(../img/alert.svg);
 }
 
 .sections_box_root section {
   @include fade;
   display: none;
   margin: 0 auto;
+  padding: 2rem;
   max-width: 1000px;
   border: 1px solid $cyan;
 }
 
-.container {
-  position: relative;
-  display: inline-block;
-  padding-right: 3rem;
+#section_1 {
+  border-bottom: none;
 }
 
-.container input {
+#section_3 {
+  border-top: none;
+}
+
+#section_4 {
+  flex-direction: column;
+}
+
+.home_inputs_root {
+  flex-grow: 10;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1rem;
+}
+
+.calculator_root {
   display: none;
+  grid-template-areas: 
+    'text_1 text_1 text_1 text_2 text_2 text_2'
+    'input_1 input_1 input_1 input_2 input_2 input_2'
+    'submit_1 . . text_3 text_4 text_5'
+    '. . . input_3 input_4 input_5';
+  grid-gap: 1rem;
 }
 
-.container::after {
-  @include bg_icon;
-  content: " ";
-  position: absolute;
-  top: 5px;
-  right: 5px;
+.calculator_root input {
+  height: 3rem;;
 }
 
-.container input:checked ~ .container {
-  background: red;
+.video_root {
+  margin: 0 auto;
+  width: 80%;
 }
 
-.container input:checked ~ .checkmark {
-  background-color: #2196F3;
+#section_5 {
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#section_5 > div {
+  float: right;
+  width: 48%;
+  padding: 0;
+}
+
+#section_5 img {
+  width: 8rem;
+  height: 8rem;
+}
+
+#section_5 h2 {
+  @include bold;
+  color: $cyan;
 }
 
 @media (max-width: 1000px) {
@@ -224,4 +259,35 @@ $banner_height: 33rem;
 }
 
 @media (max-width: 600px) {
+  .sections_box_root section div {
+    padding: 1rem 0;
+  }
+
+  .calculator_root {
+    grid-template-areas: 
+      'text_1 input_1 input_1'
+      'submit_1 . .'
+      'text_2 input_2 input_2'
+      'text_3 text_4 text_5'
+      'input_3 input_4 input_5';
+    grid-gap: 0;
+  }
+
+  .calculator_root input[type=submit],
+  .calculator_root input[type=text],
+  .calculator_root input[type=number] {
+    width: 90%;
+  }
+
+  #section_5 {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #section_5 > div {
+    text-align: center;
+    float: right;
+    width: 100%;
+    padding: 0;
+  }
 }

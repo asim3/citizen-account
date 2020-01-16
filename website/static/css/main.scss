@@ -15,13 +15,71 @@
     cursor: pointer;
 }
 
+article {
+  position: relative;
+  margin: 1rem auto;
+  padding: 2%;
+  padding-bottom: 3rem;
+  width: 95%;
+  color: $black;
+  background: $gray;
+}
+
+article a {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  color: $blue!important;
+}
+
+aside {
+  margin-top: 1rem;
+}
+
+input[type=submit] {
+  @include bold;
+  color: $blue;
+  border: none;
+  background: $yellow;
+}
+
+input[type=text],
+input[type=number] {
+  @include regular;
+  width: 100%;
+}
+
+h1 {
+  @include bold;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+h1 img {
+  float: right;
+  width: 8rem;
+  height: 5rem;
+}
+
 @media (max-width: 1000px) {
 
 }
 
 
 @media (max-width: 600px) {
-  
+  aside {
+    float: right;
+    width: 30%;
+    clear: both;
+  }
+
+  input[type=submit],
+  input[type=text],
+  input[type=number] {
+    float: right;
+    margin-top: 1rem;
+    width: 70%;
+  }
 }
 
 
