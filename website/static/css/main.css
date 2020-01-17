@@ -1088,21 +1088,51 @@ footer .android {
 }
 
 .faq_side_nav {
+  width: 20%;
   color: #FFFFFF;
 }
 
 .faq_side_nav a {
   display: block;
   margin-top: 0.2rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
   width: 100%;
   background: #00A3DD;
 }
 
 .question_root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 1rem;
   padding: 0.5rem 2rem;
   width: 94%;
+  height: 55rem;
+  overflow: hidden;
+}
+
+.question_root b {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 3rem;
+  line-height: 3rem;
+  background: red;
+}
+
+.question_root pre {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  background: green;
+  -webkit-transition: -webkit-box-flex 0.3s ease-out;
+  transition: -webkit-box-flex 0.3s ease-out;
+  transition: flex 0.3s ease-out;
+  transition: flex 0.3s ease-out, -webkit-box-flex 0.3s ease-out, -ms-flex 0.3s ease-out;
 }
 
 .fixed_massege {
