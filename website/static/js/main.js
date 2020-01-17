@@ -97,8 +97,7 @@ function show_calculator() {
   document.getElementById("calculator_root").style.display = "grid";
 }
 
-
-window.onload = function() {
+window.addEventListener("load", function() {
 
   document.getElementById("show_side_links")
     .addEventListener("click", toggle_side_links);
@@ -110,10 +109,10 @@ window.onload = function() {
     .addEventListener("click", e => e.stopPropagation());
 
   document.getElementById("side_links_close")
-  .addEventListener("click", function(event) {
-    event.stopPropagation();
-    toggle_side_links();
-  });
+    .addEventListener("click", function(event) {
+      event.stopPropagation();
+      toggle_side_links();
+    });
 
   const ln_ar = document.getElementById("ln_ar")
   if(ln_ar) {
@@ -140,4 +139,4 @@ window.onload = function() {
 
   document.getElementById("banner_left")
     .addEventListener("click", _ => show_banner_img("previous"));
-};
+});

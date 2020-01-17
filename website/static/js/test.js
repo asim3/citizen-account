@@ -46,14 +46,19 @@ function expandSection(element) {
   element.setAttribute('data-collapsed', 'false');
 }
 
-document.querySelector('#toggle-button').addEventListener('click', function(e) {
-  var section = document.querySelector('.section.collapsible');
-  var isCollapsed = section.getAttribute('data-collapsed') === 'true';
-    
-  if(isCollapsed) {
-    expandSection(section)
-    section.setAttribute('data-collapsed', 'false')
-  } else {
-    collapseSection(section)
-  }
+window.addEventListener("loadjj", function() {
+  const question_all = document.querySelectorAll('.question_root');
+  for(let i=0;i<question_all.length;i++) {
+    question_all[i].addEventListener("click", function(e) {
+      console.log(e.target)
+      let isCollapsed = e.target.getAttribute('data-collapsed') === 'true';
+      if(isCollapsed) {
+        expandSection(e.target)
+        e.target.setAttribute('data-collapsed', 'false')
+      }
+      else {
+        collapsee(e.target)
+      }
+    });
+  };
 });
