@@ -71,36 +71,6 @@ a {
   animation-duration: 1.5s;
 }
 
-label {
-  position: relative;
-  display: inline-block;
-  padding-right: 3rem;
-}
-
-input[type=radio] {
-  display: none;
-}
-
-input[type=radio] + label::after {
-  width: 2rem;
-  height: 2rem;
-  background-image: url(../img/favicon.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  content: " ";
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: #FFFFFF;
-  background-image: url(../img/option_0.svg);
-}
-
-input[type=radio]:checked + label::after {
-  opacity: 1;
-  background-image: url(../img/option_1.svg);
-}
-
 @-webkit-keyframes fade {
   from {
     opacity: .4;
@@ -131,6 +101,46 @@ pre {
   padding: 0;
   font-size: 1rem;
   white-space: pre-line;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  padding-right: 3rem;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio] + label::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: " ";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #FFFFFF;
+  background-image: url(../img/option_0.svg);
+}
+
+input[type=radio]:checked + label::after {
+  background-image: url(../img/option_1.svg);
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
 }
 
 @media (max-width: 1000px) {
@@ -820,6 +830,76 @@ footer .android {
   grid-gap: 1rem;
 }
 
+.text_1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: text_1;
+}
+
+.input_1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: input_1;
+}
+
+.text_2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: text_2;
+}
+
+.input_2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: input_2;
+}
+
+.submit_1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: submit_1;
+}
+
+.text_3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: text_3;
+}
+
+.text_4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+  grid-area: text_4;
+}
+
+.text_5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 6;
+  grid-area: text_5;
+}
+
+.input_3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: input_3;
+}
+
+.input_4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 5;
+  grid-area: input_4;
+}
+
+.input_5 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 6;
+  grid-area: input_5;
+}
+
 .calculator_root {
   display: none;
       grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
@@ -878,6 +958,63 @@ footer .android {
 @media (max-width: 600px) {
   .sections_box_root section div {
     padding: 1rem 0;
+  }
+  .text_1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text_1;
+  }
+  .input_1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: input_1;
+  }
+  .text_2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: text_2;
+  }
+  .input_2 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: input_2;
+  }
+  .submit_1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: submit_1;
+  }
+  .text_3 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: text_3;
+  }
+  .text_4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: text_4;
+  }
+  .text_5 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    grid-area: text_5;
+  }
+  .input_3 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: input_3;
+  }
+  .input_4 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: input_4;
+  }
+  .input_5 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: input_5;
   }
   .calculator_root {
         grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
@@ -948,6 +1085,24 @@ footer .android {
 .news_root div:first-child {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
+}
+
+.faq_side_nav {
+  color: #FFFFFF;
+}
+
+.faq_side_nav a {
+  display: block;
+  margin-top: 0.2rem;
+  padding: 0 1rem;
+  width: 100%;
+  background: #00A3DD;
+}
+
+.question_root {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  width: 94%;
 }
 
 .fixed_massege {

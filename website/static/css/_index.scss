@@ -206,6 +206,18 @@ $banner_height: 33rem;
   grid-gap: 1rem;
 }
 
+.text_1   { grid-area: text_1; }
+.input_1  { grid-area: input_1; }
+.text_2   { grid-area: text_2; }
+.input_2  { grid-area: input_2; }
+.submit_1 { grid-area: submit_1; }
+.text_3   { grid-area: text_3; }
+.text_4   { grid-area: text_4; }
+.text_5   { grid-area: text_5; }
+.input_3  { grid-area: input_3; }
+.input_4  { grid-area: input_4; }
+.input_5  { grid-area: input_5; }
+
 .calculator_root {
   display: none;
   grid-template-areas: 
@@ -264,6 +276,18 @@ $banner_height: 33rem;
     padding: 1rem 0;
   }
 
+  .text_1   { grid-area: text_1; }
+  .input_1  { grid-area: input_1; }
+  .text_2   { grid-area: text_2; }
+  .input_2  { grid-area: input_2; }
+  .submit_1 { grid-area: submit_1; }
+  .text_3   { grid-area: text_3; }
+  .text_4   { grid-area: text_4; }
+  .text_5   { grid-area: text_5; }
+  .input_3  { grid-area: input_3; }
+  .input_4  { grid-area: input_4; }
+  .input_5  { grid-area: input_5; }
+  
   .calculator_root {
     grid-template-areas: 
       'text_1 input_1 input_1'
