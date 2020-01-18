@@ -143,6 +143,28 @@ input[type=radio]:checked + label::after {
   display: grid;
 }
 
+/* vanilla-js-accordion */
+.js-Accordion-title {
+  border-top: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.js-Accordion-title:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.js-Accordion-content {
+  border: 1px solid #ccc;
+  border-top: 0;
+  height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  -webkit-transition: all .25s linear;
+  transition: all .25s linear;
+}
+
+/* vanilla-js-accordion */
 @media (max-width: 1000px) {
   :root {
     font-size: 10px;
@@ -1095,7 +1117,7 @@ footer .android {
 .faq_side_nav a {
   display: block;
   margin-top: 0.2rem;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
   width: 100%;
   background: #00A3DD;
 }
@@ -1109,10 +1131,8 @@ footer .android {
 .question_root div:first-child {
   margin-bottom: 0.5rem;
   padding-right: 1rem;
-  height: 3rem;
-  line-height: 3rem;
   font-weight: bold;
-  border-right: 0.2rem solid #00A3DD;
+  border-right: 0.1rem solid #00A3DD;
   background: #F7F7F7;
 }
 

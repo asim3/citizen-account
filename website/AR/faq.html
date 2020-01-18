@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="../static/css/main.css">
   <link rel="icon" href="../static/img/favicon.png">
   <script src="../static/js/main.js"></script>
+  <script src="../static/js/vanilla-js-accordion.js"></script>
 
 
-  
+<!--   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
 
 
@@ -58,6 +59,7 @@
       <a href="./">الرئيسية</a>
       <a href="#">الأسئلة الشائعة</a>
     </div>
+    
 
     <div class="flex">
       <div class="faq_side_nav">
@@ -67,33 +69,96 @@
         <a href="#">الأهلية</a>
         <a href="#">الدفع</a>
       </div>
-      <div style="flex: 1;">
-        
-        <div class="question_root">
-          <div onclick="$(this).next().collapse('toggle');">
-            الأسئلة
-          </div>
-          <div id="demo2" class="collapse">
-            aaaaaaa aaaaaaa aaaaaaa
-          </div>
+
+
+      <div id="question_root">
+      
+        <div class="js-Accordion-title">
+          لدي تابع غير مؤهل والسبب "الحالة الاجتماعية للتابع لم تتطابق مع سجلات الاحوال المدنية" مامعنى ذلك ؟
         </div>
-        
-        <div class="question_root">
-          <div onclick="$(this).next().collapse('toggle');">
-            الأسئلة
-          </div>
-          <div id="demo2" class="collapse">
-            aaaaaaa aaaaaaa aaaaaaa
-          </div>
+        <div class="js-Accordion-content">
+          في حال تغير الحالة الاجتماعية للتابع مثل زواج الابن أو الإبنة يكون الابن رب أسرة وعليه التسجيل بحساب جديد واضافة تابعيه وتكون الابنة تابع مع زوجها وعلى الاب حذف هذا التابع ، أما في حال ان الحالة الاجتماعية كانت مطابقة للبيانات المدخلة بالبوابة فيتم مراجعة الأحوال المدنية لتحديث البيانات ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
         </div>
-        
-        <div class="question_root">
-          <div onclick="$(this).next().collapse('toggle');">
-            الأسئلة
-          </div>
-          <div id="demo2" class="collapse">
-            aaaaaaa aaaaaaa aaaaaaa
-          </div>
+      
+        <div class="js-Accordion-title">
+          انا غير مؤهل والسبب "تشير السجلات بأن المستند المرفق منتهي أو مرفوض" ما الحل ؟
+        </div>
+        <div class="js-Accordion-content">
+          يتم حذف المستند المرفق المنتهي الصلاحية او المرفوض و إرفاق مستند جديد بدلا عن المستند المرفوض او المنتهي ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          لدي تابع غير مؤهل والسبب "التابع مسجل كمستفيد رئيسي" مامعنى ذلك ؟
+        </div>
+        <div class="js-Accordion-content">
+          يكون التابع مسجل كمستفيد رئيسي مستقل في حال ان عمره 24 سنه فما فوق أو في حال اثباث استقلاليته في المسكن عن عائلته أو في حال كان متزوج (رب أسرة) ، وعليه يتم حذف هذا التابع
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          هل موعد وتاريخ الدفع من كل شهر محدد؟
+        </div>
+        <div class="js-Accordion-content">
+          نعم سيكون موعد دفع الدعم في تاريخ 10 ميلادي من كل شهر
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          في حال عدم الأهلية بسبب إشارة السجلات بوجود سجل تجاري للمتقدم الرئيسي أو التابع لم يتم الافصاح عنه ، ما هو الحل ؟
+        </div>
+        <div class="js-Accordion-content">
+          يجب الافصاح عن اي دخل ناتج عن نشاط تجاري من سجل تجاري سواء للمستفيد الرئيسي أو التابع ومن ثم يتم تقديم اعتراض على الأهلية ليتم قبوله ودخوله في الدورة التالية ، اما في حال شطب السجل التجاري فيتم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          ماذا لو صادف موعد الصرف إجازة نهاية الأسبوع؟
+        </div>
+        <div class="js-Accordion-content">
+          في حال كان موعد الصرف يوافق يوم الجمعة سوف يكون موعد الصرف قبل بيوم وهو يوم الخميس
+          
+          في حال كان موعد الصرف يوافق يوم السبت سوف يكون موعد الصرف بعد بيوم وهو يوم الأحد
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          في حال عدم الأهلية بسبب إشارة السجلات بأن المتقدم الرئيسي أو التابع يسكن في احد بيوت الايواء وهو في سكن مختلف غير حكومي ، ماهو الحل؟
+        </div>
+        <div class="js-Accordion-content">
+          في حال المتقدم الرئيسي أو التابع لا يسكن في احد بيوت الايواء يتم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          هل يحق للمتزوجات التسجيل في البرنامج ؟
+        </div>
+        <div class="js-Accordion-content">
+          نعم ، يحق للمتزوجة التسجيل في البرنامج في حال أنها كانت إحدى الفئات التالية (مهجورة – عائل الاسرة فاقد الأهلية – عائل الاسرة سجين – عائل الاسرة متغيب – متزوجة من غير سعودي ) وذلك بعد تقديم المستندات الثبوتية للحالة
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          انا غير مؤهل والسبب " يجب رفع وثائق لأثبات استقلالية المسكن" ما الحل ؟
+        </div>
+        <div class="js-Accordion-content">
+          يجب رفع وثائق استقلالية المسكن وهي عقد الايجار الموحد من منصة ايجار  او صك الملكية للسكن او مشهد اثبات سكن جامعي او احد المعاهد او الكليات العسكرية ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          ابنائي سعوديين تحت السن المسموح لهم بالتسجيل , ماهي الطريقة للاستفادة من الدعم ؟
+        </div>
+        <div class="js-Accordion-content">
+          في حال كانت الأم غير سعودية مطلقة أو أرملة ولديها إثبات إحتضان أو صك ولاية على ابنائها أو حصر ورثة يتم التواصل مع مركز اتصال برنامج حساب المواطن ورفع طلب من اجل التسجيل في البرنامج
+        </div>
+      
+      
+        <div class="js-Accordion-title">
+          ماذا يعني الايبان البنكي غير صالح ؟
+        </div>
+        <div class="js-Accordion-content">
+          اذا كان الايبان البنكي للمستفيد غير مطابق للهوية عند التحقق مع مؤسسة النقد السعودي فإن حالة الايبان تكون (غير صالح)
         </div>
 
 

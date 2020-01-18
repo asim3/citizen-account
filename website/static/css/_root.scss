@@ -159,6 +159,27 @@ input[type=radio]:checked + label::after {
   display: grid;
 }
 
+/* vanilla-js-accordion */
+.js-Accordion-title {
+  border-top: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.js-Accordion-title:first-child {
+  border-top: 1px solid #ccc;
+}
+
+.js-Accordion-content {
+  border: 1px solid #ccc;
+  border-top: 0;
+  height: 0;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: all .25s linear;
+}
+/* vanilla-js-accordion */
+
 
 @media (max-width: 1000px) {
   :root {
