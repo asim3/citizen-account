@@ -6,21 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="../static/css/main.css">
   <link rel="icon" href="../static/img/favicon.png">
-  <script src="../static/js/main.js"></script>
-  <script src="../static/js/vanilla-js-accordion.js"></script>
-
-
-<!--   
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
-
-
-
 </head>
 
 
-<body><div class="body_root">
+<body>
+<div class="body_root">
 <header class="no_select">
   <div id="show_side_links" class="header_menu"></div>
   
@@ -71,7 +61,29 @@
       </div>
 
 
-      <div id="question_root">
+      <div id="question_root" class="question_root">
+ 
+        <form class="question_post" method="POST">
+          <aside>القسم</aside>
+          <aside>بحث</aside>
+          <i></i>
+          <i></i>
+
+
+          <select name="section">
+            <option value="All" selected="selected">جميع الأسئلة</option>
+            <option value="1">عن البرنامج</option>
+            <option value="2">التسجيل</option>
+            <option value="3">الأهلية</option>
+            <option value="4">الدفع</option>
+          </select>
+
+          <input name="subject" type="text" />
+          
+          <input class="button" value="" type="submit" />
+          <i></i>
+        </form>
+
       
         <div class="js-Accordion-title">
           لدي تابع غير مؤهل والسبب "الحالة الاجتماعية للتابع لم تتطابق مع سجلات الاحوال المدنية" مامعنى ذلك ؟
@@ -162,7 +174,6 @@
         </div>
 
 
-      </div>
     </div>
   <!-- max_width end -->
   </div>
@@ -196,5 +207,9 @@
 
 <div class="fixed_massege"></div>
 
-</div></body>
+<!-- body_root end -->
+</div>
+<script src="../static/js/main.js"></script>
+<script src="../static/js/vanilla-js-accordion.js"></script>
+</body>
 </html>

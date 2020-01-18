@@ -49,6 +49,70 @@
       <a href="./">الرئيسية</a>
       <a href="#">صوتك مسموع</a>
     </div>
+
+
+    <a href="#" class="button">التعريف بالخدمة</a>
+    <a href="#" class="button-h">سياسة الخدمة</a>
+
+
+    <article>
+      بوابة (صوتك مسموع) هي قناة جديدة هدفها الوصول المباشر والتكامل بين أعمال برنامج حساب المواطن والمستفيدين تعمل على زيادة فاعلية التواصل الإلكتروني ورفع جودة خدمة المستفيدين، كما تحقق هذه البوابة الاستماع لأي شكوى أو ملاحظة حول أعمال البرنامج وخدماتها المختلفة
+    </article>
+
+
+    <div class="sections_box_root">
+      <section id="section_1" style="display:flex;">
+        <h1>
+          <img src="../static/img/logo_4.svg">
+          ارفع طلب على صوتك مسموع
+        </h1>
+        <div>
+          <div class="button" onclick="show_urv_box(2);">متابعة طلب</div>
+          <div class="button-h" onclick="show_urv_box(4);">أنشئ طلب</div>
+        </div>
+      </section>
+
+
+      <section id="section_2" style="display:flex;">
+        <form method="POST">
+          <aside>رقم الطلب *</aside>
+          <input name="subject" type="text" />
+          
+          <aside>رقم الهوية *</aside>
+          <input name="message" type="text" />
+
+          <input class="button" value="تحقق" type="submit" />
+        </form>
+      </section>
+
+
+      <section id="section_4">
+        <form method="POST">
+          <aside>الموضوع *</aside>
+          <input name="name" type="text" />
+          
+          <aside>الاسم *</aside>
+          <input name="mail" type="text" />
+    
+          <aside>الجوال *</aside>
+          <input name="subject" type="text" />
+          <span>رقم الجوال يكون بالصيغة 966500000000</span>
+          
+          <aside>رقم الهوية *</aside>
+          <input name="message" type="text" />
+    
+          <img class="CAPTCHA" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA">
+    
+          <aside>ماهو الرمز الموجود في الصورة ؟</aside>
+          <input name="" type="text" />
+          
+          <input class="button" value="إرسال" type="submit" />
+        </form>
+      </section>
+    </div>
+  
+
+
   <!-- max_width end -->
   </div>
 <!-- app_root end -->

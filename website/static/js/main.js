@@ -97,6 +97,13 @@ function show_calculator() {
   document.getElementById("calculator_root").style.display = "grid";
 }
 
+
+function show_urv_box(id) {
+  document.getElementById("section_2").style.display = "none";
+  document.getElementById("section_4").style.display = "none";
+  document.getElementById("section_" + id).style.display = "flex";
+}
+
 window.addEventListener("load", function() {
 
   document.getElementById("show_side_links")

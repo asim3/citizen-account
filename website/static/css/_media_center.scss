@@ -1,7 +1,46 @@
 .news_root {
   display: flex;
+  flex-direction: row;
 }
 
 .news_root div:first-child {
   flex-basis: 70%;
+}
+
+.media_infograph,
+.media_videos {
+  display: flex;
+  background: $gray;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.infograph_root {
+  display: flex;
+  flex-wrap: wrap;
+  background: $gray;
+}
+
+.infograph_root div {
+  display: inline-block;
+  margin: 2% 1%;
+  width: 30%;
+}
+
+.infograph_root img {
+  width: 100%;
+}
+
+.media_infograph img,
+.media_videos img,
+.media_videos div {
+  display: inline-block;
+  margin: 2%;
+  width: 44%;
+}
+
+@media (max-width: 600px) {
+  .news_root {
+    flex-direction: column;
+  }
 }

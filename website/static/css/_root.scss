@@ -133,6 +133,11 @@ label {
   padding-right: 3rem;
 }
 
+select {
+  @include regular;
+  font-size: 1rem;
+}
+
 input[type=radio] {
   display: none;
 }
@@ -161,20 +166,12 @@ input[type=radio]:checked + label::after {
 
 /* vanilla-js-accordion */
 .js-Accordion-title {
-  border-top: 0;
-  cursor: pointer;
   display: block;
-}
-
-.js-Accordion-title:first-child {
-  border-top: 1px solid #ccc;
+  cursor: pointer;
 }
 
 .js-Accordion-content {
-  border: 1px solid #ccc;
-  border-top: 0;
   height: 0;
-  line-height: 1.5;
   overflow: hidden;
   transition: all .25s linear;
 }

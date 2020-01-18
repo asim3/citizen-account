@@ -111,18 +111,48 @@ h1 img {
   padding-right: 3rem;
 }
 
+.button-h,
 .button {
   @include bold;
   margin: 1rem 0;
   padding: 0.5rem 2rem;
   text-align: center;
   color: $blue!important;
+  border: 0.1rem solid $yellow;
   background: $yellow;
+  cursor: pointer;
+}
+
+.button-h {
+  background: none;
+}
+
+section .button,
+section .button-h {
+  display: inline;
+  padding: 1rem 2rem!important;
 }
 
 .CAPTCHA {
   width: 15rem;
   height: 6rem;
+}
+
+.small_nav {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.small_nav a {
+  display: inline-block;
+  margin: 0.1rem;
+  padding: 0rem 1rem;
+  font-weight: bold;
+  border: 0.1rem solid $yellow;
+}
+
+.small_nav .selected {
+  background: $yellow;
 }
 
 @media (max-width: 1000px) {
