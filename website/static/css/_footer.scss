@@ -8,8 +8,10 @@
 }
 
 .body_root > footer > div {
-  padding: 0 10rem;
+  margin: 0 auto;
+  width: 100%;
   height: 4rem;
+  max-width: 1000px;
   color: $black;
   clear: both;
 }
@@ -20,17 +22,20 @@
 
 .thumb-up {
   @include bg_icon;
-  margin: 0 1rem;
+  margin-right: 1rem;
   padding: 0 1rem;
+  height: 3rem;
   background-image: url(../img/thumb-up.svg);
   cursor: pointer;
 }
 
 .thumb-down {
   @include bg_icon;
-  margin: 0 1rem;
+  margin-right: 1rem;
   padding: 0 1rem;
+  height: 3rem;
   background-image: url(../img/thumb-down.svg);
+  background-position: center bottom;
   cursor: pointer;
 }
 
@@ -117,6 +122,10 @@ footer .android {
     display: none;
   }
 
+  .body_root > footer > div {
+    width: 98%;
+  }
+
   .twitter_text {
     display: block;
   }
@@ -165,11 +174,6 @@ footer .android {
 
   footer .android {
     grid-area: app2;
-  }
-
-  .body_root > footer > div {
-    margin: 0 3rem;
-    padding: 0;
   }
 }
 

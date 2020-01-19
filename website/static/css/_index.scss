@@ -3,7 +3,6 @@ $banner_height: 33rem;
 .banner_root {
   position: relative;
   margin: 2rem auto 4rem auto;
-  padding: 0 3rem;
   width: 100%;
   max-width: 1000px;
   height: $banner_height;
@@ -105,7 +104,8 @@ $banner_height: 33rem;
 .sections_nav {
   @include bg_icon;
   padding-top: 10rem;
-  background-size: 5rem 5rem;
+  background-size: 6rem 6rem;
+  transition: background-size 0.1s ease-in;
 }
 
 .sections_text {
@@ -120,28 +120,25 @@ $banner_height: 33rem;
 
 .sections_nav:nth-child(2) {
   background-image: url(../img/logo_2.svg);
+  background-size: 5rem 5rem;
 }
 
 .sections_nav:nth-child(3) {
   background-image: url(../img/logo_1.svg);
 }
 
-.sections_text:nth-child(1) {
+.sections_nav:hover {
+  background-size: 8rem 8rem;
+}
+
+.sections_text {
   @include bold;
   color: $blue;
   font-size: 2rem;
 }
 
-.sections_text:nth-child(2) {
-  @include bold;
-  color: $green;
-  font-size: 2rem;
-}
-
-.sections_text:nth-child(3) {
-  @include bold;
+.sections_text:hover {
   color: $cyan;
-  font-size: 2rem;
 }
 
 .sections_text::after {
@@ -256,13 +253,35 @@ $banner_height: 33rem;
 
 #section_5 h2 {
   @include bold;
+  font-size: 2rem;
   color: $cyan;
+}
+
+#section_5 p {
+  @include bold;
+  font-size: 1.2rem;
+}
+
+#section_5 {
+  flex-direction: column;
+  text-align: center;
+}
+
+#section_5 > div {
+  text-align: center;
+  float: right;
+  width: 100%;
+  padding: 0;
 }
 
 @media (max-width: 1000px) {
   .sections_box_root section {
     flex-direction: column;
     max-width: 98%;
+  }
+
+  .banner_root {
+    width: 98%;
   }
 
   .section_alert {
