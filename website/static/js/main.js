@@ -106,20 +106,38 @@ function show_urv_box(id) {
 
 window.addEventListener("load", function() {
 
-  document.getElementById("show_side_links")
-    .addEventListener("click", toggle_side_links);
+  const show_side_links = document.getElementById("show_side_links")
+  if(show_side_links) {
+    show_side_links.addEventListener("click", toggle_side_links);
+  }
 
-  document.getElementById("side_links_root")
-    .addEventListener("click", toggle_side_links);
+  const side_links_root = document.getElementById("side_links_root")
+  if(side_links_root) {
+    side_links_root.addEventListener("click", toggle_side_links);
+  }
 
-  document.getElementById("side_links")
-    .addEventListener("click", e => e.stopPropagation());
+  const side_links = document.getElementById("side_links")
+  if(side_links) {
+    side_links.addEventListener("click", e => e.stopPropagation());
+  }
 
-  document.getElementById("side_links_close")
-    .addEventListener("click", function(event) {
+  const side_links_close = document.getElementById("side_links_close")
+  if(side_links_close) {
+    side_links_close.addEventListener("click", function(event) {
       event.stopPropagation();
       toggle_side_links();
     });
+  }
+
+  const banner_right = document.getElementById("banner_right")
+  if(banner_right) {
+    banner_right.addEventListener("click", _ => show_banner_img("next"));
+  }
+
+  const banner_left = document.getElementById("banner_left")
+  if(banner_left) {
+    banner_left.addEventListener("click", _ => show_banner_img("previous"));
+  }
 
   const ln_ar = document.getElementById("ln_ar")
   if(ln_ar) {
@@ -140,10 +158,4 @@ window.addEventListener("load", function() {
   }
   
   setTimeout(add_video_to_home, 0);
-
-  document.getElementById("banner_right")
-    .addEventListener("click", _ => show_banner_img("next"));
-
-  document.getElementById("banner_left")
-    .addEventListener("click", _ => show_banner_img("previous"));
 });

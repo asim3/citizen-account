@@ -343,11 +343,13 @@ header {
   .side_links a {
     display: block;
     font-size: 1.3rem;
-    line-height: 2.7rem;
+    line-height: 4.7rem;
+    height: 5rem;
     border-top: 1px solid #F7F7F7;
   }
   .side_links > nav {
     width: 100%;
+    height: 5rem;
   }
   .side_links nav:hover {
     height: auto;
@@ -1425,7 +1427,7 @@ section .button-h {
   }
   article img + pre,
   article ul {
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 }
 
