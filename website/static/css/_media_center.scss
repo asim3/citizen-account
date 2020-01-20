@@ -31,12 +31,17 @@
   width: 100%;
 }
 
-.media_infograph img,
-.media_videos img,
+.media_infograph div,
 .media_videos div {
   display: inline-block;
   margin: 2%;
   width: 44%;
+}
+
+.media_infograph img,
+.media_videos img {
+  width: 100%;
+
 }
 
 @media (max-width: 600px) {
