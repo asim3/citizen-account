@@ -1,0 +1,1 @@
+aws s3 cp c:\www\citizen-account\website\ s3://web-citizen-account/website/ --acl public-read --recursive
