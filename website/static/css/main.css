@@ -572,7 +572,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -925,7 +925,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
+      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
   grid-gap: 1rem;
 }
 
@@ -1064,7 +1064,7 @@ footer .android {
     grid-area: input_5;
   }
   .calculator_root {
-        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
+        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
     grid-gap: 0;
   }
   .calculator_root input[type=submit],
@@ -1144,8 +1144,7 @@ footer .android {
   display: -ms-flexbox;
   display: flex;
   background: #F7F7F7;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .infograph_root {
@@ -1167,16 +1166,18 @@ footer .android {
   width: 100%;
 }
 
-.media_infograph div,
-.media_videos div {
+.media_infograph a,
+.media_videos a {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   display: inline-block;
-  margin: 2%;
-  width: 44%;
-}
-
-.media_infograph img,
-.media_videos img {
-  width: 100%;
+  margin: 3%;
+  padding: 22%;
+  background-position: center top;
 }
 
 @media (max-width: 600px) {

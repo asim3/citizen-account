@@ -11,8 +11,7 @@
 .media_videos {
   display: flex;
   background: $gray;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .infograph_root {
@@ -31,17 +30,13 @@
   width: 100%;
 }
 
-.media_infograph div,
-.media_videos div {
+.media_infograph a,
+.media_videos a {
+  @include bg_icon;
   display: inline-block;
-  margin: 2%;
-  width: 44%;
-}
-
-.media_infograph img,
-.media_videos img {
-  width: 100%;
-
+  margin: 3%;
+  padding: 22%;
+  background-position: center top;
 }
 
 @media (max-width: 600px) {
