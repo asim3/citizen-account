@@ -50,6 +50,7 @@ aside {
   margin-top: 1rem;
 }
 
+form .button,
 input[type=submit] {
   @include bold;
   color: $blue;
@@ -57,11 +58,18 @@ input[type=submit] {
   background: $yellow;
 }
 
+form select,
+form textarea,
 input[type=email],
+input[type=file],
 input[type=text],
 input[type=number] {
   @include regular;
   width: 100%;
+}
+
+form select {
+  height: 3rem;
 }
 
 h1 {
@@ -134,7 +142,14 @@ section .button-h {
   padding: 1rem 2rem!important;
 }
 
+form .button {
+  display: inline-block;
+  height: 4rem;
+  line-height: 2rem;
+}
+
 .CAPTCHA {
+  display: block;
   width: 15rem;
   height: 6rem;
 }
@@ -157,6 +172,7 @@ section .button-h {
 }
 
 form span {
+  display: block;
   color: gray;
 }
 
@@ -184,13 +200,18 @@ form span {
     clear: both;
   }
 
+  form .button,
   input[type=submit],
   .CAPTCHA {
     float: right;
     margin-right: 30%;
   }
 
+  form select,
+  form textarea,
+  form .button,
   input[type=submit],
+  input[type=file],
   input[type=text],
   input[type=email],
   input[type=number] {
@@ -202,6 +223,11 @@ form span {
   form span {
     float: right;
     padding-right: 30%;
+    clear: both;
+  }
+
+  form b {
+    float: right;
   }
 
   .title br {

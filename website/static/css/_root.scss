@@ -94,15 +94,11 @@ a {
 }
 
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
 @mixin fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
@@ -174,8 +170,17 @@ input[type=radio]:checked + label::after {
   overflow: hidden;
   transition: all .25s linear;
 }
-/* vanilla-js-accordion */
+/* end vanilla-js-accordion */
 
+@keyframes spinner-grow {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.loading {
+  opacity: 0;
+  animation: spinner-grow 0.75s linear infinite;
+}
 
 @media (max-width: 1000px) {
   :root {

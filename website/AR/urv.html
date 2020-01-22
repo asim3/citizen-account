@@ -84,6 +84,8 @@
 
       <section id="section_2" style="display:flex;">
         <form method="POST">
+          <b>لمتابعة طلبك المقدم ، فضلا أدخل التالي :</b>
+
           <aside>رقم الطلب *</aside>
           <input name="subject" type="text" />
           
@@ -109,7 +111,28 @@
           
           <aside>رقم الهوية *</aside>
           <input name="message" type="text" />
-    
+
+          <aside>نوع الطلب *</aside>
+          <select name="section">
+            <option value="All" selected="selected">اختيار نوع الطلب</option>
+            <option value="1">إيقاف الحساب</option>
+            <option value="2">التسجيل</option>
+            <option value="3">الأهلية</option>
+            <option value="4">المدفوعات</option>
+            <option value="5">شكوى على موظف</option>
+          </select>
+          
+
+          <aside>شرح الطلب *</aside>
+          <textarea></textarea>
+
+          <aside>المرفقات</aside>
+          <input name="message" type="file" />
+          <span>يجب أن يكون حجم الملفات أقل من 2 ميغابايت.</span>
+          <span>أنواع الملفات المسموح بها: jpeg png doc docx pdf jpg</span>
+          <span class="button" onclick="this.className='button loading'">ارفع</span>
+          
+
           <img class="CAPTCHA" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA">
     
           <aside>ماهو الرمز الموجود في الصورة ؟</aside>

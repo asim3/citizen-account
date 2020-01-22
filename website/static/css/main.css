@@ -65,9 +65,9 @@ a {
 
 .fade {
   -webkit-animation-name: fade;
+          animation-name: fade;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -160,7 +160,30 @@ input[type=radio]:checked + label::after {
   transition: all .25s linear;
 }
 
-/* vanilla-js-accordion */
+/* end vanilla-js-accordion */
+@-webkit-keyframes spinner-grow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes spinner-grow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  opacity: 0;
+  -webkit-animation: spinner-grow 0.75s linear infinite;
+          animation: spinner-grow 0.75s linear infinite;
+}
+
 @media (max-width: 1000px) {
   :root {
     font-size: 10px;
@@ -568,7 +591,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -813,9 +836,9 @@ footer .android {
 
 .sections_box_root section {
   -webkit-animation-name: fade;
+          animation-name: fade;
   -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+          animation-duration: 1.5s;
   display: none;
   margin: 0 auto;
   padding: 2rem;
@@ -921,7 +944,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
+      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
   grid-gap: 1rem;
 }
 
@@ -1060,7 +1083,7 @@ footer .android {
     grid-area: input_5;
   }
   .calculator_root {
-        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
+        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
     grid-gap: 0;
   }
   .calculator_root input[type=submit],
@@ -1331,6 +1354,7 @@ aside {
   margin-top: 1rem;
 }
 
+form .button,
 input[type=submit] {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
   color: #003C77;
@@ -1338,11 +1362,18 @@ input[type=submit] {
   background: #BFD145;
 }
 
+form select,
+form textarea,
 input[type=email],
+input[type=file],
 input[type=text],
 input[type=number] {
   font-family: cairo-regular, TimesNewRoman, sans-serif;
   width: 100%;
+}
+
+form select {
+  height: 3rem;
 }
 
 h1 {
@@ -1415,7 +1446,14 @@ section .button-h {
   padding: 1rem 2rem !important;
 }
 
+form .button {
+  display: inline-block;
+  height: 4rem;
+  line-height: 2rem;
+}
+
 .CAPTCHA {
+  display: block;
   width: 15rem;
   height: 6rem;
 }
@@ -1438,6 +1476,7 @@ section .button-h {
 }
 
 form span {
+  display: block;
   color: gray;
 }
 
@@ -1461,12 +1500,17 @@ form span {
     width: 30%;
     clear: both;
   }
+  form .button,
   input[type=submit],
   .CAPTCHA {
     float: right;
     margin-right: 30%;
   }
+  form select,
+  form textarea,
+  form .button,
   input[type=submit],
+  input[type=file],
   input[type=text],
   input[type=email],
   input[type=number] {
@@ -1477,6 +1521,10 @@ form span {
   form span {
     float: right;
     padding-right: 30%;
+    clear: both;
+  }
+  form b {
+    float: right;
   }
   .title br {
     display: block;
