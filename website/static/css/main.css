@@ -60,7 +60,6 @@ a {
 
 .max_width {
   margin: 0 auto;
-  padding: 2rem;
   width: 1000px;
 }
 
@@ -167,16 +166,13 @@ input[type=radio]:checked + label::after {
     font-size: 10px;
   }
   .max_width {
-    width: 100vw;
+    width: 98%;
   }
 }
 
 @media (max-width: 600px) {
   :root {
     font-size: 8px;
-  }
-  .max_width {
-    width: 100vw;
   }
 }
 
@@ -1357,6 +1353,7 @@ h1 {
 
 h3 {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
+  padding: 2rem;
   font-size: 1.5rem;
   line-height: 5rem;
 }
@@ -1440,6 +1437,10 @@ section .button-h {
   background: #BFD145;
 }
 
+form span {
+  color: gray;
+}
+
 @media (max-width: 1000px) {
   .title {
     margin: 2rem 10%;
@@ -1472,6 +1473,10 @@ section .button-h {
     float: right;
     margin-top: 1rem;
     width: 70%;
+  }
+  form span {
+    float: right;
+    padding-right: 30%;
   }
   .title br {
     display: block;

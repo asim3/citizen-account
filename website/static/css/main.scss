@@ -72,6 +72,7 @@ h1 {
 
 h3 {
   @include bold;
+  padding: 2rem;
   font-size: 1.5rem;
   line-height: 5rem;
 }
@@ -155,6 +156,10 @@ section .button-h {
   background: $yellow;
 }
 
+form span {
+  color: gray;
+}
+
 @media (max-width: 1000px) {
   .title {
     margin: 2rem 10%;
@@ -192,6 +197,11 @@ section .button-h {
     float: right;
     margin-top: 1rem;
     width: 70%;
+  }
+
+  form span {
+    float: right;
+    padding-right: 30%;
   }
 
   .title br {

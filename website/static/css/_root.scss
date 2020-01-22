@@ -90,7 +90,6 @@ a {
 
 .max_width {
   margin: 0 auto;
-  padding: 2rem;
   width: 1000px;
 }
 
@@ -184,7 +183,7 @@ input[type=radio]:checked + label::after {
   }
 
   .max_width {
-    width: 100vw;
+    width: 98%;
   }
 }
 
@@ -192,10 +191,6 @@ input[type=radio]:checked + label::after {
 @media (max-width: 600px) {
   :root {
     font-size: 8px;
-  }
-  
-  .max_width {
-    width: 100vw;
   }
 }
 

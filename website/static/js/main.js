@@ -98,7 +98,22 @@ function show_calculator() {
 }
 
 
+function show_urv_title(id) {
+  document.getElementById("btn_title_1").className = "button-h";
+  document.getElementById("btn_title_3").className = "button-h";
+  document.getElementById("btn_title_" + id).className = "button";
+
+  document.getElementById("title_1").style.display = "none";
+  document.getElementById("title_3").style.display = "none";
+  document.getElementById("title_" + id).style.display = "flex";
+}
+
+
 function show_urv_box(id) {
+  document.getElementById("btn_sec_2").className = "button-h";
+  document.getElementById("btn_sec_4").className = "button-h";
+  document.getElementById("btn_sec_" + id).className = "button";
+
   document.getElementById("section_2").style.display = "none";
   document.getElementById("section_4").style.display = "none";
   document.getElementById("section_" + id).style.display = "flex";

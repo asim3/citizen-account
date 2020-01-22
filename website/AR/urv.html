@@ -51,16 +51,18 @@
     </div>
 
 
-    <div class="button" style="display: inline;">التعريف بالخدمة</div>
-    <div class="button-h" style="display: inline;">سياسة الخدمة</div>
+    <div id="btn_title_1" class="button" style="display: inline;"
+      onclick="show_urv_title(1);">التعريف بالخدمة</div>
+    <div id="btn_title_3" class="button-h" style="display: inline;"
+      onclick="show_urv_title(3);">سياسة الخدمة</div>
 
 
-    <article id="">
+    <article id="title_1">
       بوابة (صوتك مسموع) هي قناة جديدة هدفها الوصول المباشر والتكامل بين أعمال برنامج حساب المواطن والمستفيدين تعمل على زيادة فاعلية التواصل الإلكتروني ورفع جودة خدمة المستفيدين، كما تحقق هذه البوابة الاستماع لأي شكوى أو ملاحظة حول أعمال البرنامج وخدماتها المختلفة
     </article>
 
 
-    <article>
+    <article id="title_3" style="display: none;">
       يمكن لمستفيدين حساب المواطن رفع طلب عند مواجة اي مشكلة حول الخدمات المقدمة، تهدف هذه الخدمة إلى معالجة الطلبات الواردة من خلال دراستها والرجوع للمستفيد بنتائج الطلب المقدم من خلال التواصل المباشر، كما يمكن لمقدم الطلب متابعة حالة الطلب عبر هذه الخدمة.
     </article>
 
@@ -72,8 +74,10 @@
           ارفع طلب على صوتك مسموع
         </h1>
         <div>
-          <div class="button" onclick="show_urv_box(2);">متابعة طلب</div>
-          <div class="button-h" onclick="show_urv_box(4);">أنشئ طلب</div>
+          <div id="btn_sec_2" class="button" 
+            onclick="show_urv_box(2);">متابعة طلب</div>
+          <div id="btn_sec_4" class="button-h" 
+            onclick="show_urv_box(4);">أنشئ طلب</div>
         </div>
       </section>
 
