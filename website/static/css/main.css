@@ -1189,6 +1189,19 @@ footer .android {
   height: 17rem;
 }
 
+@media (max-width: 1000px) {
+  .news_root {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .media_videos > div > * {
+    width: 39vw;
+    height: 23vw;
+  }
+}
+
 @media (max-width: 600px) {
   .news_root {
     -webkit-box-orient: vertical;
