@@ -1144,7 +1144,7 @@ footer .android {
   display: -ms-flexbox;
   display: flex;
   background: #F7F7F7;
-  overflow: hidden;
+  overflow: scroll hidden;
 }
 
 .infograph_root {
@@ -1166,8 +1166,7 @@ footer .android {
   width: 100%;
 }
 
-.media_infograph a,
-.media_videos a {
+.media_infograph a {
   width: 2rem;
   height: 2rem;
   background-image: url(../img/favicon.png);
@@ -1178,6 +1177,16 @@ footer .android {
   margin: 3%;
   padding: 22%;
   background-position: center top;
+}
+
+.media_videos div {
+  margin: 3%;
+  width: 44%;
+}
+
+.media_videos > div > * {
+  width: 30rem;
+  height: 17rem;
 }
 
 @media (max-width: 600px) {
