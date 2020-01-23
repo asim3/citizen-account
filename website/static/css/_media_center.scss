@@ -48,6 +48,22 @@
   height: 17rem;
 }
 
+.media_details {
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 100%;
+  background: $gray;
+}
+
+.media_details img {
+  float: left;
+  margin: 1rem;
+  width: 30vw;
+  height: 30vw;
+  max-width: 30rem;
+  max-height: 30rem;
+}
+
 @media (max-width: 1000px) {
   .news_root {
     flex-direction: column;

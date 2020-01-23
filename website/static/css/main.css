@@ -591,7 +591,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -944,7 +944,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
+      grid-template-areas: 'text_1 text_1 text_1 text_2 text_2 text_2' 'input_1 input_1 input_1 input_2 input_2 input_2' 'submit_1 . . text_3 text_4 text_5' '. . . input_3 input_4 input_5';
   grid-gap: 1rem;
 }
 
@@ -1049,7 +1049,8 @@ footer .android {
   }
   .submit_1 {
     -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
     grid-area: submit_1;
   }
   .text_3 {
@@ -1083,13 +1084,16 @@ footer .android {
     grid-area: input_5;
   }
   .calculator_root {
-        grid-template-areas: 'text_1 input_1 input_1' 'submit_1 . .' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
+        grid-template-areas: 'text_1 input_1 input_1' '. submit_1 submit_1' 'text_2 input_2 input_2' 'text_3 text_4 text_5' 'input_3 input_4 input_5';
     grid-gap: 0;
   }
   .calculator_root input[type=submit],
   .calculator_root input[type=text],
   .calculator_root input[type=number] {
     width: 90%;
+  }
+  .submit_1 {
+    margin-right: 0 !important;
   }
   #section_5 {
     -webkit-box-orient: vertical;
@@ -1206,6 +1210,22 @@ footer .android {
 .media_videos > div > * {
   width: 30rem;
   height: 17rem;
+}
+
+.media_details {
+  margin-right: 1rem;
+  padding: 1rem;
+  width: 100%;
+  background: #F7F7F7;
+}
+
+.media_details img {
+  float: left;
+  margin: 1rem;
+  width: 30vw;
+  height: 30vw;
+  max-width: 30rem;
+  max-height: 30rem;
 }
 
 @media (max-width: 1000px) {
