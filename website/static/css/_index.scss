@@ -33,6 +33,8 @@ $banner_height: 33rem;
   top: 50%;
   right: 4rem;
   background-image: url(../img/banner_right.svg);
+  box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
@@ -42,6 +44,8 @@ $banner_height: 33rem;
   top: 50%;
   left: 4rem;
   background-image: url(../img/banner_left.svg);
+  box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
 }
 
@@ -85,7 +89,6 @@ $banner_height: 33rem;
   flex-grow: 1;
   padding: 2rem;
 }
-
 
 .sections_nav_root {
   display: flex;
@@ -203,30 +206,52 @@ $banner_height: 33rem;
   grid-gap: 1rem;
 }
 
-.text_1   { grid-area: text_1; }
-.input_1  { grid-area: input_1; }
-.text_2   { grid-area: text_2; }
-.input_2  { grid-area: input_2; }
-.submit_1 { grid-area: submit_1; }
-.text_3   { grid-area: text_3; }
-.text_4   { grid-area: text_4; }
-.text_5   { grid-area: text_5; }
-.input_3  { grid-area: input_3; }
-.input_4  { grid-area: input_4; }
-.input_5  { grid-area: input_5; }
+.text_1 {
+  grid-area: text_1;
+}
+.input_1 {
+  grid-area: input_1;
+}
+.text_2 {
+  grid-area: text_2;
+}
+.input_2 {
+  grid-area: input_2;
+}
+.submit_1 {
+  grid-area: submit_1;
+}
+.text_3 {
+  grid-area: text_3;
+}
+.text_4 {
+  grid-area: text_4;
+}
+.text_5 {
+  grid-area: text_5;
+}
+.input_3 {
+  grid-area: input_3;
+}
+.input_4 {
+  grid-area: input_4;
+}
+.input_5 {
+  grid-area: input_5;
+}
 
 .calculator_root {
   display: none;
-  grid-template-areas: 
-    'text_1 text_1 text_1 text_2 text_2 text_2'
-    'input_1 input_1 input_1 input_2 input_2 input_2'
-    'submit_1 . . text_3 text_4 text_5'
-    '. . . input_3 input_4 input_5';
+  grid-template-areas:
+    "text_1 text_1 text_1 text_2 text_2 text_2"
+    "input_1 input_1 input_1 input_2 input_2 input_2"
+    "submit_1 . . text_3 text_4 text_5"
+    ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
 .calculator_root input {
-  height: 3rem;;
+  height: 3rem;
 }
 
 .video_root {
@@ -295,43 +320,65 @@ $banner_height: 33rem;
     padding: 1rem 0;
   }
 
-  .text_1   { grid-area: text_1; }
-  .input_1  { grid-area: input_1; }
-  .text_2   { grid-area: text_2; }
-  .input_2  { grid-area: input_2; }
-  .submit_1 { grid-area: submit_1; }
-  .text_3   { grid-area: text_3; }
-  .text_4   { grid-area: text_4; }
-  .text_5   { grid-area: text_5; }
-  .input_3  { grid-area: input_3; }
-  .input_4  { grid-area: input_4; }
-  .input_5  { grid-area: input_5; }
-  
+  .text_1 {
+    grid-area: text_1;
+  }
+  .input_1 {
+    grid-area: input_1;
+  }
+  .text_2 {
+    grid-area: text_2;
+  }
+  .input_2 {
+    grid-area: input_2;
+  }
+  .submit_1 {
+    grid-area: submit_1;
+  }
+  .text_3 {
+    grid-area: text_3;
+  }
+  .text_4 {
+    grid-area: text_4;
+  }
+  .text_5 {
+    grid-area: text_5;
+  }
+  .input_3 {
+    grid-area: input_3;
+  }
+  .input_4 {
+    grid-area: input_4;
+  }
+  .input_5 {
+    grid-area: input_5;
+  }
+
   .calculator_root {
-    grid-template-areas: 
-      'text_1 input_1 input_1'
-      '. submit_1 submit_1'
-      'text_2 input_2 input_2'
-      'text_3 text_4 text_5'
-      'input_3 input_4 input_5';
+    grid-template-areas:
+      "text_1 input_1 input_1"
+      ". submit_1 submit_1"
+      "text_2 input_2 input_2"
+      "text_3 text_4 text_5"
+      "input_3 input_4 input_5";
     grid-gap: 0;
   }
 
-  .calculator_root input[type=submit],
-  .calculator_root input[type=text],
-  .calculator_root input[type=number] {
+  .calculator_root input[type="submit"],
+  .calculator_root input[type="text"],
+  .calculator_root input[type="number"] {
     width: 90%;
   }
 
   .submit_1 {
-    margin-right: 0!important;
+    margin-right: 0 !important;
   }
 
   #section_5 {
     flex-direction: column;
     text-align: center;
   }
-  
+
   #section_5 > div {
     text-align: center;
     float: right;
