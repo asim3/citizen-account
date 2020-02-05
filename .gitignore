@@ -1,0 +1,13 @@
+
+*.log
+*.pot
+*.pyc
+__pycache__
+*.sqlite3
+local_settings.py
+staticfiles
+static_collected
+media
+MEDIA_ROOT
+.venv
+__MACOSX
