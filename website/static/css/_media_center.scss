@@ -11,7 +11,7 @@
 .media_videos {
   display: flex;
   background: $gray;
-  overflow: scroll hidden;
+  overflow: hidden;
 }
 
 .infograph_root {
@@ -46,6 +46,7 @@
 .media_videos > div > * {
   width: 30rem;
   height: 17rem;
+  max-width: none;
 }
 
 .media_details {

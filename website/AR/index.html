@@ -1,208 +1,219 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>حساب المواطن</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="../static/css/main.css">
+  <link rel="stylesheet" href="../static/bootstrap-4.4.1-dist/css/bootstrap.min.css">
   <link rel="icon" href="../static/img/favicon.png">
   <script src="../static/js/main.js"></script>
 </head>
 
 
-<body><div class="body_root">
-<header class="no_select">
-  <div id="show_side_links" class="header_menu"></div>
-  
-  <div class="header_logo"></div>
-  
-  <a href="#" class="header_login">الدخول/التسجيل</a>
-  <a href="#" class="header_search">بحث</a>
+<body>
+  <div class="body_root">
+    <header class="no_select">
+      <div id="show_side_links" class="header_menu"></div>
 
-  <div id="side_links_root" class="side_links_root">
-    <div id="side_links_close" class="side_links_close"></div>
-    
-    <div id="side_links" class="side_links">
-      <a href="./index.html" class="selected">الرئيسية</a>
-      <a href="./about.html">عن حساب المواطن</a>
-      <nav>
-        <a href="./policies.html">السياسات</a>
-        <a href="./terms.html">مصطلحات تهمك</a>
-        <a href="./terms.html">مصطلحات تهمك</a>
-        <a href="./terms.html">مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك</a>
-        <a href="./terms.html">مصطلحات تهمك</a>
-      </nav>
-      <a href="./urv.html">صوتك مسموع</a>
-      <a href="./media_center.html">المركز الإعلامي</a>
-      <nav>
-        <a href="./faq.html">الأسئلة الشائعة</a>
-        <a href="./userGuide.html">دليل المستخدم</a>
-      </nav>
-      <a href="./contact.html">اتصل بنا</a>
-    </div>
-  </div>
-</header>
+      <div class="header_logo"></div>
 
+      <a href="#" class="header_login">الدخول/التسجيل</a>
+      <a href="#" class="header_search">بحث</a>
 
-<div class="app_root">
-  <div class="banner_root">
-    <div class="banner_img">
-      <div id="banner_img_1" class="fade active"></div>
-      <div id="banner_img_2" class="fade"></div>
-      <div id="banner_img_3" class="fade"></div>
-      <div id="banner_img_4" class="fade"></div>
-    </div>
+      <div id="side_links_root" class="side_links_root">
+        <div id="side_links_close" class="side_links_close"></div>
 
-    <div id="banner_right" class="banner_right"></div>
-    <div id="banner_left" class="banner_left"></div>
-  </div>
-
-  <div class="sections_nav_root">
-    <div class="sections_nav" onclick="show_sections_box([5]);"></div>
-    <div class="sections_nav" onclick="show_sections_box([4]);"></div>
-    <div class="sections_nav" onclick="show_sections_box([1,2]);"></div>
-  </div>
-
-  <div class="sections_nav_root">
-    <div class="sections_text" onclick="show_sections_box([5]);">عن البرنامج</div>
-    <div class="sections_text" onclick="show_sections_box([4]);">المركز الإعلامي</div>
-    <div class="sections_text sections_nav_selected" 
-      onclick="show_sections_box([1,2]);">الحاسبة التقديرية</div>
-  </div>
-
-
-  <div class="sections_box_root">
-    <section id="section_1" style="display:flex;flex-wrap: wrap;">
-      <div class="home_inputs_root">
-        <b style="grid-column: 1 / 4;">يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة البرنامج فقط قم بملء الحقول لتظهر لك النتيجة</b>
-        <span style="grid-column: 1;">هل أنت مسجل في برنامج حساب المواطن ؟</span>
-        <input type="radio" id="radio_1" name="option_1" onchange="show_calculator()" />
-        <label for="radio_1">مستقل</label>
-
-        <input type="radio" id="radio_2" name="option_1" onchange="show_calculator()" />
-        <label for="radio_2">رب أسرة</label>
-        <span style="grid-column: 1;">هل أنت؟	</span>
-        <input type="radio" id="radio_3" name="option_2" onchange="show_calculator()" />
-        <label for="radio_3">مستقل</label>
-
-        <input type="radio" id="radio_4" name="option_2" onchange="show_calculator()" />
-        <label for="radio_4">رب أسرة</label>
-      </div>
-      <div>
-        <div class="section_alert">
-          تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين)
+        <div id="side_links" class="side_links">
+          <a href="./index.html" class="selected">الرئيسية</a>
+          <a href="./about.html">عن حساب المواطن</a>
+          <nav>
+            <a href="./policies.html">السياسات</a>
+            <a href="./terms.html">مصطلحات تهمك</a>
+            <a href="./terms.html">مصطلحات تهمك</a>
+            <a href="./terms.html">مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك</a>
+            <a href="./terms.html">مصطلحات تهمك</a>
+          </nav>
+          <a href="./urv.html">صوتك مسموع</a>
+          <a href="./media_center.html">المركز الإعلامي</a>
+          <nav>
+            <a href="./faq.html">الأسئلة الشائعة</a>
+            <a href="./userGuide.html">دليل المستخدم</a>
+          </nav>
+          <a href="./contact.html">اتصل بنا</a>
         </div>
       </div>
-      <div id="calculator_root" class="calculator_root">
-          <span class="text_1">أدخل مجموع دخلك</span>
-          <input class="input_1" type="number" />
-          <span class="text_2">مبلغ الدعم التقديري</span>
-          
-          <input class="input_2" type="number" disabled />
-          <input class="submit_1" type="submit" value="احسب" />
-          
-          <span class="text_3">عدد أفراد الأسرة</span>
-          <span class="text_4">حد الإعفاء من التناقص</span>
-          <span class="text_5">الحد المانع</span>
+    </header>
 
-          <input class="input_3" type="number" disabled />
-          <input class="input_4" type="number" disabled />
-          <input class="input_5" type="number" disabled />
+
+    <div class="app_root">
+      <div class="banner_root">
+        <div class="banner_img">
+          <div id="banner_img_1" class="fade active"></div>
+          <div id="banner_img_2" class="fade"></div>
+          <div id="banner_img_3" class="fade"></div>
+          <div id="banner_img_4" class="fade"></div>
+        </div>
+
+        <div id="banner_right" class="banner_right"></div>
+        <div id="banner_left" class="banner_left"></div>
       </div>
-    </section>
+
+      <div class="sections_nav_root">
+        <div class="sections_nav" onclick="show_sections_box([5]);"></div>
+        <div class="sections_nav" onclick="show_sections_box([4]);"></div>
+        <div class="sections_nav" onclick="show_sections_box([1,2]);"></div>
+      </div>
+
+      <div class="sections_nav_root">
+        <div class="sections_text" onclick="show_sections_box([5]);">عن البرنامج</div>
+        <div class="sections_text" onclick="show_sections_box([4]);">المركز الإعلامي</div>
+        <div class="sections_text sections_nav_selected" onclick="show_sections_box([1,2]);">الحاسبة التقديرية</div>
+      </div>
 
 
-    <section id="section_2"  style="display:flex;" onclick="show_sections_box([1,2,3]);">
-      <h1 style="cursor: pointer;">
-        <img src="../static/img/logo_4.svg">
-        طريقة استخدام الآلة الحاسبة التقديرية
-      </h1>
-    </section>
+      <div class="sections_box_root">
+        <section id="section_1" style="display:flex;flex-wrap: wrap;">
+          <div class="home_inputs_root">
+            <b style="grid-column: 1 / 4;">يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة البرنامج فقط قم بملء الحقول
+              لتظهر لك النتيجة</b>
+            <span style="grid-column: 1;">هل أنت مسجل في برنامج حساب المواطن ؟</span>
+            <input type="radio" id="radio_1" name="option_1" onchange="show_calculator()" />
+            <label for="radio_1">مستقل</label>
+
+            <input type="radio" id="radio_2" name="option_1" onchange="show_calculator()" />
+            <label for="radio_2">رب أسرة</label>
+            <span style="grid-column: 1;">هل أنت؟ </span>
+            <input type="radio" id="radio_3" name="option_2" onchange="show_calculator()" />
+            <label for="radio_3">مستقل</label>
+
+            <input type="radio" id="radio_4" name="option_2" onchange="show_calculator()" />
+            <label for="radio_4">رب أسرة</label>
+          </div>
+          <div>
+            <div class="section_alert">
+              تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو
+              معالين)
+            </div>
+          </div>
+          <div id="calculator_root" class="calculator_root">
+            <span class="text_1">أدخل مجموع دخلك</span>
+            <input class="input_1" type="number" />
+            <span class="text_2">مبلغ الدعم التقديري</span>
+
+            <input class="input_2" type="number" disabled />
+            <input class="submit_1" type="submit" value="احسب" />
+
+            <span class="text_3">عدد أفراد الأسرة</span>
+            <span class="text_4">حد الإعفاء من التناقص</span>
+            <span class="text_5">الحد المانع</span>
+
+            <input class="input_3" type="number" disabled />
+            <input class="input_4" type="number" disabled />
+            <input class="input_5" type="number" disabled />
+          </div>
+        </section>
 
 
-    <section id="section_3">
-      <img class="video_root" src="../static/img/home_banner_1.jpg" />
-    </section>
+        <section id="section_2" style="display:flex;" onclick="show_sections_box([1,2,3]);">
+          <h1 style="cursor: pointer;">
+            <img src="../static/img/logo_4.svg">
+            طريقة استخدام الآلة الحاسبة التقديرية
+          </h1>
+        </section>
 
 
-    <section id="section_4">
-      <article>
-        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
-        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
-        <a href="#">اقرأ المزيد</a>
-      </article>
-      <article>
-        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
-        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
-        <a href="#">اقرأ المزيد</a>
-      </article>
-      <article>
-        <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
-        أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
-        <a href="#">اقرأ المزيد</a>
-      </article>
-    </section>
+        <section id="section_3">
+          <iframe class="video_root" src="https://www.youtube.com/embed/-d3Dd3XKmfI?rel=0" gesture="media"
+            allow="encrypted-media" allowfullscreen="" width="100%" height="315" frameborder="0">
+          </iframe>
+        </section>
 
 
-    <section id="section_5">
+        <section id="section_4">
+          <article>
+            <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+            <a href="#">اقرأ المزيد</a>
+          </article>
+          <article>
+            <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+            <a href="#">اقرأ المزيد</a>
+          </article>
+          <article>
+            <b>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</b><br>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+            <a href="#">اقرأ المزيد</a>
+          </article>
+        </section>
+
+
+        <section id="section_5">
+          <div>
+            <img src="../static/img/logo_51.svg" />
+            <h2>عن البرنامج</h2>
+            <p>إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع الحكومية بأسلوب يضمن تحقيق كفاءة عالية.
+            </p>
+          </div>
+          <div>
+            <img src="../static/img/logo_52.svg" />
+            <h2>أهداف البرنامج</h2>
+            <p>يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع
+              ترشيد الإستهلاك.</p>
+          </div>
+          <div>
+            <img src="../static/img/logo_53.svg" />
+            <h2>المبادئ التوجيهية</h2>
+            <p>توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم
+              قبل أي تغير في أسعار الطاقة.</p>
+          </div>
+          <div>
+            <img src="../static/img/logo_54.svg" />
+            <h2>الرؤية المستقبيلة</h2>
+            <p>أن يكون حساب المواطن بوابة شاملة لكافة برامج الدعم الحكومي.</p>
+          </div>
+        </section>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- app_root end -->
+    </div>
+
+
+    <footer>
+      <div></div>
       <div>
-        <img src="../static/img/logo_51.svg" />
-        <h2>عن البرنامج</h2>
-        <p>إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع الحكومية بأسلوب يضمن تحقيق كفاءة عالية.</p>
+        <div class="twitter_id">@citizenaccount</div>
+        <div class="twitter_text_big">يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات والمواعيد</div>
+        <div class="twitter_text">تابعنا لمزيد من الأخبار</div>
+        <div class="twitter_icon"></div>
+        <div class="youtube"></div>
       </div>
-      <div>
-        <img src="../static/img/logo_52.svg" />
-        <h2>أهداف البرنامج</h2>
-        <p>يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع ترشيد الإستهلاك.</p>
-      </div>
-      <div>
-        <img src="../static/img/logo_53.svg" />
-        <h2>المبادئ التوجيهية</h2>
-        <p>توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم قبل أي تغير في أسعار الطاقة.</p>
-      </div>
-      <div>
-        <img src="../static/img/logo_54.svg" />
-        <h2>الرؤية المستقبيلة</h2>
-        <p>أن يكون حساب المواطن بوابة شاملة لكافة برامج الدعم الحكومي.</p>
-      </div>
-    </section>
+
+      <footer>
+        <div>جميع الحقوق محفوظة © 2020</div>
+        <div>الاسئلة الشائعة</div>
+        <div>سياسة الخصوصية</div>
+        <div>الشروط والأحكام</div>
+        <a href="#android" class="android"></a>
+        <a href="#apple" class="apple"></a>
+      </footer>
+    </footer>
+
+    <div class="fixed_massege"></div>
+
   </div>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-  <!-- app_root end -->
-</div>
-
-
-<footer>
-  <div></div>
-  <div>
-    <div class="twitter_id">@citizenaccount</div>
-    <div class="twitter_text_big">يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات والمواعيد</div>
-    <div class="twitter_text">تابعنا لمزيد من الأخبار</div>
-    <div class="twitter_icon"></div>
-    <div class="youtube"></div>
-  </div>
-  
-  <footer>
-    <div>جميع الحقوق محفوظة © 2020</div>
-    <div>الاسئلة الشائعة</div>
-    <div>سياسة الخصوصية</div>
-    <div>الشروط والأحكام</div>
-    <a href="#android" class="android"></a>
-    <a href="#apple" class="apple"></a>
-  </footer>
-</footer> 
-
-<div class="fixed_massege"></div>
-
-</div></body>
 </html>

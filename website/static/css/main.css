@@ -965,6 +965,7 @@ footer .android {
 .video_root {
   margin: 0 auto;
   width: 80%;
+  height: 33rem;
 }
 
 #section_5 {
@@ -1034,6 +1035,10 @@ footer .android {
 @media (max-width: 600px) {
   .sections_box_root section div {
     padding: 1rem 0;
+  }
+  .video_root {
+    width: 100%;
+    height: 24rem;
   }
   .text_1 {
     -ms-grid-row: 1;
@@ -1177,7 +1182,7 @@ footer .android {
   display: -ms-flexbox;
   display: flex;
   background: #F7F7F7;
-  overflow: scroll hidden;
+  overflow: hidden;
 }
 
 .infograph_root {
@@ -1220,6 +1225,7 @@ footer .android {
 .media_videos > div > * {
   width: 30rem;
   height: 17rem;
+  max-width: none;
 }
 
 .media_details {
