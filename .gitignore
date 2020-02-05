@@ -11,3 +11,4 @@ media
 MEDIA_ROOT
 .venv
 __MACOSX
+~$*.xlsx
