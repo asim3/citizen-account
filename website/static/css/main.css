@@ -1111,7 +1111,7 @@ footer .android {
 }
 
 .download {
-  margin: 5%;
+  margin: 5% 5% 0px 5%;
   width: 40%;
   float: right;
 }
