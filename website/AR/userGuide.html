@@ -1,211 +1,230 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>حساب المواطن</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="../static/css/main.css"><link rel="stylesheet" href="../static/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/main.css">
   <link rel="icon" href="../static/img/favicon.png">
   <script src="../static/js/main.js"></script>
 </head>
 
 
-<body><div class="body_root">
-<header class="no_select">
-  <div id="show_side_links" class="header_menu"></div>
-  
-  <div class="header_logo"></div>
-  
-  <a href="#" class="header_login">الدخول/التسجيل</a>
-  <a href="#" class="header_search">بحث</a>
+<body>
+  <div class="body_root">
+    <header class="no_select">
+      <div id="show_side_links" class="header_menu"></div>
 
-  <div id="side_links_root" class="side_links_root">
-    <div id="side_links_close" class="side_links_close"></div>
-    
-    <div id="side_links" class="side_links">
-      <a href="./index.html">الرئيسية</a>
-      <a href="./about.html">عن حساب المواطن</a>
-      <nav>
-        <a href="./policies.html">السياسات</a>
-        <a href="./terms.html">مصطلحات تهمك</a>
-      </nav>
-      <a href="./urv.html">صوتك مسموع</a>
-      <a href="./media_center.html">المركز الإعلامي</a>
-      <nav>
-        <a href="./faq.html" class="selected">الأسئلة الشائعة</a>
-        <a href="./userGuide.html">دليل المستخدم</a>
-      </nav>
-      <a href="./contact.html">اتصل بنا</a>
+      <div class="header_logo"></div>
+
+      <a href="#" class="header_login">الدخول/التسجيل</a>
+      <a href="#" class="header_search">بحث</a>
+
+      <div id="side_links_root" class="side_links_root">
+        <div id="side_links_close" class="side_links_close"></div>
+
+        <div id="side_links" class="side_links">
+          <a href="./index.html">الرئيسية</a>
+          <a href="./about.html">عن حساب المواطن</a>
+          <nav>
+            <a href="./policies.html">السياسات</a>
+            <a href="./terms.html">مصطلحات تهمك</a>
+          </nav>
+          <a href="./urv.html">صوتك مسموع</a>
+          <a href="./media_center.html">المركز الإعلامي</a>
+          <nav>
+            <a href="./faq.html" class="selected">الأسئلة الشائعة</a>
+            <a href="./userGuide.html">دليل المستخدم</a>
+          </nav>
+          <a href="./contact.html">اتصل بنا</a>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="app_root">
+      <div class="max_width">
+        <div class="title">
+          <span>دليل المستخدم</span>
+          <br>
+          <a href="./">الرئيسية</a>
+          <a href="./faq.html">الأسئلة الشائعة</a>
+          <a href="#">دليل المستخدم</a>
+        </div>
+
+
+        <div class="flex">
+          <div class="faq_side_nav">
+            <a href="#">دليل المستخدم</a>
+            <a href="#">التسجيل</a>
+            <a href="#">الأهلية</a>
+            <a href="#">الإستحقاق</a>
+          </div>
+
+
+          <div id="question_root" class="question_root">
+
+            <form class="question_post" method="POST">
+              <aside>القسم</aside>
+              <aside>بحث</aside>
+              <i></i>
+              <i></i>
+
+
+              <select name="section">
+                <option value="15" selected="selected">دليل المستخدم</option>
+                <option value="20">التسجيل</option>
+                <option value="25">الاهلية</option>
+                <option value="30">الاستحقاق</option>
+              </select>
+
+              <input name="subject" type="text" />
+
+              <input class="button" value="" type="submit" />
+              <i></i>
+            </form>
+
+
+            <div class="js-Accordion-title">
+              لدي تابع غير مؤهل والسبب "الحالة الاجتماعية للتابع لم تتطابق مع سجلات الاحوال المدنية" مامعنى ذلك ؟
+            </div>
+            <div class="js-Accordion-content">
+              في حال تغير الحالة الاجتماعية للتابع مثل زواج الابن أو الإبنة يكون الابن رب أسرة وعليه التسجيل بحساب جديد
+              واضافة تابعيه وتكون الابنة تابع مع زوجها وعلى الاب حذف هذا التابع ، أما في حال ان الحالة الاجتماعية كانت
+              مطابقة للبيانات المدخلة بالبوابة فيتم مراجعة الأحوال المدنية لتحديث البيانات ومن ثم رفع اعتراض على نتيجة
+              الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+            </div>
+
+            <div class="js-Accordion-title">
+              انا غير مؤهل والسبب "تشير السجلات بأن المستند المرفق منتهي أو مرفوض" ما الحل ؟
+            </div>
+            <div class="js-Accordion-content">
+              يتم حذف المستند المرفق المنتهي الصلاحية او المرفوض و إرفاق مستند جديد بدلا عن المستند المرفوض او المنتهي
+              ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+            </div>
+
+
+            <div class="js-Accordion-title">
+              لدي تابع غير مؤهل والسبب "التابع مسجل كمستفيد رئيسي" مامعنى ذلك ؟
+            </div>
+            <div class="js-Accordion-content">
+              يكون التابع مسجل كمستفيد رئيسي مستقل في حال ان عمره 24 سنه فما فوق أو في حال اثباث استقلاليته في المسكن عن
+              عائلته أو في حال كان متزوج (رب أسرة) ، وعليه يتم حذف هذا التابع
+            </div>
+
+
+            <div class="js-Accordion-title">
+              هل موعد وتاريخ الدفع من كل شهر محدد؟
+            </div>
+            <div class="js-Accordion-content">
+              نعم سيكون موعد دفع الدعم في تاريخ 10 ميلادي من كل شهر
+            </div>
+
+
+            <div class="js-Accordion-title">
+              في حال عدم الأهلية بسبب إشارة السجلات بوجود سجل تجاري للمتقدم الرئيسي أو التابع لم يتم الافصاح عنه ، ما هو
+              الحل ؟
+            </div>
+            <div class="js-Accordion-content">
+              يجب الافصاح عن اي دخل ناتج عن نشاط تجاري من سجل تجاري سواء للمستفيد الرئيسي أو التابع ومن ثم يتم تقديم
+              اعتراض على الأهلية ليتم قبوله ودخوله في الدورة التالية ، اما في حال شطب السجل التجاري فيتم رفع اعتراض على
+              نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+            </div>
+
+
+            <div class="js-Accordion-title">
+              ماذا لو صادف موعد الصرف إجازة نهاية الأسبوع؟
+            </div>
+            <div class="js-Accordion-content">
+              في حال كان موعد الصرف يوافق يوم الجمعة سوف يكون موعد الصرف قبل بيوم وهو يوم الخميس
+
+              في حال كان موعد الصرف يوافق يوم السبت سوف يكون موعد الصرف بعد بيوم وهو يوم الأحد
+            </div>
+
+
+            <div class="js-Accordion-title">
+              في حال عدم الأهلية بسبب إشارة السجلات بأن المتقدم الرئيسي أو التابع يسكن في احد بيوت الايواء وهو في سكن
+              مختلف غير حكومي ، ماهو الحل؟
+            </div>
+            <div class="js-Accordion-content">
+              في حال المتقدم الرئيسي أو التابع لا يسكن في احد بيوت الايواء يتم رفع اعتراض على نتيجة الأهلية لإستكمال
+              اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+            </div>
+
+
+            <div class="js-Accordion-title">
+              هل يحق للمتزوجات التسجيل في البرنامج ؟
+            </div>
+            <div class="js-Accordion-content">
+              نعم ، يحق للمتزوجة التسجيل في البرنامج في حال أنها كانت إحدى الفئات التالية (مهجورة – عائل الاسرة فاقد
+              الأهلية – عائل الاسرة سجين – عائل الاسرة متغيب – متزوجة من غير سعودي ) وذلك بعد تقديم المستندات الثبوتية
+              للحالة
+            </div>
+
+
+            <div class="js-Accordion-title">
+              انا غير مؤهل والسبب " يجب رفع وثائق لأثبات استقلالية المسكن" ما الحل ؟
+            </div>
+            <div class="js-Accordion-content">
+              يجب رفع وثائق استقلالية المسكن وهي عقد الايجار الموحد من منصة ايجار او صك الملكية للسكن او مشهد اثبات سكن
+              جامعي او احد المعاهد او الكليات العسكرية ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول
+              الطلب للدخول في دورة الاهلية القادمة
+            </div>
+
+
+            <div class="js-Accordion-title">
+              ابنائي سعوديين تحت السن المسموح لهم بالتسجيل , ماهي الطريقة للاستفادة من الدعم ؟
+            </div>
+            <div class="js-Accordion-content">
+              في حال كانت الأم غير سعودية مطلقة أو أرملة ولديها إثبات إحتضان أو صك ولاية على ابنائها أو حصر ورثة يتم
+              التواصل مع مركز اتصال برنامج حساب المواطن ورفع طلب من اجل التسجيل في البرنامج
+            </div>
+
+
+            <div class="js-Accordion-title">
+              ماذا يعني الايبان البنكي غير صالح ؟
+            </div>
+            <div class="js-Accordion-content">
+              اذا كان الايبان البنكي للمستفيد غير مطابق للهوية عند التحقق مع مؤسسة النقد السعودي فإن حالة الايبان تكون
+              (غير صالح)
+            </div>
+
+
+          </div>
+        </div>
+        <!-- max_width end -->
+      </div>
+      <!-- app_root end -->
     </div>
-  </div>
-</header>
 
 
-<div class="app_root">
-  <div class="max_width">
-    <div class="title">
-      <span>دليل المستخدم</span>
-      <br>
-      <a href="./">الرئيسية</a>
-      <a href="./faq.html">الأسئلة الشائعة</a>
-      <a href="#">دليل المستخدم</a>
-    </div>
-
-    
-    <div class="flex">
-      <div class="faq_side_nav">
-        <a href="#">دليل المستخدم</a>
-        <a href="#">التسجيل</a>
-        <a href="#">الأهلية</a>
-        <a href="#">الإستحقاق</a>
+    <footer>
+      <div></div>
+      <div>
+        <div class="twitter_id">@citizenaccount</div>
+        <div class="twitter_text_big">يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات والمواعيد</div>
+        <div class="twitter_text">تابعنا لمزيد من الأخبار</div>
+        <div class="twitter_icon"></div>
+        <div class="youtube"></div>
       </div>
 
+      <footer>
+        <div>جميع الحقوق محفوظة © 2020</div>
+        <div>الاسئلة الشائعة</div>
+        <div>سياسة الخصوصية</div>
+        <div>الشروط والأحكام</div>
+        <a href="#android" class="android"></a>
+        <a href="#apple" class="apple"></a>
+      </footer>
+    </footer>
 
-      <div id="question_root" class="question_root">
- 
-        <form class="question_post" method="POST">
-          <aside>القسم</aside>
-          <aside>بحث</aside>
-          <i></i>
-          <i></i>
+    <div class="fixed_massege"></div>
 
-          
-          <select name="section">
-            <option value="15" selected="selected">دليل المستخدم</option>
-            <option value="20">التسجيل</option>
-            <option value="25">الاهلية</option>
-            <option value="30">الاستحقاق</option>
-          </select>
-          
-          <input name="subject" type="text" />
-          
-          <input class="button" value="" type="submit" />
-          <i></i>
-        </form>
-      
-      
-        <div class="js-Accordion-title">
-          لدي تابع غير مؤهل والسبب "الحالة الاجتماعية للتابع لم تتطابق مع سجلات الاحوال المدنية" مامعنى ذلك ؟
-        </div>
-        <div class="js-Accordion-content">
-          في حال تغير الحالة الاجتماعية للتابع مثل زواج الابن أو الإبنة يكون الابن رب أسرة وعليه التسجيل بحساب جديد واضافة تابعيه وتكون الابنة تابع مع زوجها وعلى الاب حذف هذا التابع ، أما في حال ان الحالة الاجتماعية كانت مطابقة للبيانات المدخلة بالبوابة فيتم مراجعة الأحوال المدنية لتحديث البيانات ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
-        </div>
-      
-        <div class="js-Accordion-title">
-          انا غير مؤهل والسبب "تشير السجلات بأن المستند المرفق منتهي أو مرفوض" ما الحل ؟
-        </div>
-        <div class="js-Accordion-content">
-          يتم حذف المستند المرفق المنتهي الصلاحية او المرفوض و إرفاق مستند جديد بدلا عن المستند المرفوض او المنتهي ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          لدي تابع غير مؤهل والسبب "التابع مسجل كمستفيد رئيسي" مامعنى ذلك ؟
-        </div>
-        <div class="js-Accordion-content">
-          يكون التابع مسجل كمستفيد رئيسي مستقل في حال ان عمره 24 سنه فما فوق أو في حال اثباث استقلاليته في المسكن عن عائلته أو في حال كان متزوج (رب أسرة) ، وعليه يتم حذف هذا التابع
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          هل موعد وتاريخ الدفع من كل شهر محدد؟
-        </div>
-        <div class="js-Accordion-content">
-          نعم سيكون موعد دفع الدعم في تاريخ 10 ميلادي من كل شهر
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          في حال عدم الأهلية بسبب إشارة السجلات بوجود سجل تجاري للمتقدم الرئيسي أو التابع لم يتم الافصاح عنه ، ما هو الحل ؟
-        </div>
-        <div class="js-Accordion-content">
-          يجب الافصاح عن اي دخل ناتج عن نشاط تجاري من سجل تجاري سواء للمستفيد الرئيسي أو التابع ومن ثم يتم تقديم اعتراض على الأهلية ليتم قبوله ودخوله في الدورة التالية ، اما في حال شطب السجل التجاري فيتم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          ماذا لو صادف موعد الصرف إجازة نهاية الأسبوع؟
-        </div>
-        <div class="js-Accordion-content">
-          في حال كان موعد الصرف يوافق يوم الجمعة سوف يكون موعد الصرف قبل بيوم وهو يوم الخميس
-          
-          في حال كان موعد الصرف يوافق يوم السبت سوف يكون موعد الصرف بعد بيوم وهو يوم الأحد
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          في حال عدم الأهلية بسبب إشارة السجلات بأن المتقدم الرئيسي أو التابع يسكن في احد بيوت الايواء وهو في سكن مختلف غير حكومي ، ماهو الحل؟
-        </div>
-        <div class="js-Accordion-content">
-          في حال المتقدم الرئيسي أو التابع لا يسكن في احد بيوت الايواء يتم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          هل يحق للمتزوجات التسجيل في البرنامج ؟
-        </div>
-        <div class="js-Accordion-content">
-          نعم ، يحق للمتزوجة التسجيل في البرنامج في حال أنها كانت إحدى الفئات التالية (مهجورة – عائل الاسرة فاقد الأهلية – عائل الاسرة سجين – عائل الاسرة متغيب – متزوجة من غير سعودي ) وذلك بعد تقديم المستندات الثبوتية للحالة
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          انا غير مؤهل والسبب " يجب رفع وثائق لأثبات استقلالية المسكن" ما الحل ؟
-        </div>
-        <div class="js-Accordion-content">
-          يجب رفع وثائق استقلالية المسكن وهي عقد الايجار الموحد من منصة ايجار  او صك الملكية للسكن او مشهد اثبات سكن جامعي او احد المعاهد او الكليات العسكرية ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          ابنائي سعوديين تحت السن المسموح لهم بالتسجيل , ماهي الطريقة للاستفادة من الدعم ؟
-        </div>
-        <div class="js-Accordion-content">
-          في حال كانت الأم غير سعودية مطلقة أو أرملة ولديها إثبات إحتضان أو صك ولاية على ابنائها أو حصر ورثة يتم التواصل مع مركز اتصال برنامج حساب المواطن ورفع طلب من اجل التسجيل في البرنامج
-        </div>
-      
-      
-        <div class="js-Accordion-title">
-          ماذا يعني الايبان البنكي غير صالح ؟
-        </div>
-        <div class="js-Accordion-content">
-          اذا كان الايبان البنكي للمستفيد غير مطابق للهوية عند التحقق مع مؤسسة النقد السعودي فإن حالة الايبان تكون (غير صالح)
-        </div>
-
-
-      </div>
-    </div>
-  <!-- max_width end -->
+    <!-- body_root end -->
   </div>
-<!-- app_root end -->
-</div>
-
-
-<footer>
-  <div></div>
-  <div>
-    <div class="twitter_id">@citizenaccount</div>
-    <div class="twitter_text_big">يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات والمواعيد</div>
-    <div class="twitter_text">تابعنا لمزيد من الأخبار</div>
-    <div class="twitter_icon"></div>
-    <div class="youtube"></div>
-  </div>
-  
-  <footer>
-    <div>جميع الحقوق محفوظة © 2020</div>
-    <div>الاسئلة الشائعة</div>
-    <div>سياسة الخصوصية</div>
-    <div>الشروط والأحكام</div>
-    <a href="#android" class="android"></a>
-    <a href="#apple" class="apple"></a>
-  </footer>
-</footer> 
-
-<div class="fixed_massege"></div>
-
-<!-- body_root end -->
-</div>
-<script src="../static/js/main.js"></script>
-<script src="../static/js/vanilla-js-accordion.js"></script>
+  <script src="../static/js/main.js"></script>
+  <script src="../static/js/vanilla-js-accordion.js"></script>
 </body>
+
 </html>
