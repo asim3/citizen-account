@@ -1065,6 +1065,41 @@ footer .android {
   padding: 0;
 }
 
+#search_form_root {
+  display: none;
+  position: absolute;
+  top: 13rem;
+  left: 3rem;
+}
+
+#search_form_root form {
+  position: relative;
+  width: 22rem;
+}
+
+#search_form_root input[type=text] {
+  margin: 0;
+  padding: 0 1rem;
+  width: 100%;
+  line-height: 3rem;
+  color: #003C77;
+  border: 0.1rem solid #F7F7F7;
+  background: #BFD145;
+}
+
+#search_form_root input[type=submit] {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  margin: 0;
+  padding: 0 1rem;
+  width: auto;
+  line-height: 3rem;
+  border: 0.1rem solid #F7F7F7;
+  border-right: none;
+  cursor: pointer;
+}
+
 @media (max-width: 1000px) {
   .sections_box_root section {
     -webkit-box-orient: vertical;
@@ -1079,6 +1114,10 @@ footer .android {
   .section_alert {
     padding: 1rem;
     width: 100%;
+  }
+  #search_form_root {
+    top: 6rem;
+    left: 1rem;
   }
 }
 

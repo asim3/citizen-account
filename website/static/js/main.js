@@ -54,9 +54,9 @@ function add_video_to_home() {
   }
 }
 
-const show_banner_img = (function() {
+const show_banner_img = (function () {
   let img_index = 0;
-  return function(dir) {
+  return function (dir) {
     const all_img = document.querySelectorAll(".banner_img div");
     for (let i = 0; i < all_img.length; i++) {
       all_img[i].className = all_img[i].className.replace(" active", "");
@@ -84,7 +84,7 @@ function show_sections_box(ids) {
   for (let i = 0; i < all_sections_nav.length; i++) {
     all_sections_nav[i].className = "sections_text";
   }
-  ids.map(function(id) {
+  ids.map(function (id) {
     document.getElementById("section_" + id).style.display = "flex";
     if (id === 4) {
       all_sections_nav[1].className = "sections_text sections_nav_selected";
@@ -120,7 +120,12 @@ function show_urv_box(id) {
   document.getElementById("section_" + id).style.display = "flex";
 }
 
-window.addEventListener("load", function() {
+function show_search() {
+  const old = document.getElementById("search_form_root").style.display;
+  document.getElementById("search_form_root").style.display = old !== "block" ? "block" : "none";
+}
+
+window.addEventListener("load", function () {
   const show_side_links = document.getElementById("show_side_links");
   if (show_side_links) {
     show_side_links.addEventListener("click", toggle_side_links);
@@ -138,7 +143,7 @@ window.addEventListener("load", function() {
 
   const side_links_close = document.getElementById("side_links_close");
   if (side_links_close) {
-    side_links_close.addEventListener("click", function(event) {
+    side_links_close.addEventListener("click", function (event) {
       event.stopPropagation();
       toggle_side_links();
     });
@@ -156,7 +161,7 @@ window.addEventListener("load", function() {
 
   const ln_ar = document.getElementById("ln_ar");
   if (ln_ar) {
-    ln_ar.addEventListener("click", function(event) {
+    ln_ar.addEventListener("click", function (event) {
       let href = window.location.href;
       href = href.replace("/EN/", "/AR/");
       window.location.href = href;
@@ -165,11 +170,16 @@ window.addEventListener("load", function() {
 
   const ln_en = document.getElementById("ln_en");
   if (ln_en) {
-    ln_en.addEventListener("click", function(event) {
+    ln_en.addEventListener("click", function (event) {
       let href = window.location.href;
       href = href.replace("/AR/", "/EN/");
       window.location.href = href;
     });
+  }
+
+  const search_box = document.querySelector(".header_search");
+  if (search_box) {
+    search_box.addEventListener("click", show_search);
   }
 
   setTimeout(add_video_to_home, 0);
