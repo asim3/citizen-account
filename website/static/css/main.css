@@ -253,21 +253,34 @@ header {
   margin-left: auto;
 }
 
+.header_search,
+.header_register,
+.header_call,
 .header_login {
   position: absolute;
-  top: 10rem;
-  left: 13rem;
   padding: 0 1rem;
   background: #003C77;
 }
 
-.header_search {
-  position: absolute;
+.header_login {
   top: 10rem;
-  left: 9rem;
-  padding: 0 1rem;
-  background: #003C77;
+  left: 7rem;
+}
+
+.header_search {
+  top: 10rem;
+  left: 3rem;
   color: #FFFFFF;
+}
+
+.header_register {
+  top: 10rem;
+  left: 12rem;
+}
+
+.header_call {
+  top: 10rem;
+  left: 18rem;
 }
 
 .side_links {
@@ -317,12 +330,20 @@ header {
     margin: 2rem 0rem;
   }
   .header_login {
-    top: 5rem;
-    left: 10rem;
+    top: 3rem;
+    left: 5rem;
   }
   .header_search {
-    top: 5rem;
-    left: 5rem;
+    top: 3rem;
+    left: 1rem;
+  }
+  .header_register {
+    top: 3rem;
+    left: 10rem;
+  }
+  .header_call {
+    top: 3rem;
+    left: 16rem;
   }
   .side_links_root {
     position: relative;

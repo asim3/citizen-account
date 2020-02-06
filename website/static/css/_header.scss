@@ -43,21 +43,34 @@ header {
   margin-left: auto;
 }
 
+.header_search,
+.header_register,
+.header_call,
 .header_login {
   position: absolute;
-  top: 10rem;
-  left: 13rem;
   padding: 0 1rem;
   background: $blue;
 }
 
-.header_search {
-  position: absolute;
+.header_login {
   top: 10rem;
-  left: 9rem;
-  padding: 0 1rem;
-  background: $blue;
+  left: 7rem;
+}
+
+.header_search {
+  top: 10rem;
+  left: 3rem;
   color: $white;
+}
+
+.header_register {
+  top: 10rem;
+  left: 12rem;
+}
+
+.header_call {
+  top: 10rem;
+  left: 18rem;
 }
 
 .side_links {
@@ -89,7 +102,6 @@ header {
   background-image: url(../img/side_menu_2.svg);
 }
 
-
 @media (max-width: 1000px) {
   .header_menu {
     display: block;
@@ -100,13 +112,23 @@ header {
   }
 
   .header_login {
-    top: 5rem;
+    top: 3rem;
+    left: 5rem;
+  }
+
+  .header_search {
+    top: 3rem;
+    left: 1rem;
+  }
+
+  .header_register {
+    top: 3rem;
     left: 10rem;
   }
-  
-  .header_search {
-    top: 5rem;
-    left: 5rem;
+
+  .header_call {
+    top: 3rem;
+    left: 16rem;
   }
 
   .side_links_root {
@@ -119,7 +141,7 @@ header {
     overflow: hidden;
     z-index: 15;
   }
-  
+
   .side_links {
     position: absolute;
     display: none;
@@ -132,7 +154,7 @@ header {
     background: $white;
     overflow: hidden;
   }
-  
+
   .side_links_close {
     @include bg_icon;
     position: absolute;
@@ -165,7 +187,6 @@ header {
   }
 }
 
-
 @media (max-width: 600px) {
   header {
     background-image: url(../img/header_left_600_2.svg);
@@ -182,14 +203,13 @@ header {
   }
 }
 
-
 @media (min-width: 1001px) {
   .side_links_root {
-    display: block!important;
+    display: block !important;
   }
 
   .side_links {
-    display: block!important;
+    display: block !important;
     margin: 0 10rem;
   }
 
