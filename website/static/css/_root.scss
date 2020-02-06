@@ -177,6 +177,10 @@ input[type=radio]:checked + label::after {
 }
 /* end vanilla-js-accordion */
 
+.highlight {
+  color: $yellow;
+}
+
 @keyframes spinner-grow {
   0% { opacity: 0; }
   50% { opacity: 1; }
