@@ -595,7 +595,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
+        grid-template-areas: 'first first first'  'mid2 mid3 mid4'  '. app1 app2';
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -954,7 +954,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
+      grid-template-areas: "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
@@ -1099,7 +1099,7 @@ footer .android {
     grid-area: input_5;
   }
   .calculator_root {
-        grid-template-areas: "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
+        grid-template-areas: "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
     grid-gap: 0;
   }
   .calculator_root input[type="submit"],
@@ -1185,6 +1185,7 @@ footer .android {
   overflow: hidden;
 }
 
+.videos_root,
 .infograph_root {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1194,6 +1195,7 @@ footer .android {
   background: #F7F7F7;
 }
 
+.videos_root iframe,
 .infograph_root div {
   display: inline-block;
   margin: 2% 1%;
@@ -1244,6 +1246,11 @@ footer .android {
   max-height: 30rem;
 }
 
+.video_details_root {
+  margin: 0 1rem;
+  width: 100%;
+}
+
 @media (max-width: 1000px) {
   .news_root {
     -webkit-box-orient: vertical;
@@ -1263,6 +1270,12 @@ footer .android {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .videos_root iframe,
+  .infograph_root div {
+    display: inline-block;
+    margin: 2% 1%;
+    width: 48%;
   }
 }
 
