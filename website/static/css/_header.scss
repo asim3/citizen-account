@@ -52,9 +52,16 @@ header {
   background: $blue;
 }
 
+.header_search:hover,
+.header_register:hover,
+.header_call:hover,
+.header_login:hover {
+  background: $blue_dark ;
+}
+
 .header_login {
   top: 10rem;
-  left: 7rem;
+  left: 6rem;
 }
 
 .header_search {
@@ -71,6 +78,16 @@ header {
 .header_call {
   top: 10rem;
   left: 18rem;
+}
+
+.header_search svg,
+.header_login svg,
+.header_register svg,
+.header_call svg {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  fill: white;
 }
 
 .side_links {
@@ -113,7 +130,7 @@ header {
 
   .header_login {
     top: 3rem;
-    left: 5rem;
+    left: 4rem;
   }
 
   .header_search {
@@ -200,6 +217,14 @@ header {
 
   .side_links_root {
     top: -2rem;
+  }
+
+  .header_register {
+    left: 11rem;
+  }
+
+  .header_call {
+    left: 18rem;
   }
 }
 
