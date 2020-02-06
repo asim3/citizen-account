@@ -96,16 +96,22 @@ $banner_height: 33rem;
   max-width: 1000px;
 }
 
+.sections_nav_hover {
+  width: 33%;
+}
+
 .sections_text,
 .sections_nav {
   flex: auto;
   text-align: center;
-  width: 30%;
+  width: 100%;
   cursor: pointer;
 }
 
 .sections_nav {
   @include bg_icon;
+  width: auto;
+  height: auto;
   padding-top: 10rem;
   background-size: 6rem 6rem;
   transition: background-size 0.1s ease-in;
@@ -117,21 +123,17 @@ $banner_height: 33rem;
   text-align: center;
 }
 
-.sections_nav:nth-child(1) {
+#sections_nav_1 {
   background-image: url(../img/logo_3.svg);
 }
 
-.sections_nav:nth-child(2) {
+#sections_nav_2 {
   background-image: url(../img/logo_2.svg);
   background-size: 5rem 5rem;
 }
 
-.sections_nav:nth-child(3) {
+#sections_nav_3 {
   background-image: url(../img/logo_1.svg);
-}
-
-.sections_nav:hover {
-  background-size: 8rem 8rem;
 }
 
 .sections_text {
@@ -140,8 +142,12 @@ $banner_height: 33rem;
   font-size: 2rem;
 }
 
-.sections_text:hover {
-  color: $cyan;
+.sections_nav_hover:hover .sections_nav {
+  background-size: 8rem 8rem !important;
+}
+
+.sections_nav_hover:hover .sections_text {
+  color: $cyan !important;
 }
 
 .sections_text::after {
