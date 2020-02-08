@@ -59,7 +59,7 @@ const show_banner_img = (function () {
   return function (dir) {
     const all_img = document.querySelectorAll(".banner_img div");
     for (let i = 0; i < all_img.length; i++) {
-      all_img[i].className = all_img[i].className.replace(" active", "");
+      all_img[i].className = all_img[i].className.replace(" active show", "");
     }
     if (img_index === 0 && dir === "previous") {
       img_index = all_img.length - 1;
@@ -67,7 +67,7 @@ const show_banner_img = (function () {
       img_index = dir === "next" ? img_index + 1 : img_index - 1;
       img_index = img_index >= all_img.length ? 0 : img_index;
     }
-    all_img[img_index].className += " active";
+    all_img[img_index].className += " active show";
   };
 })();
 
