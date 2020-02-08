@@ -1345,11 +1345,25 @@ footer .android {
   width: 100%;
 }
 
+.h3_relative {
+  position: relative;
+}
+
 #media_infograph_R,
 #media_infograph_L,
 #media_videos_R,
 #media_videos_L {
+  position: absolute;
+  top: 5rem;
+  left: 3rem;
+  font-size: 2rem;
   color: #003C77;
+  cursor: pointer;
+}
+
+#media_infograph_R,
+#media_videos_R {
+  left: 5rem;
 }
 
 @media (max-width: 1000px) {
