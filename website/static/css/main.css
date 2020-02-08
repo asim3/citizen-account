@@ -1319,7 +1319,7 @@ footer .android {
 }
 
 .media_videos > div > * {
-  width: 30rem;
+  width: 32rem;
   height: 17rem;
   max-width: none;
 }
@@ -1343,6 +1343,13 @@ footer .android {
 .video_details_root {
   margin: 0 1rem;
   width: 100%;
+}
+
+#media_infograph_R,
+#media_infograph_L,
+#media_videos_R,
+#media_videos_L {
+  color: #003C77;
 }
 
 @media (max-width: 1000px) {
