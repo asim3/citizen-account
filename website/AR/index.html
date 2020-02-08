@@ -78,13 +78,15 @@
         <div id="side_links" class="side_links">
           <a href="./index.html" class="selected">الرئيسية</a>
           <a href="./about.html">عن حساب المواطن</a>
-          <nav>
-            <a href="./policies.html">السياسات</a>
-            <a href="./terms.html">مصطلحات تهمك</a>
-            <a href="./terms.html">مصطلحات تهمك</a>
-            <a href="./terms.html">مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك</a>
-            <a href="./terms.html">مصطلحات تهمك</a>
-          </nav>
+          <a href="./policies.html">
+            السياسات
+            <nav>
+              <a href="./terms.html">مصطلحات تهمك</a>
+              <a href="./terms.html">مصطلحات تهمك</a>
+              <a href="./terms.html">مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك مصطلحات تهمك</a>
+              <a href="./terms.html">مصطلحات تهمك</a>
+            </nav>
+          </a>
           <a href="./urv.html">صوتك مسموع</a>
           <nav>
             <a href="./media_center.html">المركز الإعلامي</a>
@@ -141,10 +143,10 @@
               بملء الحقول لتظهر لك النتيجة</b>
             <span style="grid-column: 1;">هل أنت مسجل في برنامج حساب المواطن ؟</span>
             <input type="radio" id="radio_1" name="option_1" onchange="show_calculator()" />
-            <label for="radio_1">مستقل</label>
+            <label for="radio_1">نعم</label>
 
             <input type="radio" id="radio_2" name="option_1" onchange="show_calculator()" />
-            <label for="radio_2">رب أسرة</label>
+            <label for="radio_2">لا</label>
             <span style="grid-column: 1;">هل أنت؟ </span>
             <input type="radio" id="radio_3" name="option_2" onchange="show_calculator()" />
             <label for="radio_3">مستقل</label>
@@ -153,14 +155,15 @@
             <label for="radio_4">رب أسرة</label>
           </div>
           <div>
-            <div class="section_alert">
-              تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج
-              الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين)
-            </div>
+            <div id="section_alert" class="section_alert"></div>
           </div>
           <div id="calculator_root" class="calculator_root">
+            <span class="text_6">أدخل عدد التابعين بعمر 18 سنة أو أكثر</span>
+            <input class="input_6" type="number" placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)" />
+            <span class="text_7">أدخل عدد التابعين بعمر أقل من 18 سنة</span>
+            <input class="input_7" type="number" />
             <span class="text_1">أدخل مجموع دخلك</span>
-            <input class="input_1" type="number" />
+            <input class="input_1" type="number" placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء" />
             <span class="text_2">مبلغ الدعم التقديري</span>
 
             <input class="input_2" type="number" disabled />

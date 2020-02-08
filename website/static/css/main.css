@@ -969,78 +969,106 @@ footer .android {
 }
 
 .text_1 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: text_1;
 }
 
 .input_1 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: input_1;
 }
 
 .text_2 {
-  -ms-grid-row: 1;
+  -ms-grid-row: 3;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-area: text_2;
 }
 
 .input_2 {
-  -ms-grid-row: 2;
+  -ms-grid-row: 4;
   -ms-grid-column: 4;
   -ms-grid-column-span: 3;
   grid-area: input_2;
 }
 
 .submit_1 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: submit_1;
 }
 
 .text_3 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 4;
   grid-area: text_3;
 }
 
 .text_4 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 5;
   grid-area: text_4;
 }
 
 .text_5 {
-  -ms-grid-row: 3;
+  -ms-grid-row: 5;
   -ms-grid-column: 6;
   grid-area: text_5;
 }
 
+.text_6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: text_6;
+}
+
+.text_7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: text_7;
+}
+
 .input_3 {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 4;
   grid-area: input_3;
 }
 
 .input_4 {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 5;
   grid-area: input_4;
 }
 
 .input_5 {
-  -ms-grid-row: 4;
+  -ms-grid-row: 6;
   -ms-grid-column: 6;
   grid-area: input_5;
 }
 
+.input_6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: input_6;
+}
+
+.input_7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-area: input_7;
+}
+
 .calculator_root {
   display: none;
-      grid-template-areas: "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
+      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
@@ -1170,65 +1198,87 @@ footer .android {
     height: 24rem;
   }
   .text_1 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: text_1;
   }
   .input_1 {
-    -ms-grid-row: 1;
+    -ms-grid-row: 3;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-area: input_1;
   }
   .text_2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: text_2;
   }
   .input_2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-area: input_2;
   }
   .submit_1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 4;
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-area: submit_1;
   }
   .text_3 {
-    -ms-grid-row: 4;
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
     grid-area: text_3;
   }
   .text_4 {
-    -ms-grid-row: 4;
+    -ms-grid-row: 6;
     -ms-grid-column: 2;
     grid-area: text_4;
   }
   .text_5 {
-    -ms-grid-row: 4;
+    -ms-grid-row: 6;
     -ms-grid-column: 3;
     grid-area: text_5;
   }
+  .text_6 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: text_6;
+  }
+  .text_7 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: text_7;
+  }
   .input_3 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 7;
     -ms-grid-column: 1;
     grid-area: input_3;
   }
   .input_4 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 7;
     -ms-grid-column: 2;
     grid-area: input_4;
   }
   .input_5 {
-    -ms-grid-row: 5;
+    -ms-grid-row: 7;
     -ms-grid-column: 3;
     grid-area: input_5;
   }
+  .input_6 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: input_6;
+  }
+  .input_7 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 2;
+    grid-area: input_7;
+  }
   .calculator_root {
-        grid-template-areas: "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
+        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
     grid-gap: 0;
   }
   .calculator_root input[type="submit"],

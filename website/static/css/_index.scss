@@ -267,6 +267,12 @@ $banner_height: 33rem;
 .text_5 {
   grid-area: text_5;
 }
+.text_6 {
+  grid-area: text_6;
+}
+.text_7 {
+  grid-area: text_7;
+}
 .input_3 {
   grid-area: input_3;
 }
@@ -276,10 +282,18 @@ $banner_height: 33rem;
 .input_5 {
   grid-area: input_5;
 }
+.input_6 {
+  grid-area: input_6;
+}
+.input_7 {
+  grid-area: input_7;
+}
 
 .calculator_root {
   display: none;
   grid-template-areas:
+    "text_6 text_6 text_6 text_7 text_7 text_7"
+    "input_6 input_6 input_6 input_7 input_7 input_7"
     "text_1 text_1 text_1 text_2 text_2 text_2"
     "input_1 input_1 input_1 input_2 input_2 input_2"
     "submit_1 . . text_3 text_4 text_5"
@@ -431,6 +445,12 @@ $banner_height: 33rem;
   .text_5 {
     grid-area: text_5;
   }
+  .text_6 {
+    grid-area: text_6;
+  }
+  .text_7 {
+    grid-area: text_7;
+  }
   .input_3 {
     grid-area: input_3;
   }
@@ -440,9 +460,17 @@ $banner_height: 33rem;
   .input_5 {
     grid-area: input_5;
   }
+  .input_6 {
+    grid-area: input_6;
+  }
+  .input_7 {
+    grid-area: input_7;
+  }
 
   .calculator_root {
     grid-template-areas:
+      "text_6 input_6 input_6"
+      "text_7 input_7 input_7"
       "text_1 input_1 input_1"
       ". submit_1 submit_1"
       "text_2 input_2 input_2"

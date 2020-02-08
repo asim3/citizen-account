@@ -97,7 +97,33 @@ function show_sections_box(ids) {
 }
 
 function show_calculator() {
-  document.getElementById("calculator_root").style.display = "grid";
+  const radio_1 = document.getElementById("radio_1");
+  const radio_2 = document.getElementById("radio_2");
+  const radio_3 = document.getElementById("radio_3");
+  const radio_4 = document.getElementById("radio_4");
+  const input_1 = document.querySelector(".input_1");
+  const section_alert = document.querySelector(".section_alert");
+  if (radio_1.checked) {
+
+  }
+  if (radio_3.checked) {
+    section_alert.innerHTML = "تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين)";
+    input_1.placeholder = "";
+    document.querySelector(".text_6").style.display = "none"
+    document.querySelector(".input_6").style.display = "none"
+    document.querySelector(".text_7").style.display = "none"
+    document.querySelector(".input_7").style.display = "none"
+  } else {
+    section_alert.innerHTML = "تعريف رب الأسرة: ذكر أو أنثى ( الزوج، زوجة غير المواطن، أم غير متزوجة، أب غير متزوج، زوجة فاقد الأهلية)";
+    input_1.placeholder = "يشمل الدخل الخاص برب الأسرة والزوجة والأبناء";
+    document.querySelector(".text_6").style.display = "block"
+    document.querySelector(".input_6").style.display = "block"
+    document.querySelector(".text_7").style.display = "block"
+    document.querySelector(".input_7").style.display = "block"
+  }
+  if ((radio_1.checked || radio_2.checked) && (radio_3.checked || radio_4.checked)) {
+    document.getElementById("calculator_root").style.display = "grid";
+  }
 }
 
 function show_urv_title(id) {
