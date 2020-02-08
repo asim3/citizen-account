@@ -136,11 +136,23 @@
             <form method="POST">
               <b>لمتابعة طلبك المقدم ، فضلا أدخل التالي :</b>
 
+              <div class="form_alert">
+                الرجاء التأكد من صحة البيانات
+              </div>
+
+              <div class="form_error">
+                نص الخطأ هنا
+              </div>
+
+              <div class="form_ok">
+                نص الإستلام هنا
+              </div>
+
               <aside>رقم الطلب *</aside>
-              <input name="subject" type="number" />
+              <input name="subject" type="number" required="" />
 
               <aside>رقم الهوية *</aside>
-              <input name="message" type="number" />
+              <input name="message" type="number" required="" />
 
               <input class="button" value="تحقق" type="submit" />
             </form>
@@ -149,18 +161,235 @@
 
           <section id="section_4">
             <form method="POST">
+
+              <div class="form_alert">
+                الرجاء التأكد من صحة البيانات
+              </div>
+
+              <div class="form_error">
+                نص الخطأ هنا
+              </div>
+
+              <div class="form_ok">
+                نص الإستلام هنا
+              </div>
+
               <aside>الموضوع *</aside>
-              <input name="name" type="text" />
+              <input name="name" type="text" required="" />
 
               <aside>الاسم *</aside>
-              <input name="mail" type="text" />
+              <input name="mail" type="text" required="" />
 
               <aside>الجوال *</aside>
-              <input name="subject" type="number" />
+              <input name="subject" type="number" required="" />
               <span>رقم الجوال يكون بالصيغة 966500000000</span>
 
               <aside>رقم الهوية *</aside>
-              <input name="message" type="number" />
+              <input name="message" type="number" required="" />
+
+              <aside>تاريخ الميلاد بالهجري</aside>
+
+
+
+              <select class="select_day" name="day" required="">
+                <option value="_none">- لا شيء -</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+
+
+              <select class="select_day" name="month" required="">
+                <option value="_none">- لا شيء -</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+
+
+
+              <select class="select_day" name="year" required="">
+                <option value="_none">- لا شيء -</option>
+                <option value="1441">1441</option>
+                <option value="1440">1440</option>
+                <option value="1439">1439</option>
+                <option value="1438">1438</option>
+                <option value="1437">1437</option>
+                <option value="1436">1436</option>
+                <option value="1435">1435</option>
+                <option value="1434">1434</option>
+                <option value="1433">1433</option>
+                <option value="1432">1432</option>
+                <option value="1431">1431</option>
+                <option value="1430">1430</option>
+                <option value="1429">1429</option>
+                <option value="1428">1428</option>
+                <option value="1427">1427</option>
+                <option value="1426">1426</option>
+                <option value="1425">1425</option>
+                <option value="1424">1424</option>
+                <option value="1423">1423</option>
+                <option value="1422">1422</option>
+                <option value="1421">1421</option>
+                <option value="1420">1420</option>
+                <option value="1419">1419</option>
+                <option value="1418">1418</option>
+                <option value="1417">1417</option>
+                <option value="1416">1416</option>
+                <option value="1415">1415</option>
+                <option value="1414">1414</option>
+                <option value="1413">1413</option>
+                <option value="1412">1412</option>
+                <option value="1411">1411</option>
+                <option value="1410">1410</option>
+                <option value="1409">1409</option>
+                <option value="1408">1408</option>
+                <option value="1407">1407</option>
+                <option value="1406">1406</option>
+                <option value="1405">1405</option>
+                <option value="1404">1404</option>
+                <option value="1403">1403</option>
+                <option value="1402">1402</option>
+                <option value="1401">1401</option>
+                <option value="1400">1400</option>
+                <option value="1399">1399</option>
+                <option value="1398">1398</option>
+                <option value="1397">1397</option>
+                <option value="1396">1396</option>
+                <option value="1395">1395</option>
+                <option value="1394">1394</option>
+                <option value="1393">1393</option>
+                <option value="1392">1392</option>
+                <option value="1391">1391</option>
+                <option value="1390">1390</option>
+                <option value="1389">1389</option>
+                <option value="1388">1388</option>
+                <option value="1387">1387</option>
+                <option value="1386">1386</option>
+                <option value="1385">1385</option>
+                <option value="1384">1384</option>
+                <option value="1383">1383</option>
+                <option value="1382">1382</option>
+                <option value="1381">1381</option>
+                <option value="1380">1380</option>
+                <option value="1379">1379</option>
+                <option value="1378">1378</option>
+                <option value="1377">1377</option>
+                <option value="1376">1376</option>
+                <option value="1375">1375</option>
+                <option value="1374">1374</option>
+                <option value="1373">1373</option>
+                <option value="1372">1372</option>
+                <option value="1371">1371</option>
+                <option value="1370">1370</option>
+                <option value="1369">1369</option>
+                <option value="1368">1368</option>
+                <option value="1367">1367</option>
+                <option value="1366">1366</option>
+                <option value="1365">1365</option>
+                <option value="1364">1364</option>
+                <option value="1363">1363</option>
+                <option value="1362">1362</option>
+                <option value="1361">1361</option>
+                <option value="1360">1360</option>
+                <option value="1359">1359</option>
+                <option value="1358">1358</option>
+                <option value="1357">1357</option>
+                <option value="1356">1356</option>
+                <option value="1355">1355</option>
+                <option value="1354">1354</option>
+                <option value="1353">1353</option>
+                <option value="1352">1352</option>
+                <option value="1351">1351</option>
+                <option value="1350">1350</option>
+                <option value="1349">1349</option>
+                <option value="1348">1348</option>
+                <option value="1347">1347</option>
+                <option value="1346">1346</option>
+                <option value="1345">1345</option>
+                <option value="1344">1344</option>
+                <option value="1343">1343</option>
+                <option value="1342">1342</option>
+                <option value="1341">1341</option>
+                <option value="1340">1340</option>
+                <option value="1339">1339</option>
+                <option value="1338">1338</option>
+                <option value="1337">1337</option>
+                <option value="1336">1336</option>
+                <option value="1335">1335</option>
+                <option value="1334">1334</option>
+                <option value="1333">1333</option>
+                <option value="1332">1332</option>
+                <option value="1331">1331</option>
+                <option value="1330">1330</option>
+                <option value="1329">1329</option>
+                <option value="1328">1328</option>
+                <option value="1327">1327</option>
+                <option value="1326">1326</option>
+                <option value="1325">1325</option>
+                <option value="1324">1324</option>
+                <option value="1323">1323</option>
+                <option value="1322">1322</option>
+                <option value="1321">1321</option>
+                <option value="1320">1320</option>
+                <option value="1319">1319</option>
+                <option value="1318">1318</option>
+                <option value="1317">1317</option>
+                <option value="1316">1316</option>
+                <option value="1315">1315</option>
+                <option value="1314">1314</option>
+                <option value="1313">1313</option>
+                <option value="1312">1312</option>
+                <option value="1311">1311</option>
+                <option value="1310">1310</option>
+                <option value="1309">1309</option>
+                <option value="1308">1308</option>
+                <option value="1307">1307</option>
+                <option value="1306">1306</option>
+                <option value="1305">1305</option>
+                <option value="1304">1304</option>
+                <option value="1303">1303</option>
+                <option value="1302">1302</option>
+                <option value="1301">1301</option>
+                <option value="1300">1300</option>
+              </select>
+
 
               <aside>نوع الطلب *</aside>
               <select name="section">
@@ -186,7 +415,7 @@
               <img class="CAPTCHA" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA">
 
               <aside>ماهو الرمز الموجود في الصورة ؟</aside>
-              <input name="" type="text" />
+              <input name="" type="text" required="" />
 
               <input class="button" value="إرسال" type="submit" />
             </form>

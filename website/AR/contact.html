@@ -102,22 +102,34 @@
 
 
         <form method="POST">
+          <div class="form_alert">
+            الرجاء التأكد من صحة البيانات
+          </div>
+
+          <div class="form_error">
+            نص الخطأ هنا
+          </div>
+
+          <div class="form_ok">
+            نص الإستلام هنا
+          </div>
+
           <aside>اسمك *</aside>
-          <input name="name" type="text" />
+          <input name="name" type="text" required="" />
 
           <aside>عنوان بريدك الإلكتروني *</aside>
-          <input name="mail" type="email" />
+          <input name="mail" type="email" required="" />
 
           <aside>الموضوع *</aside>
-          <input name="subject" type="text" />
+          <input name="subject" type="text" required="" />
 
           <aside>رسالة *</aside>
-          <textarea name="message" rows="4"></textarea>
+          <textarea name="message" rows="4" required=""></textarea>
 
           <img class="CAPTCHA" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA">
 
           <aside>أدخل الرموز في الصورة</aside>
-          <input name="" type="text" />
+          <input name="" type="text" required="" />
 
           <input class="button" value="إرسال" type="submit" />
         </form>

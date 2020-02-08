@@ -167,6 +167,36 @@ $banner_height: 33rem;
   background: $cyan;
 }
 
+.form_alert {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  line-height: 2rem;
+  border: 1px solid $yellow;
+}
+
+.form_error {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem;   
+  width: 100%;
+  font-weight: bold;
+  line-height: 2rem;
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 96, 96);
+  background: rgb(255, 180, 180);
+}
+
+.form_ok {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem;   
+  width: 100%;
+  line-height: 2rem;
+  border: 1px solid #74b543;
+  background: #caf3ab;
+}
+
 .section_alert {
   position: relative;
   padding: 1rem;
@@ -175,6 +205,7 @@ $banner_height: 33rem;
   border: 1px solid $yellow;
 }
 
+.form_alert::after,
 .section_alert::after {
   @include bg_icon;
   content: " ";
@@ -339,6 +370,10 @@ $banner_height: 33rem;
   border: 0.1rem solid $gray;
   border-right: none;
   cursor: pointer;
+}
+
+.select_day {
+  width: 5rem;
 }
 
 @media (max-width: 1000px) {

@@ -877,6 +877,36 @@ footer .android {
   background: #00A3DD;
 }
 
+.form_alert {
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  line-height: 2rem;
+  border: 1px solid #BFD145;
+}
+
+.form_error {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  font-weight: bold;
+  line-height: 2rem;
+  color: red;
+  border: 1px solid #ff6060;
+  background: #ffb4b4;
+}
+
+.form_ok {
+  position: relative;
+  margin-top: 1rem;
+  padding: 1rem;
+  width: 100%;
+  line-height: 2rem;
+  border: 1px solid #74b543;
+  background: #caf3ab;
+}
+
 .section_alert {
   position: relative;
   padding: 1rem;
@@ -885,6 +915,7 @@ footer .android {
   border: 1px solid #BFD145;
 }
 
+.form_alert::after,
 .section_alert::after {
   width: 2rem;
   height: 2rem;
@@ -1103,6 +1134,10 @@ footer .android {
   border: 0.1rem solid #F7F7F7;
   border-right: none;
   cursor: pointer;
+}
+
+.select_day {
+  width: 5rem;
 }
 
 @media (max-width: 1000px) {
