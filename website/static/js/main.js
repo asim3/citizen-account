@@ -213,5 +213,24 @@ window.addEventListener("load", function() {
     search_box.addEventListener("click", show_search);
   }
 
+  const side_links_navs = document.querySelectorAll(".side_links nav");
+  for (let i = 0; i < side_links_navs.length; i++) {
+    const nav_span = document.createElement("span");
+    nav_span.addEventListener("click", function() {
+      const parent_parent = nav_span.parentElement.parentElement;
+      if (parent_parent.className === "side_links") {
+        const side_links_first = document.querySelectorAll(".side_links > nav");
+        for (let x = 0; x < side_links_first.length; x++) {
+          console.log(side_links_first[x]);
+          side_links_first[x].querySelector("div").className = "";
+          side_links_first[x].querySelector("span").className = "";
+        }
+      }
+      nav_span.classList.toggle("rotate_span");
+      nav_span.previousElementSibling.classList.toggle("nav_show");
+    });
+    side_links_navs[i].appendChild(nav_span);
+  }
+
   setTimeout(add_video_to_home, 0);
 });

@@ -97,7 +97,6 @@ header {
 
 .side_links a,
 .side_links > nav {
-  height: 3rem;
   line-height: 3rem;
 }
 
@@ -105,18 +104,38 @@ header {
   position: relative;
   display: inline-flex;
   flex-direction: column;
-  overflow: hidden;
   z-index: 2;
 }
 
-.side_links nav > a:first-child::after {
+.side_links nav nav div,
+.side_links nav {
+  position: relative;
+}
+
+.side_links nav > a:first-child {
+  padding-left: 2rem;
+}
+
+.side_links nav > span {
   @include bg_icon;
-  content: " ";
-  display: inline-block;
-  padding: 0 1rem;
-  width: 0.7rem;
-  height: 0.7rem;
+  position: absolute;
+  top: 0.8rem;
+  left: 0rem;
+  padding: 0.8rem;
   background-image: url(../img/side_menu_2.svg);
+}
+
+.nav_show,
+.nav_show a {
+  display: block !important;
+}
+
+.side_links nav > .rotate_span {
+  transform: rotate(180deg);
+}
+
+.side_links nav > span:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -195,12 +214,17 @@ header {
 
   .side_links > nav {
     width: 100%;
-    height: 5rem;
   }
 
-  .side_links nav:hover {
-    height: auto;
+  .nav_show > a {
     background-color: $gray;
+  }
+
+  .side_links nav > div {
+    display: none;
+    position: static;
+    top: none;
+    right: none;
   }
 }
 
@@ -249,8 +273,12 @@ header {
     border: 0.1rem solid $yellow;
   }
 
-  .side_links nav:hover {
-    height: auto;
+  .nav_show {
+    width: 30rem;
+  }
+
+  .side_links nav nav a,
+  .nav_show > a {
     background-color: $yellow;
   }
 
@@ -261,5 +289,12 @@ header {
 
   .side_links_close {
     display: none;
+  }
+
+  .side_links nav > div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0rem;
   }
 }
