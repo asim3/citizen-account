@@ -113,14 +113,14 @@ header {
 }
 
 .side_links nav > a:first-child {
-  padding-left: 2rem;
+  padding-left: 3rem;
 }
 
 .side_links nav > span {
   @include bg_icon;
   position: absolute;
   top: 0.8rem;
-  left: 0rem;
+  left: 0.5rem;
   padding: 0.8rem;
   background-image: url(../img/side_menu_2.svg);
 }

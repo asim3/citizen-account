@@ -12,5 +12,5 @@ MEDIA_ROOT
 .venv
 __MACOSX
 ~$*.xlsx
-
 .~lock.*.xlsx#
+website/download/*.zip
