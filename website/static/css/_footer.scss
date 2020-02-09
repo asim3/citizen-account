@@ -98,7 +98,7 @@ footer > footer {
   clear: both;
 }
 
-footer > footer *:nth-child(1n+2) {
+footer > footer *:nth-child(1n + 2) {
   margin: 0 1rem;
 }
 
@@ -116,7 +116,6 @@ footer .android {
   background-image: url(../img/android.svg);
 }
 
-
 @media (max-width: 1000px) {
   .twitter_text_big {
     display: none;
@@ -131,7 +130,6 @@ footer .android {
   }
 }
 
-
 @media (max-width: 600px) {
   .body_root > footer {
     background-position: -5rem 0rem;
@@ -139,17 +137,17 @@ footer .android {
 
   footer > footer {
     display: grid;
-    grid-template-areas: 
-      'first first first' 
-      'mid2 mid3 mid4' 
-      '. app1 app2';
+    grid-template-areas:
+      "first first first"
+      "mid2 mid3 mid4"
+      ". app1 app2";
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
 
   footer > footer > * {
-    margin: 0!important;
-    text-align: center!important;
+    margin: 0 !important;
+    text-align: center !important;
   }
 
   footer > footer > div:nth-child(1) {
@@ -177,7 +175,5 @@ footer .android {
   }
 }
 
-
 @media (min-width: 1001px) {
-  
 }

@@ -1,21 +1,20 @@
-@import './root';
-@import './header';
-@import './footer';
-@import './index';
-@import './policies';
-@import './media_center';
-@import './faq';
-
+@import "./root";
+@import "./header";
+@import "./footer";
+@import "./index";
+@import "./policies";
+@import "./media_center";
+@import "./faq";
 
 .fixed_massege {
-    @include bg_icon;
-    position: fixed;
-    bottom: 5rem;
-    right: 2rem;
-    width: 5rem;
-    height: 5rem;
-    background-image: url(../img/massege.svg);
-    cursor: pointer;
+  @include bg_icon;
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../img/massege.svg);
+  cursor: pointer;
 }
 
 article {
@@ -32,7 +31,7 @@ article a {
   position: absolute;
   bottom: 0;
   left: 2rem;
-  color: $blue!important;
+  color: $blue !important;
 }
 
 article img {
@@ -51,7 +50,7 @@ aside {
 }
 
 form .button,
-input[type=submit] {
+input[type="submit"] {
   @include bold;
   color: $blue;
   border: none;
@@ -60,10 +59,10 @@ input[type=submit] {
 
 form select,
 form textarea,
-input[type=email],
-input[type=file],
-input[type=text],
-input[type=number] {
+input[type="email"],
+input[type="file"],
+input[type="text"],
+input[type="number"] {
   @include regular;
   width: 100%;
 }
@@ -100,7 +99,7 @@ h1 img {
 
 .title a {
   @include regular;
-  color: $blue!important;
+  color: $blue !important;
   font-size: 1rem;
 }
 
@@ -126,7 +125,7 @@ h1 img {
   margin: 1rem 0;
   padding: 0.5rem 2rem;
   text-align: center;
-  color: $blue!important;
+  color: $blue !important;
   border: 0.1rem solid $yellow;
   background: $yellow;
   cursor: pointer;
@@ -139,7 +138,7 @@ h1 img {
 section .button,
 section .button-h {
   display: inline;
-  padding: 1rem 2rem!important;
+  padding: 1rem 2rem !important;
 }
 
 form .button {
@@ -188,10 +187,9 @@ form span {
 
   article img + pre,
   article ul {
-    padding-right: 0!important;
+    padding-right: 0 !important;
   }
 }
-
 
 @media (max-width: 600px) {
   aside {
@@ -201,7 +199,7 @@ form span {
   }
 
   form .button,
-  input[type=submit],
+  input[type="submit"],
   .CAPTCHA {
     float: right;
     margin-right: 30%;
@@ -210,11 +208,11 @@ form span {
   form select,
   form textarea,
   form .button,
-  input[type=submit],
-  input[type=file],
-  input[type=text],
-  input[type=email],
-  input[type=number] {
+  input[type="submit"],
+  input[type="file"],
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
     float: right;
     margin-top: 1rem;
     width: 70%;
@@ -239,7 +237,5 @@ form span {
   }
 }
 
-
 @media (min-width: 1001px) {
-  
 }

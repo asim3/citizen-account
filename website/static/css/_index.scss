@@ -178,7 +178,7 @@ $banner_height: 33rem;
 .form_error {
   position: relative;
   margin-top: 1rem;
-  padding: 1rem;   
+  padding: 1rem;
   width: 100%;
   font-weight: bold;
   line-height: 2rem;
@@ -190,7 +190,7 @@ $banner_height: 33rem;
 .form_ok {
   position: relative;
   margin-top: 1rem;
-  padding: 1rem;   
+  padding: 1rem;
   width: 100%;
   line-height: 2rem;
   border: 1px solid #74b543;
@@ -363,7 +363,7 @@ $banner_height: 33rem;
   width: 22rem;
 }
 
-#search_form_root input[type=text] {
+#search_form_root input[type="text"] {
   margin: 0;
   padding: 0 1rem;
   width: 100%;
@@ -373,7 +373,7 @@ $banner_height: 33rem;
   background: $yellow;
 }
 
-#search_form_root input[type=submit] {
+#search_form_root input[type="submit"] {
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -404,7 +404,7 @@ $banner_height: 33rem;
     padding: 1rem;
     width: 100%;
   }
-  
+
   #search_form_root {
     top: 6rem;
     left: 1rem;

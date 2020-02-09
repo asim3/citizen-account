@@ -1,27 +1,28 @@
 /**
-* @fileOverview
-* @author Zoltan Toth
-* @version 1.1.0
-*/
+ * @fileOverview
+ * @author Zoltan Toth
+ * @version 1.1.0
+ */
 
 /**
-* @description
-* Vanilla JavaScript Accordion
-*
-* @class
-* @param {(string|Object)} options.element - HTML id of the accordion container
-*         or the DOM element.
-* @param {number} [options.openTab=1] - Start the accordion with this item opened.
-* @param {boolean} [options.oneOpen=false] - Only one tab can be opened at a time.
-*/
+ * @description
+ * Vanilla JavaScript Accordion
+ *
+ * @class
+ * @param {(string|Object)} options.element - HTML id of the accordion container
+ *         or the DOM element.
+ * @param {number} [options.openTab=1] - Start the accordion with this item opened.
+ * @param {boolean} [options.oneOpen=false] - Only one tab can be opened at a time.
+ */
 var Accordion = function(options) {
-  var element = typeof options.element === 'string' ?
-                  document.getElementById(options.element) : options.element,
-      openTab = options.openTab,
-      oneOpen = options.oneOpen || false,
-
-      titleClass   = 'js-Accordion-title',
-      contentClass = 'js-Accordion-content';
+  var element =
+      typeof options.element === "string"
+        ? document.getElementById(options.element)
+        : options.element,
+    openTab = options.openTab,
+    oneOpen = options.oneOpen || false,
+    titleClass = "js-Accordion-title",
+    contentClass = "js-Accordion-content";
 
   render();
 
@@ -29,23 +30,22 @@ var Accordion = function(options) {
    * Initial rendering of the accordion.
    */
   function render() {
-      // attach classes to buttons and containers
-      [].forEach.call(element.querySelectorAll('button'),
-          function(item) {
-              item.classList.add(titleClass);
-              item.nextElementSibling.classList.add(contentClass);
-          });
+    // attach classes to buttons and containers
+    [].forEach.call(element.querySelectorAll("button"), function(item) {
+      item.classList.add(titleClass);
+      item.nextElementSibling.classList.add(contentClass);
+    });
 
-      // attach only one click listener
-      element.addEventListener('click', onClick);
+    // attach only one click listener
+    element.addEventListener("click", onClick);
 
-      // accordion starts with all tabs closed
-      closeAll();
+    // accordion starts with all tabs closed
+    closeAll();
 
-      // sets the open tab - if defined
-      if (openTab) {
-          open(openTab);
-      }
+    // sets the open tab - if defined
+    if (openTab) {
+      open(openTab);
+    }
   }
 
   /**
@@ -54,24 +54,26 @@ var Accordion = function(options) {
    * @param {object} e - Element the click occured on.
    */
   function onClick(e) {
-      if (e.target.className.indexOf(titleClass) === -1) {
-          return;
-      }
+    if (e.target.className.indexOf(titleClass) === -1) {
+      return;
+    }
 
-      if (oneOpen) {
-          closeAll();
-      }
+    if (oneOpen) {
+      closeAll();
+    }
 
-      toggle(e.target.nextElementSibling);
+    toggle(e.target.nextElementSibling);
   }
 
   /**
    * Closes all accordion tabs.
    */
   function closeAll() {
-      [].forEach.call(element.querySelectorAll('.' + contentClass), function(item) {
-          item.style.height = 0;
-      });
+    [].forEach.call(element.querySelectorAll("." + contentClass), function(
+      item
+    ) {
+      item.style.height = 0;
+    });
   }
 
   /**
@@ -80,17 +82,16 @@ var Accordion = function(options) {
    * @param {object} el - The content tab to show or hide.
    */
   function toggle(el) {
-      // getting the height every time in case
-      // the content was updated dynamically
-      var height = el.scrollHeight;
+    // getting the height every time in case
+    // the content was updated dynamically
+    var height = el.scrollHeight;
 
-      if (el.style.height === '0px' || el.style.height === '') {
-          el.style.height = height + 'px';
-      } else {
-          el.style.height = 0;
-      }
+    if (el.style.height === "0px" || el.style.height === "") {
+      el.style.height = height + "px";
+    } else {
+      el.style.height = 0;
+    }
   }
-
 
   /**
    * Returns the corresponding accordion content element by index.
@@ -98,7 +99,7 @@ var Accordion = function(options) {
    * @param {number} n - Index of tab to return
    */
   function getTarget(n) {
-      return element.querySelectorAll('.' + contentClass)[n - 1];
+    return element.querySelectorAll("." + contentClass)[n - 1];
   }
 
   /**
@@ -109,12 +110,12 @@ var Accordion = function(options) {
    * @public
    */
   function open(n) {
-      var target = getTarget(n);
+    var target = getTarget(n);
 
-      if (target) {
-          if (oneOpen) closeAll();
-          target.style.height = target.scrollHeight + 'px';
-      }
+    if (target) {
+      if (oneOpen) closeAll();
+      target.style.height = target.scrollHeight + "px";
+    }
   }
 
   /**
@@ -125,11 +126,11 @@ var Accordion = function(options) {
    * @public
    */
   function close(n) {
-      var target = getTarget(n);
+    var target = getTarget(n);
 
-      if (target) {
-          target.style.height = 0;
-      }
+    if (target) {
+      target.style.height = 0;
+    }
   }
 
   /**
@@ -138,23 +139,21 @@ var Accordion = function(options) {
    * @public
    */
   function destroy() {
-      element.removeEventListener('click', onClick);
+    element.removeEventListener("click", onClick);
   }
 
   return {
-      open: open,
-      close: close,
-      destroy: destroy
+    open: open,
+    close: close,
+    destroy: destroy
   };
 };
 
-
 // https://github.com/zoltantothcom/vanilla-js-accordion
-
 
 window.addEventListener("load", function() {
   const accordion = new Accordion({
-    element: "question_root",    // ID of the accordion container
-    oneOpen: true            // [optional] Allow one accordion tab only to be opened at a time
+    element: "question_root", // ID of the accordion container
+    oneOpen: true // [optional] Allow one accordion tab only to be opened at a time
   });
-})
+});

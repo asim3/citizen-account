@@ -40,18 +40,18 @@
 
 .question_post aside,
 .question_post select {
-  margin: 0!important;
+  margin: 0 !important;
   width: 9rem;
   height: 3rem;
 }
 
-.question_post input[type=text] {
-  margin: 0!important;
+.question_post input[type="text"] {
+  margin: 0 !important;
   width: 19rem;
   height: 3rem;
 }
 
-.question_post input[type=submit] {
+.question_post input[type="submit"] {
   @include bg_icon;
   margin-top: 0rem;
   width: 3rem;
