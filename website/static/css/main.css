@@ -232,9 +232,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: none;
-  position: absolute;
-  top: 15rem;
-  right: 5rem;
   margin: 1rem;
   width: 2.5rem;
   height: 3rem;
@@ -244,7 +241,6 @@ header {
 }
 
 .header_logo {
-  margin: 4rem;
   width: 23rem;
   height: 11rem;
   background-image: url(../img/logo.svg);
@@ -263,7 +259,6 @@ header {
 .header_register,
 .header_call,
 .header_login {
-  position: absolute;
   padding: 0 1rem;
   background: #003c77;
 }
@@ -273,27 +268,6 @@ header {
 .header_call:hover,
 .header_login:hover {
   background: #002447;
-}
-
-.header_login {
-  top: 10rem;
-  left: 6rem;
-}
-
-.header_search {
-  top: 10rem;
-  left: 3rem;
-  color: #ffffff;
-}
-
-.header_register {
-  top: 10rem;
-  left: 12rem;
-}
-
-.header_call {
-  top: 10rem;
-  left: 18rem;
 }
 
 .header_search svg,
@@ -389,26 +363,8 @@ header {
     left: 16rem;
   }
   .side_links_root {
-    position: relative;
-    display: none;
-    top: 0rem;
-    left: 0px;
-    width: 100vw;
-    padding: 100vh;
-    overflow: hidden;
-    z-index: 15;
-  }
-  .side_links {
-    position: absolute;
-    display: none;
-    top: 5rem;
-    left: 4rem;
-    width: 100vw;
-    height: 100vh;
-    max-width: 50rem;
-    padding: 2rem;
     background: #ffffff;
-    overflow: hidden;
+    z-index: 15;
   }
   .side_links_close {
     width: 2rem;
@@ -457,9 +413,6 @@ header {
     width: 15rem;
     height: 13rem;
   }
-  .side_links_root {
-    top: -2rem;
-  }
   .header_register {
     left: 11rem;
   }
@@ -469,13 +422,6 @@ header {
 }
 
 @media (min-width: 1001px) {
-  .side_links_root {
-    display: block !important;
-  }
-  .side_links {
-    display: block !important;
-    margin: 0 10rem;
-  }
   .side_links a {
     display: inline-block;
     padding: 0 1rem;
@@ -678,7 +624,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
+        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -1102,7 +1048,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
+      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
@@ -1312,7 +1258,7 @@ footer .android {
     grid-area: input_7;
   }
   .calculator_root {
-        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
+        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
     grid-gap: 0;
   }
   .calculator_root input[type="submit"],

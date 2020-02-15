@@ -16,9 +16,6 @@ header {
 .header_menu {
   @include bg_icon;
   display: none;
-  position: absolute;
-  top: 15rem;
-  right: 5rem;
   margin: 1rem;
   width: 2.5rem;
   height: 3rem;
@@ -46,7 +43,6 @@ header {
 .header_register,
 .header_call,
 .header_login {
-  position: absolute;
   padding: 0 1rem;
   background: $blue;
 }
@@ -56,27 +52,6 @@ header {
 .header_call:hover,
 .header_login:hover {
   background: $blue_dark;
-}
-
-.header_login {
-  top: 10rem;
-  left: 6rem;
-}
-
-.header_search {
-  top: 10rem;
-  left: 3rem;
-  color: $white;
-}
-
-.header_register {
-  top: 10rem;
-  left: 12rem;
-}
-
-.header_call {
-  top: 10rem;
-  left: 18rem;
 }
 
 .header_search svg,
@@ -167,27 +142,8 @@ header {
   }
 
   .side_links_root {
-    position: relative;
-    display: none;
-    top: 0rem;
-    left: 0px;
-    width: 100vw;
-    padding: 100vh;
-    overflow: hidden;
-    z-index: 15;
-  }
-
-  .side_links {
-    position: absolute;
-    display: none;
-    top: 5rem;
-    left: 4rem;
-    width: 100vw;
-    height: 100vh;
-    max-width: 50rem;
-    padding: 2rem;
     background: $white;
-    overflow: hidden;
+    z-index: 15;
   }
 
   .side_links_close {
@@ -238,10 +194,6 @@ header {
     height: 13rem;
   }
 
-  .side_links_root {
-    top: -2rem;
-  }
-
   .header_register {
     left: 11rem;
   }
@@ -252,15 +204,6 @@ header {
 }
 
 @media (min-width: 1001px) {
-  .side_links_root {
-    display: block !important;
-  }
-
-  .side_links {
-    display: block !important;
-    margin: 0 10rem;
-  }
-
   .side_links a {
     display: inline-block;
     padding: 0 1rem;
