@@ -311,18 +311,19 @@ header {
   padding-left: 3rem;
 }
 
-.side_links nav > span {
+nav .dropdown-toggle::after {
   width: 2rem;
   height: 2rem;
   background-image: url(../img/favicon.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  top: 0.8rem;
-  left: 0.5rem;
-  padding: 0.8rem;
+  margin-right: 0.8rem;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
   background-image: url(../img/side_menu_2.svg);
+  border: none;
 }
 
 .nav_show,
@@ -624,7 +625,7 @@ footer .android {
   footer > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
+        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -1048,7 +1049,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
+      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
@@ -1109,39 +1110,30 @@ footer .android {
   padding: 0;
 }
 
-#search_form_root {
-  display: none;
-  position: absolute;
-  top: 13rem;
-  left: 3rem;
-}
-
 #search_form_root form {
   position: relative;
-  width: 22rem;
 }
 
 #search_form_root input[type="text"] {
   margin: 0;
   padding: 0 1rem;
-  width: 100%;
-  line-height: 3rem;
+  width: 22rem;
   color: #003c77;
   border: 0.1rem solid #f7f7f7;
   background: #bfd145;
 }
 
 #search_form_root input[type="submit"] {
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
   margin: 0;
   padding: 0 1rem;
   width: auto;
-  line-height: 3rem;
   border: 0.1rem solid #f7f7f7;
   border-right: none;
   cursor: pointer;
+}
+
+#navbarDropdownS::after {
+  display: none !important;
 }
 
 .select_day {
@@ -1162,10 +1154,6 @@ footer .android {
   .section_alert {
     padding: 1rem;
     width: 100%;
-  }
-  #search_form_root {
-    top: 6rem;
-    left: 1rem;
   }
 }
 
@@ -1258,7 +1246,7 @@ footer .android {
     grid-area: input_7;
   }
   .calculator_root {
-        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
+        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
     grid-gap: 0;
   }
   .calculator_root input[type="submit"],
