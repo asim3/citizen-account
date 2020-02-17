@@ -238,7 +238,6 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   display: none;
-  margin: 1rem;
   width: 2.5rem;
   height: 3rem;
   background-image: url(../img/side_menu_1.svg);
@@ -619,6 +618,7 @@ footer .android {
 
 @media (max-width: 600px) {
   .body_root > footer {
+    position: relative;
     background-position: -5rem 0rem;
   }
   footer > div > footer {
@@ -662,6 +662,10 @@ footer .android {
     -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: app2;
+  }
+  footer .thumb_root {
+    position: absolute;
+    top: 4.5rem;
   }
 }
 

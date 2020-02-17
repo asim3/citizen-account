@@ -16,7 +16,6 @@ header {
 .header_menu {
   @include bg_icon;
   display: none;
-  margin: 1rem;
   width: 2.5rem;
   height: 3rem;
   background-image: url(../img/side_menu_1.svg);

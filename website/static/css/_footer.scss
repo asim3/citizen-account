@@ -127,6 +127,7 @@ footer .android {
 
 @media (max-width: 600px) {
   .body_root > footer {
+    position: relative;
     background-position: -5rem 0rem;
   }
 
@@ -167,6 +168,11 @@ footer .android {
 
   footer .android {
     grid-area: app2;
+  }
+
+  footer .thumb_root {
+    position: absolute;
+    top: 4.5rem;
   }
 }
 
