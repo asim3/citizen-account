@@ -4,19 +4,18 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  height: 23rem;
+  height: 18rem;
 }
 
 .body_root > footer > div {
   margin: 0 auto;
   width: 100%;
   height: 4rem;
-  max-width: 1000px;
   color: $black;
   clear: both;
 }
 
-.body_root > footer > div > div {
+.body_root > footer > div > div > div {
   float: left;
 }
 
@@ -89,7 +88,7 @@
   background: $cyan;
 }
 
-footer > footer {
+footer > div > footer {
   display: flex;
   flex-wrap: wrap;
   padding: 8rem 3rem 0 15rem;
@@ -98,11 +97,11 @@ footer > footer {
   clear: both;
 }
 
-footer > footer *:nth-child(1n + 2) {
+footer > div > footer *:nth-child(1n + 2) {
   margin: 0 1rem;
 }
 
-footer > footer *:nth-child(2) {
+footer > div > footer *:nth-child(2) {
   margin: 0 auto 0 0;
 }
 
@@ -121,10 +120,6 @@ footer .android {
     display: none;
   }
 
-  .body_root > footer > div {
-    width: 98%;
-  }
-
   .twitter_text {
     display: block;
   }
@@ -135,7 +130,7 @@ footer .android {
     background-position: -5rem 0rem;
   }
 
-  footer > footer {
+  footer > div > footer {
     display: grid;
     grid-template-areas:
       "first first first"
@@ -145,24 +140,24 @@ footer .android {
     height: 10rem;
   }
 
-  footer > footer > * {
+  footer > div > footer > * {
     margin: 0 !important;
     text-align: center !important;
   }
 
-  footer > footer > div:nth-child(1) {
+  footer > div > footer > div:nth-child(1) {
     grid-area: first;
   }
 
-  footer > footer > div:nth-child(2) {
+  footer > div > footer > div:nth-child(2) {
     grid-area: mid2;
   }
 
-  footer > footer > div:nth-child(3) {
+  footer > div > footer > div:nth-child(3) {
     grid-area: mid3;
   }
 
-  footer > footer > div:nth-child(4) {
+  footer > div > footer > div:nth-child(4) {
     grid-area: mid4;
   }
 

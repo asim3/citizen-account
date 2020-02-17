@@ -55,7 +55,7 @@ a {
 
 .app_root {
   position: relative;
-  margin: 27rem 0 0 0;
+  margin-top: 27rem;
   overflow: hidden;
 }
 
@@ -194,6 +194,12 @@ input[type="radio"]:checked + label::after {
           animation: spinner-grow 0.75s linear infinite;
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+  color: inherit;
+  background-color: inherit;
+}
+
 @media (max-width: 1000px) {
   :root {
     font-size: 10px;
@@ -214,7 +220,7 @@ header {
   top: 0rem;
   left: 0rem;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 45rem;
   color: #ffffff;
   fill: #ffffff;
@@ -241,8 +247,8 @@ header {
 }
 
 .header_logo {
-  width: 23rem;
-  height: 11rem;
+  width: 25rem;
+  height: 15rem;
   background-image: url(../img/logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -344,9 +350,6 @@ nav .dropdown-toggle::after {
   .header_menu {
     display: block;
   }
-  .header_logo {
-    margin: 2rem 0rem;
-  }
   .header_login {
     top: 3rem;
     left: 4rem;
@@ -411,7 +414,7 @@ nav .dropdown-toggle::after {
     background-position: -1rem 0rem;
   }
   .header_logo {
-    width: 15rem;
+    width: 13rem;
     height: 13rem;
   }
   .header_register {
@@ -460,19 +463,18 @@ nav .dropdown-toggle::after {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  height: 23rem;
+  height: 18rem;
 }
 
 .body_root > footer > div {
   margin: 0 auto;
   width: 100%;
   height: 4rem;
-  max-width: 1000px;
   color: #000000;
   clear: both;
 }
 
-.body_root > footer > div > div {
+.body_root > footer > div > div > div {
   float: left;
 }
 
@@ -566,7 +568,7 @@ nav .dropdown-toggle::after {
   background: #00a3dd;
 }
 
-footer > footer {
+footer > div > footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -578,11 +580,11 @@ footer > footer {
   clear: both;
 }
 
-footer > footer *:nth-child(1n + 2) {
+footer > div > footer *:nth-child(1n + 2) {
   margin: 0 1rem;
 }
 
-footer > footer *:nth-child(2) {
+footer > div > footer *:nth-child(2) {
   margin: 0 auto 0 0;
 }
 
@@ -610,9 +612,6 @@ footer .android {
   .twitter_text_big {
     display: none;
   }
-  .body_root > footer > div {
-    width: 98%;
-  }
   .twitter_text {
     display: block;
   }
@@ -622,34 +621,34 @@ footer .android {
   .body_root > footer {
     background-position: -5rem 0rem;
   }
-  footer > footer {
+  footer > div > footer {
     display: -ms-grid;
     display: grid;
         grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
-  footer > footer > * {
+  footer > div > footer > * {
     margin: 0 !important;
     text-align: center !important;
   }
-  footer > footer > div:nth-child(1) {
+  footer > div > footer > div:nth-child(1) {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: first;
   }
-  footer > footer > div:nth-child(2) {
+  footer > div > footer > div:nth-child(2) {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: mid2;
   }
-  footer > footer > div:nth-child(3) {
+  footer > div > footer > div:nth-child(3) {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: mid3;
   }
-  footer > footer > div:nth-child(4) {
+  footer > div > footer > div:nth-child(4) {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     grid-area: mid4;
@@ -702,7 +701,7 @@ footer .android {
   background-position: center;
   position: absolute;
   top: 50%;
-  right: 4rem;
+  right: 0rem;
   background-image: url(../img/banner_right.svg);
   -webkit-box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
           box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
@@ -719,7 +718,7 @@ footer .android {
   background-position: center;
   position: absolute;
   top: 50%;
-  left: 4rem;
+  left: 0rem;
   background-image: url(../img/banner_left.svg);
   -webkit-box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
           box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
@@ -889,6 +888,7 @@ footer .android {
 }
 
 .section_alert {
+  display: none;
   position: relative;
   padding: 1rem;
   width: 15rem;
@@ -919,7 +919,6 @@ footer .android {
   display: none;
   margin: 0 auto;
   padding: 2rem;
-  max-width: 1000px;
   border: 1px solid #00a3dd;
 }
 
@@ -1146,7 +1145,6 @@ footer .android {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-width: 98%;
   }
   .banner_root {
     width: 98%;

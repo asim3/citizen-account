@@ -84,7 +84,7 @@ a {
 
 .app_root {
   position: relative;
-  margin: 27rem 0 0 0;
+  margin-top: 27rem;
   overflow: hidden;
 }
 
@@ -196,6 +196,12 @@ input[type="radio"]:checked + label::after {
 .loading {
   opacity: 0;
   animation: spinner-grow 0.75s linear infinite;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: inherit;
+  background-color: inherit;
 }
 
 @media (max-width: 1000px) {
