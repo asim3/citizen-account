@@ -13,4 +13,3 @@ MEDIA_ROOT
 __MACOSX
 ~$*.xlsx
 .~lock.*.xlsx#
-website/download/*.zip

@@ -1,0 +1,241 @@
+@import "./root";
+@import "./header";
+@import "./footer";
+@import "./index";
+@import "./policies";
+@import "./media_center";
+@import "./faq";
+
+.fixed_massege {
+  @include bg_icon;
+  position: fixed;
+  bottom: 5rem;
+  right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../img/massege.svg);
+  cursor: pointer;
+}
+
+article {
+  position: relative;
+  margin: 2rem auto;
+  padding: 2%;
+  padding-bottom: 3rem;
+  width: 95%;
+  color: $black;
+  background: $gray;
+}
+
+article a {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  color: $blue !important;
+}
+
+article img {
+  float: right;
+  width: 7rem;
+  height: 7rem;
+}
+
+article img ~ ul,
+article img + pre {
+  padding-right: 8rem;
+}
+
+aside {
+  margin-top: 1rem;
+}
+
+form .button,
+input[type="submit"] {
+  @include bold;
+  color: $blue;
+  border: none;
+  background: $yellow;
+}
+
+form select,
+form textarea,
+input[type="email"],
+input[type="file"],
+input[type="text"],
+input[type="number"] {
+  @include regular;
+  width: 100%;
+}
+
+form select {
+  height: 3rem;
+}
+
+h1 {
+  @include bold;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+h3 {
+  @include bold;
+  padding: 2rem;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+h1 img {
+  float: right;
+  width: 8rem;
+  height: 5rem;
+}
+
+.title {
+  @include bold;
+  margin: 2rem auto;
+  color: $green;
+  font-size: 2rem;
+}
+
+.title a {
+  @include regular;
+  color: $blue !important;
+  font-size: 1rem;
+}
+
+.title br {
+  display: none;
+}
+
+.title a::after {
+  content: " >";
+}
+
+.title a:last-child::after {
+  content: " ";
+}
+
+.title a:first-of-type {
+  padding-right: 3rem;
+}
+
+.button-h,
+.button {
+  @include bold;
+  margin: 1rem 0;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  color: $blue !important;
+  border: 0.1rem solid $yellow;
+  background: $yellow;
+  cursor: pointer;
+}
+
+.button-h {
+  background: none;
+}
+
+section .button,
+section .button-h {
+  display: inline;
+  padding: 1rem 2rem !important;
+}
+
+form .button {
+  display: inline-block;
+  height: 4rem;
+  line-height: 2rem;
+}
+
+.CAPTCHA {
+  display: block;
+  width: 15rem;
+  height: 6rem;
+}
+
+.small_nav {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.small_nav a {
+  display: inline-block;
+  margin: 0.1rem;
+  padding: 0rem 1rem;
+  font-weight: bold;
+  border: 0.1rem solid $yellow;
+}
+
+.small_nav .selected {
+  background: $yellow;
+}
+
+form span {
+  display: block;
+  color: gray;
+}
+
+@media (max-width: 1000px) {
+  .title {
+    margin: 2rem 10%;
+    width: 80%;
+  }
+
+  article img {
+    float: none;
+  }
+
+  article img + pre,
+  article ul {
+    padding-right: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  aside {
+    float: right;
+    width: 30%;
+    clear: both;
+  }
+
+  form .button,
+  input[type="submit"],
+  .CAPTCHA {
+    float: right;
+    margin-right: 30%;
+  }
+
+  form select,
+  form textarea,
+  form .button,
+  input[type="submit"],
+  input[type="file"],
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    float: right;
+    margin-top: 1rem;
+    width: 70%;
+  }
+
+  form span {
+    float: right;
+    padding-right: 30%;
+    clear: both;
+  }
+
+  form b {
+    float: right;
+  }
+
+  .title br {
+    display: block;
+  }
+
+  .title a:first-of-type {
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1001px) {
+}
