@@ -1,0 +1,50 @@
+$blue_dark: #002447;
+$blue: #003c77;
+$cyan: #00a3dd;
+$green: #21bcba;
+$green-sub: #1ebbb9;
+$yellow: #bfd145;
+$white: #ffffff;
+$gray: #f7f7f7;
+$black: #000000;
+
+@font-face {
+  font-family: "cairo-regular";
+  src: local("cairo-regular"), local("Cairo-Regular"), local("Cairo Regular"),
+    url("../fonts/cairo/Cairo-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "cairo-bold";
+  src: local("cairo-bold"), local("Cairo-Bold"), local("Cairo Bold"),
+    url("../fonts/cairo/Cairo-Bold.ttf") format("TrueType");
+}
+
+@mixin regular {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+}
+
+@mixin bold {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+}
+
+body {
+  background-image: url(../img/header_left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0rem 0rem;
+}
+
+footer {
+  padding-top: 1rem;
+  background-image: url(../img/footer_left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+@media (max-width: 600px) {
+  footer {
+    background-position: -5rem 0rem;
+  }
+}
