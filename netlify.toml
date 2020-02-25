@@ -1,3 +1,15 @@
 [[redirects]]
   from = "/"
-  to = "/v4/ar/index.html"
+  to = "/v3/ar/index.html"
+
+[[redirects]]
+  from = "/d/"
+  to = "/download/"
+
+[[redirects]]
+  from = "/a/*"
+  to = "/download/"
+
+[[redirects]]
+  from = "/s/*"
+  to = "/download/*"
