@@ -92,6 +92,14 @@ footer {
   background: $cyan;
 }
 
+#search_form_root {
+  background: $yellow;
+}
+
+button:focus {
+    outline: none !important;
+}
+
 @media (max-width: 600px) {
   footer {
     background-position: -5rem 0rem;

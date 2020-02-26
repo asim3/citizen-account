@@ -73,6 +73,14 @@ footer {
   background: #00a3dd;
 }
 
+#search_form_root {
+  background: #bfd145;
+}
+
+button:focus {
+  outline: none !important;
+}
+
 @media (max-width: 600px) {
   footer {
     background-position: -5rem 0rem;
