@@ -66,6 +66,32 @@ footer {
   background-image: url(../img/banner_left.svg);
 }
 
+.twitter_id {
+  direction: ltr;
+  color: $cyan;
+  border: 1px solid $cyan;
+}
+
+.twitter_text_big,
+.twitter_text {
+  position: relative;
+  color: $white;
+  border: 1px solid $cyan;
+  background-color: $cyan;
+}
+
+.twitter_text_big::after,
+.twitter_text::after {
+  content: " ";
+  position: absolute;
+  top: 30%;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  transform: rotate(45deg);
+  background: $cyan;
+}
+
 @media (max-width: 600px) {
   footer {
     background-position: -5rem 0rem;

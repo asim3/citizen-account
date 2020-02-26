@@ -46,6 +46,33 @@ footer {
   background-image: url(../img/banner_left.svg);
 }
 
+.twitter_id {
+  direction: ltr;
+  color: #00a3dd;
+  border: 1px solid #00a3dd;
+}
+
+.twitter_text_big,
+.twitter_text {
+  position: relative;
+  color: #ffffff;
+  border: 1px solid #00a3dd;
+  background-color: #00a3dd;
+}
+
+.twitter_text_big::after,
+.twitter_text::after {
+  content: " ";
+  position: absolute;
+  top: 30%;
+  right: -0.5rem;
+  width: 1rem;
+  height: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: #00a3dd;
+}
+
 @media (max-width: 600px) {
   footer {
     background-position: -5rem 0rem;
