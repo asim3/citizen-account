@@ -29,6 +29,9 @@ $black: #000000;
 }
 
 body {
+  font-family: cairo-regular, TimesNewRoman, sans-serif;
+  direction: rtl;
+  text-align: right;
   background-image: url(../img/header_left.svg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,11 +43,42 @@ footer {
   background-image: url(../img/footer_left.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: 0rem 0rem;
+}
+
+.bg-blue-dark {
+  background: $blue;
+}
+
+.bg-blue-dark:hover {
+  background: $blue_dark;
+}
+
+.side_links a {
+  color: $blue;
+}
+
+.carousel-control-next-icon {
+  background-image: url(../img/banner_right.svg);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/banner_left.svg);
 }
 
 @media (max-width: 600px) {
   footer {
     background-position: -5rem 0rem;
+  }
+}
+
+@media (min-width: 1001px) {
+  .side_links a {
+    border: 1px solid #ffffff00;
+  }
+
+  .side_links a:hover {
+    font-weight: bold;
+    border: 1px solid $yellow;
   }
 }
