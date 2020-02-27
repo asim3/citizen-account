@@ -1,0 +1,58 @@
+.carousel-control-next-icon {
+  background-image: url(../img/banner_right.svg);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../img/banner_left.svg);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 5rem 5rem rgba(255, 255, 255, 0.5);
+}
+
+.carousel-indicators li {
+  background-color: $blue;
+  border: 1px solid $yellow;
+}
+
+.home-tab-link {
+  color: $blue;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border-color: $cyan $cyan #fff;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: $yellow $yellow $cyan;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid $cyan;
+}
+
+.home-tab-content {
+  border: 1px solid;
+  border-color: #fff $cyan $cyan $cyan;
+}
+
+.card-title {
+  color: $cyan;
+  font-weight: bold;
+}
+
+.card-text {
+  color: $blue;
+  font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  .home-tab-link {
+    font-size: 0.8rem;
+  }
+}
