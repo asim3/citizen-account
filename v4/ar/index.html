@@ -15,7 +15,7 @@
     <div class="container">
       <div class="d-flex align-items-center">
         <div class="ml-auto">
-          <img class="card-img-top" src="../static/img/logo.svg" alt="Card image">
+          <img class="w-100 p-md-4" src="../static/img/logo.svg" alt="Card image">
         </div>
         <div class="p-2 bg-blue-dark">
           <a href="tel:19912" class="text-white">
@@ -139,8 +139,8 @@
 
 
   <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
+      <ol class="carousel-indicators flex-row-reverse">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -165,14 +165,113 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+
+    <ul class="nav nav-tabs nav-justified p-0" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link p-0 pb-2 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+          <img class="d-block m-auto w-50" src="../static/img/logo_3.svg" alt="logo_3" style="max-width: 125px;">
+          <span class="d-block mt-2 home-tab-link">عن البرنامج</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-0 pb-2" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+          <img class="d-block m-auto w-50" src="../static/img/logo_2.svg" alt="logo_2" style="max-width: 125px;">
+          <span class="d-block mt-2 home-tab-link">المركز الإعلامي</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link p-0 pb-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+          <img class="d-block m-auto w-50" src="../static/img/logo_1.svg" alt="logo_1" style="max-width: 125px;">
+          <span class="d-block mt-2 home-tab-link">الحاسبة التقديرية</span>
+        </a>
+      </li>
+    </ul>
+    <div class="tab-content pt-2 home-tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="card m-2">
+          <img class="p-4" src="../static/img/logo_51.svg" />
+          <div class="card-body text-center">
+            <h2 class="card-title">عن البرنامج</h2>
+            <p class="card-text">
+            إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع
+            الحكومية بأسلوب يضمن تحقيق كفاءة عالية.
+          </p>
+          </div>
+        </div>
+        <div class="card m-2">
+          <img class="p-4" src="../static/img/logo_52.svg" />
+          <div class="card-body text-center">
+            <h2 class="card-title">أهداف البرنامج</h2>
+            <p class="card-text">
+            يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على
+            رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع ترشيد الإستهلاك.
+          </p>
+          </div>
+        </div>
+        <div class="card m-2">
+          <img class="p-4" src="../static/img/logo_53.svg" />
+          <div class="card-body text-center">
+            <h2 class="card-title">المبادئ التوجيهية</h2>
+            <p class="card-text">
+            توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي
+            ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم قبل أي تغير في أسعار
+            الطاقة.
+          </p>
+          </div>
+        </div>
+        <div class="card m-2">
+          <img class="p-4" src="../static/img/logo_54.svg" />
+          <div class="card-body text-center">
+            <h2 class="card-title">الرؤية المستقبيلة</h2>
+            <p class="card-text">أن يكون حساب المواطن بوابة شاملة لكافة برامج الدعم الحكومي.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="rounded m-3 p-3" style="background: #f7f7f7;">
+          <h5>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</h5>
+          <p>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر
+            للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+          </p>
+          <a href="#">اقرأ المزيد</a>
+        </div>
+        <div class="rounded m-3 p-3" style="background: #f7f7f7;">
+          <h5>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</h5>
+          <p>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر
+            للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+          </p>
+          <a href="#">اقرأ المزيد</a>
+        </div>
+        <div class="rounded m-3 p-3" style="background: #f7f7f7;">
+          <h5>55,6 مليار ريال إجمالي الدفعات منها 2.6 مليار لدفعة أكتوبر</h5>
+          <p>
+            أودع اليوم برنامج حساب المواطن 2.6 مليار ريال مخصص دعم شهر أكتوبر
+            للمستفيدين المكتملة طلباتهم، حيث بلغت ...
+          </p>
+          <a href="#">اقرأ المزيد</a>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        aaa      33
+      </div>
+    </div>
   </div>
 
 
   <footer class="mt-5">
     <div class="container">
       <div class="d-flex justify-content-end mb-5">
-        <img class="ml-4" src="../static/img/youtube.svg" alt="youtube">
-        <img class="ml-4" src="../static/img/twitter.svg" alt="twitter">
+        <a href="#youtube">
+          <img class="ml-4" src="../static/img/youtube.svg" alt="youtube">
+        </a>
+        <a href="#twitter">
+          <img class="ml-4" src="../static/img/twitter.svg" alt="twitter">
+        </a>
         <div class="p-1 pr-3 d-none d-lg-block twitter_text_big">
           يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات
           والمواعيد
@@ -181,19 +280,29 @@
         <div class="p-1 twitter_id">@citizenaccount</div>
       </div>
 
-      <div class="row align-items-end text-white pb-3">
-        <div class="col">جميع الحقوق محفوظة © 2020</div>
-        <div class="col">الاسئلة الشائعة</div>
-        <div class="col">سياسة الخصوصية</div>
-        <div class="col">الشروط والأحكام</div>
-        <div class="col">
+      <div class="row align-items-end text-white pb-2">
+        <div class="col col-5 col-sm-8">
+          <a class="text-white" href="#">جميع الحقوق محفوظة © 2020</a><br />
+          <a class="text-white" href="#">الاسئلة الشائعة</a><br />
+          <a class="text-white" href="#">سياسة الخصوصية</a><br />
+          <a class="text-white" href="#">الشروط والأحكام</a><br />
+        </div>
+        <div class="col col-2 col-sm-1">
           <a href="#android" class="android">
-            <img class="d-block w-100" src="../static/img/android.svg" alt="android app">
+            <img 
+              class="d-block w-100" 
+              src="../static/img/android.svg" 
+              alt="android app" 
+              style="width:35px !important; height:35px !important;">
           </a>
         </div>
-        <div class="col">
+        <div class="col col-2 col-sm-1">
           <a href="#apple" class="apple">
-            <img class="d-block w-100" src="../static/img/apple.svg" alt="apple app">
+            <img 
+              class="d-block w-100" 
+              src="../static/img/apple.svg" 
+              alt="apple app" 
+              style="width:35px !important; height:35px !important;">
           </a>
         </div>
       </div>

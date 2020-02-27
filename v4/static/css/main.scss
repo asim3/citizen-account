@@ -8,6 +8,8 @@ $white: #ffffff;
 $gray: #f7f7f7;
 $black: #000000;
 
+@import "./home";
+
 @font-face {
   font-family: "cairo-regular";
   src: local("cairo-regular"), local("Cairo-Regular"), local("Cairo Regular"),
@@ -33,7 +35,7 @@ body {
   direction: rtl;
   text-align: right;
   background-image: url(../img/header_left.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 0rem 0rem;
 }
@@ -56,14 +58,6 @@ footer {
 
 .side_links a {
   color: $blue;
-}
-
-.carousel-control-next-icon {
-  background-image: url(../img/banner_right.svg);
-}
-
-.carousel-control-prev-icon {
-  background-image: url(../img/banner_left.svg);
 }
 
 .twitter_id {
@@ -97,12 +91,17 @@ footer {
 }
 
 button:focus {
-    outline: none !important;
+  outline: none !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   footer {
+    font-size: 10px;
     background-position: -5rem 0rem;
+  }
+
+  .twitter_text::after {
+    top: 22%;
   }
 }
 
