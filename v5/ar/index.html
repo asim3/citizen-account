@@ -37,10 +37,11 @@
         </div>
         <div class="p-2 bg-blue-dark">
           <a class="dropdown-toggle text-white" href="#" id="navbarDropdownS" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
+            data-target="#navbar_dropdown_search" aria-haspopup="true" aria-expanded="false">
             <img src="../static/img/search.svg" alt="search">
           </a>
-          <div class="dropdown-menu dropdown-menu-right text-right p-0" aria-labelledby="navbarDropdownS">
+          <div class="dropdown-menu dropdown-menu-right text-right p-0" aria-labelledby="navbarDropdownS"
+            id="navbar_dropdown_search">
             <form id="search_form_root" class="input-group" action="./search.html" method="GET">
               <input class="form-control" type="text" name="s" placeholder="بحث...">
               <div class="input-group-append">
@@ -68,8 +69,9 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">السياسات</a>
-              <ul class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown1">
+                data-target="#navbar_dropdown_1" aria-haspopup="true" aria-expanded="false">السياسات</a>
+              <ul class="dropdown-menu dropdown-menu-right text-right" id="navbar_dropdown_1"
+                aria-labelledby="navbarDropdown1">
                 <li class="dropdown-item">
                   <a class="nav-link" href="./policies.html">السياسات</a>
                 </li>
@@ -83,8 +85,8 @@
                   <a class="nav-link" href="./terms.html">مصطلحات تهمك 3</a>
                 </li>
                 <li class="dropdown-item dropdown-submenu">
-                  <a class="nav-link dropdown-toggle" href="#">مصطلحات تهمك 4</a>
-                  <ul class="dropdown-submenu" style="display: none;">
+                  <a class="nav-link dropdown-toggle" href="#" data-target="#navbar_dropdown_2">مصطلحات تهمك 4</a>
+                  <ul class="dropdown-submenu" style="display: none;" id="#navbar_dropdown_2">
                     <li class="dropdown-item">
                       <a class="nav-link" href="./videos.html">مصطلحات تهمك 41</a>
                     </li>
@@ -103,8 +105,9 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">المركز الإعلامي</a>
-              <ul class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown2">
+                data-target="#navbar_dropdown_2" aria-haspopup="true" aria-expanded="false">المركز الإعلامي</a>
+              <ul class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown2"
+                id="#navbar_dropdown_1">
                 <li class="dropdown-item">
                   <a href="./media_center.html">المركز الإعلامي</a>
                 </li>
@@ -118,8 +121,9 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">الأسئلة الشائعة</a>
-              <ul class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown3">
+                data-target="#navbar_dropdown_3" aria-haspopup="true" aria-expanded="false">الأسئلة الشائعة</a>
+              <ul class="dropdown-menu dropdown-menu-right text-right" aria-labelledby="navbarDropdown3"
+                id="#navbar_dropdown_3">
                 <li class="dropdown-item">
                   <a href="./faq.html">الأسئلة الشائعة</a>
                 </li>
@@ -169,19 +173,22 @@
 
     <ul class="nav nav-tabs nav-justified p-0" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link p-0 pb-2 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+        <a class="nav-link p-0 pb-2 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+          aria-controls="pills-home" aria-selected="true">
           <img class="d-block m-auto w-50" src="../static/img/logo_3.svg" alt="logo_3" style="max-width: 125px;">
           <span class="d-block mt-2 home-tab-link">عن البرنامج</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link p-0 pb-2" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+        <a class="nav-link p-0 pb-2" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+          aria-controls="pills-profile" aria-selected="false">
           <img class="d-block m-auto w-50" src="../static/img/logo_2.svg" alt="logo_2" style="max-width: 125px;">
           <span class="d-block mt-2 home-tab-link">المركز الإعلامي</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link p-0 pb-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
+        <a class="nav-link p-0 pb-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+          aria-controls="pills-contact" aria-selected="false">
           <img class="d-block m-auto w-50" src="../static/img/logo_1.svg" alt="logo_1" style="max-width: 125px;">
           <span class="d-block mt-2 home-tab-link">الحاسبة التقديرية</span>
         </a>
@@ -194,9 +201,9 @@
           <div class="card-body text-center">
             <h2 class="card-title">عن البرنامج</h2>
             <p class="card-text">
-            إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع
-            الحكومية بأسلوب يضمن تحقيق كفاءة عالية.
-          </p>
+              إعادة توجيه الدعم الحكومي لتلبية احتياجات المواطنين من المنافع
+              الحكومية بأسلوب يضمن تحقيق كفاءة عالية.
+            </p>
           </div>
         </div>
         <div class="card m-2">
@@ -204,9 +211,9 @@
           <div class="card-body text-center">
             <h2 class="card-title">أهداف البرنامج</h2>
             <p class="card-text">
-            يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على
-            رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع ترشيد الإستهلاك.
-          </p>
+              يهدف البرنامج إلى تخفيف آثار الإصلاحات الاقتصادية، والعمل على
+              رفع كفاءة الدعم الحكومي، بالإضافة إلى تشجيع ترشيد الإستهلاك.
+            </p>
           </div>
         </div>
         <div class="card m-2">
@@ -214,10 +221,10 @@
           <div class="card-body text-center">
             <h2 class="card-title">المبادئ التوجيهية</h2>
             <p class="card-text">
-            توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي
-            ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم قبل أي تغير في أسعار
-            الطاقة.
-          </p>
+              توفير الحماية اللازمة للأسر المستحقة، وتقديم الدعم بشكل نقدي
+              ومتغير حسب حجم الأسرة، والتأكد من صرف الدعم قبل أي تغير في أسعار
+              الطاقة.
+            </p>
           </div>
         </div>
         <div class="card m-2">
@@ -257,7 +264,7 @@
       </div>
 
       <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        aaa      33
+        aaa 33
       </div>
     </div>
   </div>
@@ -289,19 +296,13 @@
         </div>
         <div class="col col-2 col-sm-1">
           <a href="#android" class="android">
-            <img 
-              class="d-block w-100" 
-              src="../static/img/android.svg" 
-              alt="android app" 
+            <img class="d-block w-100" src="../static/img/android.svg" alt="android app"
               style="width:35px !important; height:35px !important;">
           </a>
         </div>
         <div class="col col-2 col-sm-1">
           <a href="#apple" class="apple">
-            <img 
-              class="d-block w-100" 
-              src="../static/img/apple.svg" 
-              alt="apple app" 
+            <img class="d-block w-100" src="../static/img/apple.svg" alt="apple app"
               style="width:35px !important; height:35px !important;">
           </a>
         </div>
