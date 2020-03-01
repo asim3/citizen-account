@@ -35,13 +35,13 @@
             <span class="d-none d-sm-inline">التسجيل</span>
           </a>
         </div>
-        <div class="p-2 bg-blue-dark">
+        <div class="p-2 bg-blue-dark dropdown">
           <a class="dropdown-toggle text-white" href="#" id="navbarDropdownS" role="button" data-toggle="dropdown"
-            data-target="#navbar_dropdown_search" aria-haspopup="true" aria-expanded="false">
+            aria-haspopup="true" aria-expanded="false">
             <img src="../static/img/search.svg" alt="search">
           </a>
-          <div class="dropdown-menu dropdown-menu-right text-right p-0" aria-labelledby="navbarDropdownS"
-            id="navbar_dropdown_search">
+          <div id="navbar_dropdown_search" class="dropdown-menu dropdown-menu-left text-right mt-2 p-0"
+            aria-labelledby="navbarDropdownS">
             <form id="search_form_root" class="input-group" action="./search.html" method="GET">
               <input class="form-control" type="text" name="s" placeholder="بحث...">
               <div class="input-group-append">
@@ -173,8 +173,8 @@
 
     <ul class="nav nav-tabs nav-justified p-0" id="pills-tab" role="tablist">
       <li class="nav-item">
-        <a class="nav-link p-0 pb-2 active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-          aria-controls="pills-home" aria-selected="true">
+        <a class="nav-link p-0 pb-2" id="pills-info-tab" data-toggle="pill" href="#pills-info" role="tab"
+          aria-controls="pills-info" aria-selected="false">
           <img class="d-block m-auto w-50" src="../static/img/logo_3.svg" alt="logo_3" style="max-width: 125px;">
           <span class="d-block mt-2 home-tab-link">عن البرنامج</span>
         </a>
@@ -187,17 +187,20 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link p-0 pb-2" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-          aria-controls="pills-contact" aria-selected="false">
+        <a class="nav-link p-0 pb-2 active" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+          aria-controls="pills-contact" aria-selected="true">
           <img class="d-block m-auto w-50" src="../static/img/logo_1.svg" alt="logo_1" style="max-width: 125px;">
           <span class="d-block mt-2 home-tab-link">الحاسبة التقديرية</span>
         </a>
       </li>
     </ul>
+
+
+
     <div class="tab-content pt-2 home-tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+      <div class="tab-pane fade" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab">
         <div class="card m-2">
-          <img class="p-4" src="../static/img/logo_51.svg" />
+          <img class="p-4" src="../static/img/logo_51.svg" alt="logo_51" />
           <div class="card-body text-center">
             <h2 class="card-title">عن البرنامج</h2>
             <p class="card-text">
@@ -207,7 +210,7 @@
           </div>
         </div>
         <div class="card m-2">
-          <img class="p-4" src="../static/img/logo_52.svg" />
+          <img class="p-4" src="../static/img/logo_52.svg" alt="logo_52" />
           <div class="card-body text-center">
             <h2 class="card-title">أهداف البرنامج</h2>
             <p class="card-text">
@@ -217,7 +220,7 @@
           </div>
         </div>
         <div class="card m-2">
-          <img class="p-4" src="../static/img/logo_53.svg" />
+          <img class="p-4" src="../static/img/logo_53.svg" alt="logo_53" />
           <div class="card-body text-center">
             <h2 class="card-title">المبادئ التوجيهية</h2>
             <p class="card-text">
@@ -228,13 +231,14 @@
           </div>
         </div>
         <div class="card m-2">
-          <img class="p-4" src="../static/img/logo_54.svg" />
+          <img class="p-4" src="../static/img/logo_54.svg" alt="logo_54" />
           <div class="card-body text-center">
             <h2 class="card-title">الرؤية المستقبيلة</h2>
             <p class="card-text">أن يكون حساب المواطن بوابة شاملة لكافة برامج الدعم الحكومي.</p>
           </div>
         </div>
       </div>
+
 
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         <div class="rounded m-3 p-3" style="background: #f7f7f7;">
@@ -263,11 +267,50 @@
         </div>
       </div>
 
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        aaa 33
+
+      <div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="row m-2">
+          <div class="col-lg-8">
+            <div class="row py-3">
+              <div class="col-lg">
+                <b>
+                  يمكنك الآن معرفة استحقاقك من عدمه عن طريق حاسبة البرنامج فقط قم بملء الحقول لتظهر لك النتيجة
+                </b>
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col-12 col-lg-6">
+                هل أنت مسجل في برنامج حساب المواطن ؟
+              </div>
+              <div class="col">
+                نعم
+              </div>
+              <div class="col">
+                لا
+              </div>
+            </div>
+            <div class="row py-3">
+              <div class="col-12 col-lg-6">
+                هل أنت ؟
+              </div>
+              <div class="col">
+                مستقل
+              </div>
+              <div class="col">
+                رب أسرة
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div id="section_alert" class="border p-3">
+              تعريف رب الأسرة: ذكر أو أنثى ( الزوج، زوجة غير المواطن، أم غير متزوجة، أب غير متزوج، زوجة فاقد الأهلية)
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 
 
   <footer class="mt-5">

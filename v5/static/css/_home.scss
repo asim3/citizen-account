@@ -51,6 +51,23 @@
   font-weight: bold;
 }
 
+#section_alert {
+  border-color: $yellow !important;
+}
+
+#section_alert::after {
+  content: " ";
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  background-image: url(../img/alert.svg);
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;

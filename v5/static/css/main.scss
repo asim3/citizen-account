@@ -94,6 +94,10 @@ button:focus {
   outline: none !important;
 }
 
+#navbarDropdownS::after {
+  display: none;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
@@ -117,13 +121,13 @@ button:focus {
 }
 
 @media screen and (min-width: 768px){
-  .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+  nav .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
         display: block;
     }
-    .dropdown-menu{
+    nav .dropdown-menu{
         margin-top: 0;
     }
-    .dropdown-toggle{
+    nav .dropdown-toggle{
         margin-bottom: 2px;
     }
     .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{

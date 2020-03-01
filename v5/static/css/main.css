@@ -53,6 +53,23 @@
   font-weight: bold;
 }
 
+#section_alert {
+  border-color: #bfd145 !important;
+}
+
+#section_alert::after {
+  content: " ";
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  background-image: url(../img/alert.svg);
+  width: 2rem;
+  height: 2rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;
@@ -134,6 +151,10 @@ button:focus {
   outline: none !important;
 }
 
+#navbarDropdownS::after {
+  display: none;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
@@ -151,6 +172,21 @@ button:focus {
   .side_links a:hover {
     font-weight: bold;
     border: 1px solid #bfd145;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu {
+    display: block;
+  }
+  nav .dropdown-menu {
+    margin-top: 0;
+  }
+  nav .dropdown-toggle {
+    margin-bottom: 2px;
+  }
+  .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
