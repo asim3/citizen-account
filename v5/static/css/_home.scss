@@ -68,6 +68,24 @@
   background-position: center;
 }
 
+input[type="radio"] + label::after {
+  content: " ";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../img/option_0.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+}
+
+input[type="radio"]:checked + label::after {
+  background-image: url(../img/option_1.svg);
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;

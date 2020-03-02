@@ -283,10 +283,12 @@
                 هل أنت مسجل في برنامج حساب المواطن ؟
               </div>
               <div class="col">
-                نعم
+                <input class="invisible" type="radio" id="radio_1" name="option_1" onchange="show_calculator()">
+                <label class="pr-2" for="radio_1">نعم</label>
               </div>
               <div class="col">
-                لا
+                <input class="invisible" type="radio" id="radio_2" name="option_1" onchange="show_calculator()">
+                <label class="pr-2" for="radio_2">لا</label>
               </div>
             </div>
             <div class="row py-3">
@@ -294,16 +296,110 @@
                 هل أنت ؟
               </div>
               <div class="col">
-                مستقل
+                <input class="invisible" type="radio" id="radio_3" name="option_2" onchange="show_calculator()">
+                <label class="pr-2" for="radio_3">مستقل</label>
               </div>
               <div class="col">
-                رب أسرة
+                <input class="invisible" type="radio" id="radio_4" name="option_2" onchange="show_calculator()">
+                <label class="pr-2" for="radio_4">رب أسرة</label>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 align-self-end">
             <div id="section_alert" class="border p-3">
               تعريف رب الأسرة: ذكر أو أنثى ( الزوج، زوجة غير المواطن، أم غير متزوجة، أب غير متزوج، زوجة فاقد الأهلية)
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                أدخل عدد التابعين بعمر 18 سنة أو أكثر
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                أدخل عدد التابعين بعمر أقل من 18 سنة
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                أدخل مجموع دخلك
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                مبلغ الدعم التقديري
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" disabled="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                عدد أفراد الأسرة
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                حد الإعفاء من التناقص
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" disabled="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row m-2">
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                الحد المانع
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="number" disabled="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 pt-3">
+            <div class="row">
+              <div class="col-5 col-lg-12">
+                &nbsp;
+              </div>
+              <div class="col-7 col-lg-12 py-2">
+                <input class="w-100" type="submit" value="احسب" disabled="">
+              </div>
             </div>
           </div>
         </div>

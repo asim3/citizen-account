@@ -98,6 +98,13 @@ button:focus {
   display: none;
 }
 
+input[type="submit"] {
+  color: $blue;
+  border: none;
+  background: $yellow;
+  border: 2px solid $yellow;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
