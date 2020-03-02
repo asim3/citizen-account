@@ -86,6 +86,14 @@ input[type="radio"]:checked + label::after {
   background-image: url(../img/option_1.svg);
 }
 
+#pills-contact {
+  color: $blue;
+}
+
+#show-calculator-video {
+  border-top: 1px solid $cyan;
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;

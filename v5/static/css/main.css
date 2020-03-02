@@ -88,6 +88,14 @@ input[type="radio"]:checked + label::after {
   background-image: url(../img/option_1.svg);
 }
 
+#pills-contact {
+  color: #003c77;
+}
+
+#show-calculator-video {
+  border-top: 1px solid #00a3dd;
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;
@@ -178,6 +186,11 @@ input[type="submit"] {
   border: none;
   background: #bfd145;
   border: 2px solid #bfd145;
+}
+
+input[type="submit"]:disabled {
+  background: lightgray;
+  border: 2px solid lightgray;
 }
 
 @media (max-width: 575px) {

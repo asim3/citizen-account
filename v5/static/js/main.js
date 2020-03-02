@@ -13,4 +13,8 @@ $(document).ready(function () {
       dropdownMenu.parent().toggleClass("open");
     }
   });
+
+  $("#show-calculator-video h4").click(function () {
+    $("#show-calculator-video iframe").show();
+  })
 });

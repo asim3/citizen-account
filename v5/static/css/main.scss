@@ -105,6 +105,11 @@ input[type="submit"] {
   border: 2px solid $yellow;
 }
 
+input[type="submit"]:disabled {
+  background: lightgray;
+  border: 2px solid lightgray;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
