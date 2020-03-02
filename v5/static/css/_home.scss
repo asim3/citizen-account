@@ -94,8 +94,16 @@ input[type="radio"]:checked + label::after {
   border-top: 1px solid $cyan;
 }
 
+iframe {
+  height: 450px;
+}
+
 @media (max-width: 750px) {
   .home-tab-link {
     font-size: 0.8rem;
+  }
+
+  iframe {
+    height: 280px;
   }
 }
