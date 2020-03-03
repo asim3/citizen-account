@@ -25,7 +25,7 @@
 .nav-tabs .nav-link.active {
   color: #495057;
   background-color: #fff;
-  border-color: $cyan $cyan #fff;
+  border-color: $cyan $cyan $cyan;
 }
 
 .nav-tabs .nav-link:hover {
@@ -96,6 +96,28 @@ input[type="radio"]:checked + label::after {
 
 iframe {
   height: 450px;
+}
+
+#pills-tab .nav-link {
+  position: relative;
+}
+
+#pills-tab .nav-link::after {
+  content: " ";
+  position: absolute;
+  bottom: -0.55rem;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  background: #ffffff;
+  border: 1px solid $cyan;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+#pills-tab .active::after {
+    background: $cyan;
 }
 
 @media (max-width: 750px) {
