@@ -119,6 +119,14 @@ input[type="submit"]:disabled {
   .twitter_text::after {
     top: 22%;
   }
+
+  h4 img {
+    width: 15vw;
+  }
+
+  h4 b {
+    font-size: 4vw;
+  }
 }
 
 @media (min-width: 1001px) {
@@ -132,17 +140,19 @@ input[type="submit"]:disabled {
   }
 }
 
-@media screen and (min-width: 768px){
-  nav .dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
-        display: block;
-    }
-    nav .dropdown-menu{
-        margin-top: 0;
-    }
-    nav .dropdown-toggle{
-        margin-bottom: 2px;
-    }
-    .navbar .dropdown-toggle, .nav-tabs .dropdown-toggle{
-        margin-bottom: 0;
-    }
+@media screen and (min-width: 768px) {
+  nav .dropdown:hover .dropdown-menu,
+  .btn-group:hover .dropdown-menu {
+    display: block;
+  }
+  nav .dropdown-menu {
+    margin-top: 0;
+  }
+  nav .dropdown-toggle {
+    margin-bottom: 2px;
+  }
+  .navbar .dropdown-toggle,
+  .nav-tabs .dropdown-toggle {
+    margin-bottom: 0;
+  }
 }

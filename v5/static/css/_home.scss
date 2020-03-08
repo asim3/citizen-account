@@ -25,11 +25,12 @@
 .nav-tabs .nav-link.active {
   color: #495057;
   background-color: #fff;
-  border-color: $cyan $cyan $cyan;
+  border-color: #fff #fff $cyan #fff;
 }
 
 .nav-tabs .nav-link:hover {
-  border-color: $yellow $yellow $cyan;
+  border-color: #ffffff;
+  border-color: #fff #fff $cyan #fff;
 }
 
 .nav-tabs {
@@ -117,7 +118,7 @@ iframe {
 }
 
 #pills-tab .active::after {
-    background: $cyan;
+  background: $cyan;
 }
 
 @media (max-width: 750px) {
