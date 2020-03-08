@@ -121,12 +121,18 @@ iframe {
   background: $cyan;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767px) {
   .home-tab-link {
     font-size: 0.8rem;
   }
 
   iframe {
     height: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-tab-link {
+    font-size: 0.8vw;
   }
 }
