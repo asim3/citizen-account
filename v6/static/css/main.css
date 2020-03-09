@@ -135,12 +135,6 @@ iframe {
   }
 }
 
-@media (max-width: 575px) {
-  .home-tab-link {
-    font-size: 0.8vw;
-  }
-}
-
 @font-face {
   font-family: "cairo-regular";
   src: local("cairo-regular"), local("Cairo-Regular"), local("Cairo Regular"), url("../fonts/cairo/Cairo-Regular.ttf") format("TrueType");
