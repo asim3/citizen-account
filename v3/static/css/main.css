@@ -624,7 +624,7 @@ footer .android {
   footer > div > footer {
     display: -ms-grid;
     display: grid;
-        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
+        grid-template-areas: "first first first" "mid2 mid3 mid4" ". app1 app2";
     padding: 5rem 1rem 0 11rem;
     height: 10rem;
   }
@@ -1052,7 +1052,7 @@ footer .android {
 
 .calculator_root {
   display: none;
-      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
+      grid-template-areas: "text_6 text_6 text_6 text_7 text_7 text_7" "input_6 input_6 input_6 input_7 input_7 input_7" "text_1 text_1 text_1 text_2 text_2 text_2" "input_1 input_1 input_1 input_2 input_2 input_2" "submit_1 . . text_3 text_4 text_5" ". . . input_3 input_4 input_5";
   grid-gap: 1rem;
 }
 
@@ -1248,7 +1248,7 @@ footer .android {
     grid-area: input_7;
   }
   .calculator_root {
-        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
+        grid-template-areas: "text_6 input_6 input_6" "text_7 input_7 input_7" "text_1 input_1 input_1" ". submit_1 submit_1" "text_2 input_2 input_2" "text_3 text_4 text_5" "input_3 input_4 input_5";
     grid-gap: 0;
   }
   .calculator_root input[type="submit"],

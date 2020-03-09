@@ -272,7 +272,6 @@
         </div>
       </div>
 
-
       <div class="tab-pane fade show active" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
         <div class="row m-2">
           <div class="col-lg-8">
@@ -288,12 +287,12 @@
                 هل أنت مسجل في برنامج حساب المواطن ؟
               </div>
               <div class="col">
-                <input class="invisible" type="radio" id="radio_1" name="option_1" onchange="show_calculator()">
-                <label class="pr-2" for="radio_1">نعم</label>
+                <input class="invisible display_form" type="radio" value="yes" id="reg_yes" name="citizen_reg" required="required">
+                <label class="pr-2" for="reg_yes">نعم</label>
               </div>
               <div class="col">
-                <input class="invisible" type="radio" id="radio_2" name="option_1" onchange="show_calculator()">
-                <label class="pr-2" for="radio_2">لا</label>
+                <input class="invisible display_form" type="radio" value="no" id="reg_no" name="citizen_reg" required="required">
+                <label class="pr-2" for="reg_no">لا</label>
               </div>
             </div>
             <div class="row py-3">
@@ -301,125 +300,151 @@
                 هل أنت ؟
               </div>
               <div class="col">
-                <input class="invisible" type="radio" id="radio_3" name="option_2" onchange="show_calculator()">
-                <label class="pr-2" for="radio_3">مستقل</label>
+                <input class="invisible display_form" type="radio" value="single" id="type_single" name="citizen_type">
+                <label class="pr-2" for="type_single">مستقل</label>
               </div>
               <div class="col">
-                <input class="invisible" type="radio" id="radio_4" name="option_2" onchange="show_calculator()">
-                <label class="pr-2" for="radio_4">رب أسرة</label>
+                <input class="invisible display_form" type="radio" value="parent" id="type_parent" name="citizen_type">
+                <label class="pr-2" for="type_parent">رب أسرة</label>
               </div>
             </div>
           </div>
           <div class="col-lg-4 align-self-end">
-            <div id="section_alert" class="border p-3">
+            <div id="type_parent_tip" class="border p-3">
               تعريف رب الأسرة: ذكر أو أنثى ( الزوج، زوجة غير المواطن، أم غير متزوجة، أب غير متزوج، زوجة فاقد الأهلية)
             </div>
-          </div>
-        </div>
-
-        <div class="row m-2">
-          <div class="col-lg-6 pt-3">
-            <div class="row">
-              <div class="col-12">
-                أدخل عدد التابعين بعمر 18 سنة أو أكثر
-              </div>
-              <div class="col-12 py-2">
-                <input class="w-100" type="number" placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 pt-3">
-            <div class="row">
-              <div class="col-12">
-                أدخل عدد التابعين بعمر أقل من 18 سنة
-              </div>
-              <div class="col-12 py-2">
-                <input class="w-100" type="number">
-              </div>
+            <div id="type_single_tip" class="border p-3">
+              تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين) 
             </div>
           </div>
         </div>
 
-        <div class="row m-2">
-          <div class="col-lg-6 pt-3">
+        <form action="/" method="post" id="thunder-calculater-form" accept-charset="UTF-8" class="m-2" style="display:none;">
+          <input type="hidden" name="form_build_id" value="form-ZnoMZj6o-qeC0Gomu7l0odKMWWanPod05mRYNMRPPDs">
+          <input type="hidden" name="form_id" value="thunder_calculater_form">
+          <div id="calculation-input-form" class="calculation-input-form">
             <div class="row">
-              <div class="col-12">
-                أدخل مجموع دخلك
-              </div>
-              <div class="col-12 py-2">
-                <input class="w-100" type="number" placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 pt-3">
-            <div class="row">
-              <div class="col-12">
-                <b>نرجو التحقق من النقاط أدناه قبل الضغط على أيقونة احسب</b>
-                <div class="form-check-inline py-2">
-                  <label class="form-check-label" for="edit-terms-1">
-                    <input type="checkbox" id="edit-terms-1" name="terms[1]" value="1" class="form-check-input">
-                    هل تم إدخال مجموع دخلك كما هو مفصح عنه في البوابة؟
-                  </label>
-                </div>
-                <div class="form-check-inline py-2">
-                  <label class=" form-check-label" for="edit-terms-2">
-                    <input type="checkbox" id="edit-terms-2" name="terms[2]" value="2" class="form-check-input">
-                    هل تم التأكد من حالة الأهلية من خلال البوابة؟
-                  </label>
+              <div class="col-lg-6 pt-3">
+                <div class="row form-item-adults-dependents">
+                  <div class="col-12">
+                    أدخل عدد التابعين بعمر 18 سنة أو أكثر
+                  </div>
+                  <div class="col-12 py-2">
+                    <input class="w-100" id="adults_dependents" type="number" 
+                      min="0" maxlength="128" placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
+                  </div>
                 </div>
               </div>
-              <div class="align-self-end col-12 py-2">
-                <input class="w-100" type="submit" value="احسب" disabled="">
+              <div class="col-lg-6 pt-3">
+                <div class="row form-item-non-adults">
+                  <div class="col-12">
+                    أدخل عدد التابعين بعمر أقل من 18 سنة
+                  </div>
+                  <div class="col-12 py-2">
+                    <input class="w-100" id="non_adults_dependents" type="number" min="0" maxlength="128">
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="row m-2">
-          <div class="col-lg-6 pt-3">
             <div class="row">
-              <div class="col-5 col-lg-12">
-                مبلغ الدعم التقديري
+              <div class="col-lg-6 pt-3">
+                <div class="row">
+                  <div class="col-12  form-item-income">
+                    <label class="control-label" for="edit-income">
+                      أدخل مجموع دخلك
+                      <span class="form-required" title="هذا الحقل ضروري.">*</span>
+                    </label>
+                  </div>
+                  <div class="col-12 py-2">
+                    <input class="w-100" id="hh_income" type="number" placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء">
+                  </div>
+                </div>
               </div>
-              <div class="col-7 col-lg-12 py-2">
-                <input class="w-100" type="number" disabled="">
+              <div class="col-lg-6 pt-3">
+                <div class="row">
+                  <div class="col-12 form-item-terms">
+                    <b>نرجو التحقق من النقاط أدناه قبل الضغط على أيقونة احسب</b>
+                    <div class="form-check-inline py-2">
+                      <label class="form-check-label" for="edit-terms-1">
+                        <input type="checkbox" id="edit-terms-1" name="terms[1]" value="1" class="form-check-input">
+                        هل تم إدخال مجموع دخلك كما هو مفصح عنه في البوابة؟
+                      </label>
+                    </div>
+                    <div class="form-check-inline py-2">
+                      <label class=" form-check-label" for="edit-terms-2">
+                        <input type="checkbox" id="edit-terms-2" name="terms[2]" value="2" class="form-check-input">
+                        هل تم التأكد من حالة الأهلية من خلال البوابة؟
+                      </label>
+                    </div>
+                  </div>
+                  <div class="align-self-end col-12 py-2">
+                    <div class="form-error" style="display: none;">
+                      <p class="text-danger">الرجاء تعبئة جميع الحقول</p>
+                    </div>
+                    <button class="w-100 btn-calculate form-submit" id="calculate_happiness" type="submit" name="op" value="احسب" disabled="">
+                      احسب
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-lg-6 pt-3">
-            <div class="row">
-              <div class="col-5 col-lg-12">
-                عدد أفراد الأسرة
-              </div>
-              <div class="col-7 col-lg-12 py-2">
-                <input class="w-100" type="number" disabled="">
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="row m-2">
-          <div class="col-lg-6 pt-3">
             <div class="row">
-              <div class="col-5 col-lg-12">
-                حد الإعفاء من التناقص
+              <div class="col-lg-6 pt-3">
+                <div class="row form-item-total">
+                  <div class="col-5 col-lg-12">
+                    مبلغ الدعم التقديري
+                  </div>
+                  <div class="col-7 col-lg-12 py-2">
+                    <input class="w-100" id="edit-total" type="text" disabled="">
+                  </div>
+                </div>
               </div>
-              <div class="col-7 col-lg-12 py-2">
-                <input class="w-100" type="number" disabled="">
+              <div class="col-lg-6 pt-3">
+                <div class="row">
+                  <div class="col-5 col-lg-12">
+                    عدد أفراد الأسرة
+                  </div>
+                  <div class="col-7 col-lg-12 py-2">
+                    <input class="w-100" id="edit-famsize" type="text" disabled="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6 pt-3">
+                <div class="row">
+                  <div class="col-5 col-lg-12">
+                    حد الإعفاء من التناقص
+                  </div>
+                  <div class="col-7 col-lg-12 py-2">
+                    <input class="w-100" id="edit-get-max" type="number" disabled="">
+                    <div class="alert-dark p-1">
+                      * حد الاعفاء من التناقص : هو الحد الذي إذا تجاوزه اجمالي دخل الاسرة يبدأ التناقص في مقدار الدعم الكامل
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 pt-3">
+                <div class="row">
+                  <div class="col-5 col-lg-12">
+                    الحد المانع
+                  </div>
+                  <div class="col-7 col-lg-12 py-2">
+                    <input class="w-100" id="edit-get-limit" type="number" disabled="">
+                    <div class="alert-dark p-1">
+                      * الحد المانع من الدعم : هو الحد الذي اذا تجاوزه اجمالي دخل الاسرة تصبح الاسرة غير مستحقة للدعم
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 pt-3">
-            <div class="row">
-              <div class="col-5 col-lg-12">
-                الحد المانع
-              </div>
-              <div class="col-7 col-lg-12 py-2">
-                <input class="w-100" type="number" disabled="">
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
+
+
         <div id="show-calculator-video">
           <h4 class="pt-4 pr-3" style="cursor: pointer;">
             <img src="../static/img/logo_4.svg" alt="logo_4">
@@ -430,7 +455,6 @@
           </iframe>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -478,6 +502,76 @@
   <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
   <script src="../static/js/main.js"></script>
+  <script type="text/javascript">
+    /*
+      * configuration for hapiness calculator
+      * this should be placed before calculation script
+      * need to pass absolute value, no comma formating
+      * we will format during display data if required
+    */
+    var HapCalConfig = {
+      // Entitlement Input
+      ent_core_value: 406,
+      ent_tapering_threshold: 4310,
+      ent_zero_entitlement_threshold:6856.6666666666,
+      ent_minimum_entitlement: 300,
+      ent_maximum_entitlement: 50000,
+      // Entitlement Equivalisation Input
+      ent_equ_hoh_scale_factor: 1.00,
+      ent_equ_adult_dependent_scale_factor: 0.50,
+      ent_equ_non_adult_dependent_scale_factor: 0.30,
+      // Thresholds Equivalisation Input
+      thr_equ_hoh_scale_factor: 1.00,
+      thr_equ_adult_dependent_scale_factor: 0.50,
+      thr_equ_non_adult_dependent_scale_factor: 0.30,
+    };
+  </script>
+  <table id="happiness_result_table" class="table table-condensed" style="display: none;">
+    <thead>
+      <tr>
+          <th colspan="2">المبلغ المستحق</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>HH Entitlement Equivlisation Factor</td>
+      <td id="get_hh_ent_equ_factor">?</td>
+    </tr>
+    <tr>
+      <td>HH Thresholds Equivlisation Factor</td>
+      <td id="get_hh_thr_equ_factor">?</td>
+    </tr>
+    <tr>
+      <td>Full Entitlement (for this HH size)</td>
+      <td id="get_full_ent_hh_size">?</td>
+    </tr>
+    <tr>
+      <td>Tapering Threshold (for this HH size)</td>
+      <td id="get_tapering_thr_hh_size">?</td>
+    </tr>
+    <tr>
+      <td>Taper Rate (for this HH size)</td>
+      <td id="get_taper_rate_hh_size">?</td>
+    </tr>
+    <tr>
+      <td>Minimum Entitlement (for this HH size)</td>
+      <td id="get_min_ent_hh_size">?</td>
+    </tr>
+    <tr>
+      <td>Maximum Entitlement (for this HH size)</td>
+      <td id="get_max_ent_hh_size">?</td>
+    </tr>
+    <tr>
+      <td>Excess Income Above Threshold</td>
+      <td id="get_exc_income_above_thr">?</td>
+    </tr>
+    <tr>
+      <td>Entitlment Amount</td>
+      <td id="get_entitlment_amount">?</td>
+    </tr>
+  </tbody>
+</table>
+  <script src="../static/js/js_3UJeJgi9LABgXN54Jpu7TQPvxnGeYD_78wKxohN6kOs.js"></script>
 </body>
 
 </html>

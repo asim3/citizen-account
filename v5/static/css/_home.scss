@@ -52,11 +52,14 @@
   font-weight: bold;
 }
 
-#section_alert {
+#type_parent_tip,
+#type_single_tip {
+  display: none;
   border-color: $yellow !important;
 }
 
-#section_alert::after {
+#type_parent_tip::after,
+#type_single_tip::after {
   content: " ";
   position: absolute;
   top: -1rem;

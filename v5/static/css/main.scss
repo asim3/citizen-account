@@ -111,14 +111,14 @@ button:focus {
   display: none;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   color: $blue;
   border: none;
   background: $yellow;
   border: 2px solid $yellow;
 }
 
-input[type="submit"]:disabled {
+button[type="submit"]:disabled {
   background: lightgray;
   border: 2px solid lightgray;
 }

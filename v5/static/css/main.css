@@ -54,11 +54,14 @@
   font-weight: bold;
 }
 
-#section_alert {
+#type_parent_tip,
+#type_single_tip {
+  display: none;
   border-color: #bfd145 !important;
 }
 
-#section_alert::after {
+#type_parent_tip::after,
+#type_single_tip::after {
   content: " ";
   position: absolute;
   top: -1rem;
@@ -230,14 +233,14 @@ button:focus {
   display: none;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   color: #003c77;
   border: none;
   background: #bfd145;
   border: 2px solid #bfd145;
 }
 
-input[type="submit"]:disabled {
+button[type="submit"]:disabled {
   background: lightgray;
   border: 2px solid lightgray;
 }
