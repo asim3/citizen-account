@@ -156,9 +156,9 @@ body {
 }
 
 footer {
-  padding-top: 1rem;
-  background-image: url(../img/footer_left.svg);
-  background-size: cover;
+  background-color: #003c77;
+  background-image: url(../img/footer_new.svg);
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: 0rem 0rem;
 }
@@ -242,7 +242,7 @@ button[type="submit"]:disabled {
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
-    background-position: -5rem 0rem;
+    background-position: -4rem;
   }
   .twitter_text::after {
     top: 22%;

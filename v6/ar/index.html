@@ -287,11 +287,13 @@
                 هل أنت مسجل في برنامج حساب المواطن ؟
               </div>
               <div class="col">
-                <input class="invisible display_form" type="radio" value="yes" id="reg_yes" name="citizen_reg" required="required">
+                <input class="invisible display_form" type="radio" value="yes" id="reg_yes" name="citizen_reg"
+                  required="required">
                 <label class="pr-2" for="reg_yes">نعم</label>
               </div>
               <div class="col">
-                <input class="invisible display_form" type="radio" value="no" id="reg_no" name="citizen_reg" required="required">
+                <input class="invisible display_form" type="radio" value="no" id="reg_no" name="citizen_reg"
+                  required="required">
                 <label class="pr-2" for="reg_no">لا</label>
               </div>
             </div>
@@ -314,7 +316,8 @@
               تعريف رب الأسرة: ذكر أو أنثى ( الزوج، زوجة غير المواطن، أم غير متزوجة، أب غير متزوج، زوجة فاقد الأهلية)
             </div>
             <div id="type_single_tip" class="border p-3">
-              تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو معالين) 
+              تعريف الفرد المستقل: ذكر أو أنثى عمر 24 ومافوق (غير المتزوج الأعزب، الأرمل أو الأرملة، ليس لديه تابعين، أو
+              معالين)
             </div>
           </div>
         </div>
@@ -330,8 +333,8 @@
                     أدخل عدد التابعين بعمر 18 سنة أو أكثر
                   </div>
                   <div class="col-12 py-2">
-                    <input class="w-100" id="adults_dependents" type="number" 
-                      min="0" maxlength="128" placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
+                    <input class="w-100" id="adults_dependents" type="number" min="0" maxlength="128"
+                      placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
                   </div>
                 </div>
               </div>
@@ -357,7 +360,8 @@
                     </label>
                   </div>
                   <div class="col-12 py-2">
-                    <input class="w-100" id="hh_income" type="number" placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء">
+                    <input class="w-100" id="hh_income" type="number"
+                      placeholder="يشمل الدخل الخاص برب الأسرة والزوجة والأبناء">
                   </div>
                 </div>
               </div>
@@ -382,7 +386,8 @@
                     <div class="form-error" style="display: none;">
                       <p class="text-danger">الرجاء تعبئة جميع الحقول</p>
                     </div>
-                    <button class="w-100 btn-calculate form-submit" id="calculate_happiness" type="submit" name="op" value="احسب" disabled="">
+                    <button class="w-100 btn-calculate form-submit" id="calculate_happiness" type="submit" name="op"
+                      value="احسب" disabled="">
                       احسب
                     </button>
                   </div>
@@ -424,7 +429,8 @@
                   </div>
                   <div class="w-100"></div>
                   <div class="col alert-danger p-1 m-3">
-                    * حد الاعفاء من التناقص : هو الحد الذي إذا تجاوزه اجمالي دخل الاسرة يبدأ التناقص في مقدار الدعم الكامل
+                    * حد الاعفاء من التناقص : هو الحد الذي إذا تجاوزه اجمالي دخل الاسرة يبدأ التناقص في مقدار الدعم
+                    الكامل
                   </div>
                 </div>
               </div>
@@ -461,24 +467,26 @@
   </div>
 
 
-
-  <footer class="mt-5">
-    <div class="container">
-      <div class="d-flex justify-content-end mb-5">
-        <a href="#youtube">
-          <img class="ml-4" src="../static/img/youtube.svg" alt="youtube">
-        </a>
-        <a href="#twitter">
-          <img class="ml-4" src="../static/img/twitter.svg" alt="twitter">
-        </a>
-        <div class="p-1 pr-3 d-none d-lg-block twitter_text_big">
-          يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات
-          والمواعيد
-        </div>
-        <div class="p-1 pr-3 d-lg-none twitter_text">تابعنا لمزيد من الأخبار</div>
-        <div class="p-1 twitter_id">@citizenaccount</div>
+  <div class="container">
+    <div class="d-flex justify-content-end my-5">
+      <a href="#youtube">
+        <img class="ml-4" src="../static/img/youtube.svg" alt="youtube">
+      </a>
+      <a href="#twitter">
+        <img class="ml-4" src="../static/img/twitter.svg" alt="twitter">
+      </a>
+      <div class="p-1 pr-3 d-none d-lg-block twitter_text_big">
+        يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات
+        والمواعيد
       </div>
+      <div class="p-1 pr-3 d-lg-none twitter_text">تابعنا لمزيد من الأخبار</div>
+      <div class="p-1 twitter_id">@citizenaccount</div>
+    </div>
+  </div>
 
+
+  <footer class="mt-5 py-sm-4">
+    <div class="container">
       <div class="row w-75 text-center text-white pb-2">
         <a class="col col-12 col-xl-4 pt-4 p-xl-0 text-xl-right text-white" href="#">
           جميع الحقوق محفوظة © 2020
@@ -515,7 +523,7 @@
       // Entitlement Input
       ent_core_value: 406,
       ent_tapering_threshold: 4310,
-      ent_zero_entitlement_threshold:6856.6666666666,
+      ent_zero_entitlement_threshold: 6856.6666666666,
       ent_minimum_entitlement: 300,
       ent_maximum_entitlement: 50000,
       // Entitlement Equivalisation Input
@@ -531,48 +539,48 @@
   <table id="happiness_result_table" class="table table-condensed" style="display: none;">
     <thead>
       <tr>
-          <th colspan="2">المبلغ المستحق</th>
+        <th colspan="2">المبلغ المستحق</th>
       </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>HH Entitlement Equivlisation Factor</td>
-      <td id="get_hh_ent_equ_factor">?</td>
-    </tr>
-    <tr>
-      <td>HH Thresholds Equivlisation Factor</td>
-      <td id="get_hh_thr_equ_factor">?</td>
-    </tr>
-    <tr>
-      <td>Full Entitlement (for this HH size)</td>
-      <td id="get_full_ent_hh_size">?</td>
-    </tr>
-    <tr>
-      <td>Tapering Threshold (for this HH size)</td>
-      <td id="get_tapering_thr_hh_size">?</td>
-    </tr>
-    <tr>
-      <td>Taper Rate (for this HH size)</td>
-      <td id="get_taper_rate_hh_size">?</td>
-    </tr>
-    <tr>
-      <td>Minimum Entitlement (for this HH size)</td>
-      <td id="get_min_ent_hh_size">?</td>
-    </tr>
-    <tr>
-      <td>Maximum Entitlement (for this HH size)</td>
-      <td id="get_max_ent_hh_size">?</td>
-    </tr>
-    <tr>
-      <td>Excess Income Above Threshold</td>
-      <td id="get_exc_income_above_thr">?</td>
-    </tr>
-    <tr>
-      <td>Entitlment Amount</td>
-      <td id="get_entitlment_amount">?</td>
-    </tr>
-  </tbody>
-</table>
+      <tr>
+        <td>HH Entitlement Equivlisation Factor</td>
+        <td id="get_hh_ent_equ_factor">?</td>
+      </tr>
+      <tr>
+        <td>HH Thresholds Equivlisation Factor</td>
+        <td id="get_hh_thr_equ_factor">?</td>
+      </tr>
+      <tr>
+        <td>Full Entitlement (for this HH size)</td>
+        <td id="get_full_ent_hh_size">?</td>
+      </tr>
+      <tr>
+        <td>Tapering Threshold (for this HH size)</td>
+        <td id="get_tapering_thr_hh_size">?</td>
+      </tr>
+      <tr>
+        <td>Taper Rate (for this HH size)</td>
+        <td id="get_taper_rate_hh_size">?</td>
+      </tr>
+      <tr>
+        <td>Minimum Entitlement (for this HH size)</td>
+        <td id="get_min_ent_hh_size">?</td>
+      </tr>
+      <tr>
+        <td>Maximum Entitlement (for this HH size)</td>
+        <td id="get_max_ent_hh_size">?</td>
+      </tr>
+      <tr>
+        <td>Excess Income Above Threshold</td>
+        <td id="get_exc_income_above_thr">?</td>
+      </tr>
+      <tr>
+        <td>Entitlment Amount</td>
+        <td id="get_entitlment_amount">?</td>
+      </tr>
+    </tbody>
+  </table>
   <script src="../static/js/js_3UJeJgi9LABgXN54Jpu7TQPvxnGeYD_78wKxohN6kOs.js"></script>
 </body>
 
