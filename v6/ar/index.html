@@ -57,7 +57,7 @@
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
           aria-label="Toggle navigation">
-          <div class="side_menu_logo"></div>
+          <span class="d-block side_menu_logo"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -333,7 +333,7 @@
                     أدخل عدد التابعين بعمر 18 سنة أو أكثر
                   </div>
                   <div class="col-12 py-2">
-                    <input class="w-100" id="adults_dependents" type="number" min="0" maxlength="128"
+                    <input class="w-100" id="adults_dependents" type="number" min="0"
                       placeholder="لايشمل رب الأسرة (ويشمل الزوجة، الأبناء ...)">
                   </div>
                 </div>
@@ -344,7 +344,7 @@
                     أدخل عدد التابعين بعمر أقل من 18 سنة
                   </div>
                   <div class="col-12 py-2">
-                    <input class="w-100" id="non_adults_dependents" type="number" min="0" maxlength="128">
+                    <input class="w-100" id="non_adults_dependents" type="number" min="0">
                   </div>
                 </div>
               </div>
@@ -354,7 +354,7 @@
               <div class="col-lg-6 pt-3">
                 <div class="row">
                   <div class="col-12  form-item-income">
-                    <label class="control-label" for="edit-income">
+                    <label class="control-label" for="hh_income">
                       أدخل مجموع دخلك
                       <span class="form-required" title="هذا الحقل ضروري.">*</span>
                     </label>
@@ -512,7 +512,7 @@
   <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
   <script src="../static/js/main.js"></script>
-  <script type="text/javascript">
+  <script>
     /*
       * configuration for hapiness calculator
       * this should be placed before calculation script
