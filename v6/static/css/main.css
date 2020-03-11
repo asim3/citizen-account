@@ -239,6 +239,36 @@ button[type="submit"]:disabled {
   border: 2px solid lightgray;
 }
 
+h1 {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  color: #21bcba;
+}
+
+.button {
+  font-family: cairo-bold, TimesNewRoman, sans-serif;
+  text-align: center;
+  color: #003c77 !important;
+  border: 0.1rem solid #bfd145;
+  background: #bfd145;
+}
+
+.border-cyan {
+  border: 1px solid #00a3dd;
+}
+
+.pdf::after {
+  content: " ";
+  position: absolute;
+  top: 23%;
+  right: 0rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/pdf_logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
