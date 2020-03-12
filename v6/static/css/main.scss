@@ -140,10 +140,14 @@ h1 {
 }
 
 .button {
+  display: block;
   font-family: cairo-bold, TimesNewRoman, sans-serif;
   text-align: center;
-  color: #003c77 !important;
+  color: $blue !important;
   border: 0.1rem solid $yellow;
+}
+
+.button.active {
   background: $yellow;
 }
 
