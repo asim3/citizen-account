@@ -206,7 +206,7 @@ footer {
 .twitter_text::after {
   content: " ";
   position: absolute;
-  top: 30%;
+  top: 28%;
   right: -0.5rem;
   width: 1rem;
   height: 1rem;
@@ -275,7 +275,12 @@ h1 {
     background-position: -4rem;
   }
   .twitter_text::after {
-    top: 22%;
+    top: 20%;
+  }
+  .twitter_text_big,
+  .twitter_text,
+  .twitter_id {
+    font-size: 10px;
   }
   h4 img {
     width: 15vw;
