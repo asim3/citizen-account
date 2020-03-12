@@ -1,7 +1,3 @@
-function show_calculator() {
-  console.log("calculator here");
-}
-
 $(document).ready(function() {
   $(".dropdown-submenu a.nav-link").on("click", function(e) {
     $(this)
@@ -20,5 +16,15 @@ $(document).ready(function() {
 
   $("#show-calculator-video h4").click(function() {
     $("#show-calculator-video iframe").show();
+  });
+
+  $(".custom-file-input").on("change", function() {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+  });
+
+  $("#hijri-date-input").hijriDatePicker({
+    hijri:true,
+    showTodayButton: true
   });
 });

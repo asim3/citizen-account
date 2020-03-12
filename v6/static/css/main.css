@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .carousel-control-next-icon {
   background-image: url(../img/banner_right.svg);
   background-color: rgba(255, 255, 255, 0.5);
@@ -239,6 +240,17 @@ button[type="submit"]:disabled {
   border: 2px solid lightgray;
 }
 
+button[type="button"] {
+  color: #003c77;
+  border: none;
+  background-color: #ffffff;
+  border: 2px solid #bfd145;
+}
+
+button[type="button"].active {
+  background: #bfd145;
+}
+
 h1 {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
   color: #21bcba;
@@ -267,6 +279,22 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-right: .5rem;
+  padding-left: 0rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0rem;
+  padding-left: .5rem;
+}
+
+.custom-file-label::after {
+  content: "إرفع";
+  right: auto;
+  left: 0;
 }
 
 @media (max-width: 575px) {

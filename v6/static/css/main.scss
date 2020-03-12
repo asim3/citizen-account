@@ -123,6 +123,17 @@ button[type="submit"]:disabled {
   border: 2px solid lightgray;
 }
 
+button[type="button"] {
+  color: $blue;
+  border: none;
+  background-color: $white;
+  border: 2px solid $yellow;
+}
+
+button[type="button"].active {
+  background: $yellow;
+}
+
 h1 {
   font-family: cairo-bold, TimesNewRoman, sans-serif;
   color: $green;
@@ -151,6 +162,22 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  padding-right: .5rem;
+  padding-left: 0rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  padding-right: 0rem;
+  padding-left: .5rem;
+}
+
+.custom-file-label::after {
+  content: "إرفع";
+  right: auto;
+  left: 0;
 }
 
 @media (max-width: 575px) {
