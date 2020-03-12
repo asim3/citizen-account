@@ -150,6 +150,40 @@
       <li class="breadcrumb-item active">السياسات</li>
     </ul>
 
+
+    <form method="POST" style="max-width: 500px;">
+      <div class="alert alert-warning">
+        الرجاء التأكد من صحة البيانات
+      </div>
+      <div class="alert alert-danger">
+        نص الخطأ هنا
+      </div>
+      <div class="alert alert-success">
+        نص الإستلام هنا
+      </div>
+      <div class="form-group py-2">
+        <label for="mail">الاسم*:</label>
+        <input type="text" class="form-control" name="mail" id="mail" required="">
+      </div>
+      <div class="form-group py-2">
+        <label for="email">عنوان بريدك الإلكتروني*:</label>
+        <input type="mail" class="form-control" name="email" id="email" required="">
+      </div>
+      <div class="form-group py-2">
+        <label for="name">الموضوع*:</label>
+        <input type="text" class="form-control" name="name" id="name" required="">
+      </div>
+      <div class="form-group py-2">
+        <label for="comment">الرسالة:</label>
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+      <img class="mt-4" src="../static/img/image_captcha.jfif" alt="Image CAPTCHA" width="150" height="60">
+      <div class="form-group py-2">
+        <label for="CAPTCHA_number">ماهو الرمز الموجود في الصورة ؟</label>
+        <input type="text" class="form-control" name="CAPTCHA_number" id="CAPTCHA_number" required="">
+      </div>
+      <button class="w-100 py-1 rounded" value="إرسال" type="submit">إرسال الرسالة</button>
+    </form>
   </div>
 
 

@@ -23,8 +23,10 @@ $(document).ready(function() {
     $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
   });
 
-  $("#hijri-date-input").hijriDatePicker({
-    hijri:true,
-    showTodayButton: true
-  });
+  if($.fn.hasOwnProperty('hijriDatePicker')) {
+    $("#hijri-date-input").hijriDatePicker({
+      hijri:true,
+      showTodayButton: true
+    });
+  }
 });
