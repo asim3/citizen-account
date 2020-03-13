@@ -272,6 +272,10 @@ h1 {
   border: 1px solid #00a3dd;
 }
 
+.border-cyan-r {
+  border-right: 2px solid #00a3dd;
+}
+
 .pdf::after {
   content: " ";
   position: absolute;
@@ -286,19 +290,26 @@ h1 {
 }
 
 .breadcrumb-item + .breadcrumb-item {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
   padding-left: 0rem;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   padding-right: 0rem;
-  padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 .custom-file-label::after {
   content: "إرفع";
   right: auto;
   left: 0;
+}
+
+.list-group-item.active {
+  z-index: 2;
+  color: #fff;
+  background-color: #00a3dd;
+  border-color: #00a3dd;
 }
 
 @media (max-width: 575px) {
