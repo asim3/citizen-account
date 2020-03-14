@@ -209,6 +209,11 @@ h1 {
   border-color: $yellow;
 }
 
+.text-blue {
+  color: $blue;
+  font-weight: bold;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
