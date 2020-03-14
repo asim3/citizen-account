@@ -195,6 +195,20 @@ h1 {
   border-color: $cyan;
 }
 
+.page-link {
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  color: $blue;
+  border-color: $yellow;
+  border-radius: 0px !important;
+}
+
+.page-item.active .page-link {
+  color: $blue;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;

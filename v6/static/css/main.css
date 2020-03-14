@@ -312,6 +312,20 @@ h1 {
   border-color: #00a3dd;
 }
 
+.page-link {
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  color: #003c77;
+  border-color: #bfd145;
+  border-radius: 0px !important;
+}
+
+.page-item.active .page-link {
+  color: #003c77;
+  background-color: #bfd145;
+  border-color: #bfd145;
+}
+
 @media (max-width: 575px) {
   footer {
     font-size: 10px;
