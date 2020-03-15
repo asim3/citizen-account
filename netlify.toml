@@ -1,7 +1,7 @@
 [[redirects]]
   from = "/"
-  to = "/v6/ar/index.html"
+  to = "/v7/ar/index.html"
 
 [[redirects]]
   from = "/d"
-  to = "/download/v6.zip"
+  to = "/download/v7.zip"
