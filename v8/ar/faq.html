@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <title>حساب المواطن</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../static/bootstrap-4.4.1-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="icon" href="../static/img/favicon.png" />
+  </head>
+
+  <body class="text-right">
+    <header>
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <div class="ml-auto">
+            <img
+              class="w-100 p-md-4"
+              src="../static/img/logo.svg"
+              alt="Card image"
+            />
+          </div>
+          <div class="p-2 bg-blue-dark">
+            <a href="tel:19912" class="text-white">
+              <img src="../static/img/phone.svg" alt="phone" />
+              <span class="d-none d-sm-inline">19912</span>
+            </a>
+          </div>
+          <div class="p-2 bg-blue-dark">
+            <a href="#" class="text-white">
+              <img src="../static/img/login.svg" alt="login" />
+              <span class="d-none d-sm-inline">الدخول</span>
+            </a>
+          </div>
+          <div class="p-2 bg-blue-dark">
+            <a href="#" class="text-white">
+              <img src="../static/img/register.svg" alt="register" />
+              <span class="d-none d-sm-inline">التسجيل</span>
+            </a>
+          </div>
+          <div class="p-2 bg-blue-dark dropdown">
+            <a
+              class="dropdown-toggle text-white"
+              href="#"
+              id="navbarDropdownS"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img src="../static/img/search.svg" alt="search" />
+            </a>
+            <div
+              id="navbar_dropdown_search"
+              class="dropdown-menu dropdown-menu-left text-right mt-2 p-0"
+              aria-labelledby="navbarDropdownS"
+            >
+              <form
+                id="search_form_root"
+                class="input-group"
+                action="./search.html"
+                method="GET"
+              >
+                <input
+                  class="form-control"
+                  type="text"
+                  name="s"
+                  placeholder="بحث..."
+                />
+                <div class="input-group-append">
+                  <input class="btn" type="submit" value="بحث" />
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg p-0 mb-5">
+          <button
+            class="navbar-toggler collapsed border-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="d-block side_menu_logo"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav side_links p-0">
+              <li class="nav-item">
+                <a class="nav-link selected" href="./index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">عن حساب المواطن</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown1"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-target="#navbar_dropdown_1"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >السياسات</a
+                >
+                <ul
+                  class="dropdown-menu dropdown-menu-right text-right"
+                  id="navbar_dropdown_1"
+                  aria-labelledby="navbarDropdown1"
+                >
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="./policies.html">السياسات</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="./terms.html">مصطلحات تهمك 1</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="./terms.html">مصطلحات تهمك 2</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="./terms.html">مصطلحات تهمك 3</a>
+                  </li>
+                  <li class="dropdown-item dropdown-submenu">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      data-target="#navbar_dropdown_2"
+                      >مصطلحات تهمك 4</a
+                    >
+                    <ul
+                      class="dropdown-submenu"
+                      style="display: none;"
+                      id="#navbar_dropdown_2"
+                    >
+                      <li class="dropdown-item">
+                        <a class="nav-link" href="./videos.html"
+                          >مصطلحات تهمك 41</a
+                        >
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="nav-link" href="./infograph.html"
+                          >مصطلحات تهمك 42</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown-item">
+                    <a class="nav-link" href="./terms.html">مصطلحات تهمك 5</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./urv.html">صوتك مسموع</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown2"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-target="#navbar_dropdown_2"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >المركز الإعلامي</a
+                >
+                <ul
+                  class="dropdown-menu dropdown-menu-right text-right"
+                  aria-labelledby="navbarDropdown2"
+                  id="#navbar_dropdown_1"
+                >
+                  <li class="dropdown-item">
+                    <a href="./media_center.html">المركز الإعلامي</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="./videos.html">الفيديو</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="./infograph.html">الانفوجرافيك</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown3"
+                  role="button"
+                  data-toggle="dropdown"
+                  data-target="#navbar_dropdown_3"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >الأسئلة الشائعة</a
+                >
+                <ul
+                  class="dropdown-menu dropdown-menu-right text-right"
+                  aria-labelledby="navbarDropdown3"
+                  id="#navbar_dropdown_3"
+                >
+                  <li class="dropdown-item">
+                    <a href="./faq.html">الأسئلة الشائعة</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="./userGuide.html">دليل المستخدم</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contact.html">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>الأسئلة الشائعة</h1>
+      <ul class="breadcrumb bg-transparent">
+        <li class="breadcrumb-item"><a href="./">الرئيسية</a></li>
+        <li class="breadcrumb-item active">الأسئلة الشائعة</li>
+      </ul>
+
+      <div class="row">
+        <div class="col-12 col-md-3 mb-4">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              جميع الأسئلة
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              عن البرنامج
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              التسجيل
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              الأهلية
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">
+              الدفع
+            </a>
+          </div>
+        </div>
+        <div id="a-root" class="col-12 col-md-9 accordion">
+          <div
+            data-toggle="collapse"
+            id="hed-01"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-01"
+            aria-controls="con-01"
+            aria-expanded="false"
+          >
+            لدي تابع غير مؤهل والسبب "الحالة الاجتماعية للتابع لم تتطابق مع
+            سجلات الاحوال المدنية" مامعنى ذلك ؟
+          </div>
+          <div
+            id="con-01"
+            aria-labelledby="hed-01"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            في حال تغير الحالة الاجتماعية للتابع مثل زواج الابن أو الإبنة يكون
+            الابن رب أسرة وعليه التسجيل بحساب جديد واضافة تابعيه وتكون الابنة
+            تابع مع زوجها وعلى الاب حذف هذا التابع ، أما في حال ان الحالة
+            الاجتماعية كانت مطابقة للبيانات المدخلة بالبوابة فيتم مراجعة الأحوال
+            المدنية لتحديث البيانات ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال
+            اجراء التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-02"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-02"
+            aria-controls="con-02"
+            aria-expanded="false"
+          >
+            انا غير مؤهل والسبب "تشير السجلات بأن المستند المرفق منتهي أو مرفوض"
+            ما الحل ؟
+          </div>
+          <div
+            id="con-02"
+            aria-labelledby="hed-02"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            يتم حذف المستند المرفق المنتهي الصلاحية او المرفوض و إرفاق مستند
+            جديد بدلا عن المستند المرفوض او المنتهي ومن ثم رفع اعتراض على نتيجة
+            الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في دورة الاهلية
+            القادمة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-03"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-03"
+            aria-controls="con-03"
+            aria-expanded="false"
+          >
+            لدي تابع غير مؤهل والسبب "التابع مسجل كمستفيد رئيسي" مامعنى ذلك ؟
+          </div>
+          <div
+            id="con-03"
+            aria-labelledby="hed-03"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            يكون التابع مسجل كمستفيد رئيسي مستقل في حال ان عمره 24 سنه فما فوق
+            أو في حال اثباث استقلاليته في المسكن عن عائلته أو في حال كان متزوج
+            (رب أسرة) ، وعليه يتم حذف هذا التابع
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-04"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-04"
+            aria-controls="con-04"
+            aria-expanded="false"
+          >
+            هل موعد وتاريخ الدفع من كل شهر محدد؟
+          </div>
+          <div
+            id="con-04"
+            aria-labelledby="hed-04"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            نعم سيكون موعد دفع الدعم في تاريخ 10 ميلادي من كل شهر
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-05"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-05"
+            aria-controls="con-05"
+            aria-expanded="false"
+          >
+            في حال عدم الأهلية بسبب إشارة السجلات بوجود سجل تجاري للمتقدم
+            الرئيسي أو التابع لم يتم الافصاح عنه ، ما هو الحل ؟
+          </div>
+          <div
+            id="con-05"
+            aria-labelledby="hed-05"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            يجب الافصاح عن اي دخل ناتج عن نشاط تجاري من سجل تجاري سواء للمستفيد
+            الرئيسي أو التابع ومن ثم يتم تقديم اعتراض على الأهلية ليتم قبوله
+            ودخوله في الدورة التالية ، اما في حال شطب السجل التجاري فيتم رفع
+            اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في
+            دورة الاهلية القادمة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-06"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-06"
+            aria-controls="con-06"
+            aria-expanded="false"
+          >
+            ماذا لو صادف موعد الصرف إجازة نهاية الأسبوع؟
+          </div>
+          <div
+            id="con-06"
+            aria-labelledby="hed-06"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            في حال كان موعد الصرف يوافق يوم الجمعة سوف يكون موعد الصرف قبل بيوم
+            وهو يوم الخميس في حال كان موعد الصرف يوافق يوم السبت سوف يكون موعد
+            الصرف بعد بيوم وهو يوم الأحد
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-07"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-07"
+            aria-controls="con-07"
+            aria-expanded="false"
+          >
+            في حال عدم الأهلية بسبب إشارة السجلات بأن المتقدم الرئيسي أو التابع
+            يسكن في احد بيوت الايواء وهو في سكن مختلف غير حكومي ، ماهو الحل؟
+          </div>
+          <div
+            id="con-07"
+            aria-labelledby="hed-07"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            في حال المتقدم الرئيسي أو التابع لا يسكن في احد بيوت الايواء يتم رفع
+            اعتراض على نتيجة الأهلية لإستكمال اجراء التحقق وقبول الطلب للدخول في
+            دورة الاهلية القادمة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-08"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-08"
+            aria-controls="con-08"
+            aria-expanded="false"
+          >
+            هل يحق للمتزوجات التسجيل في البرنامج ؟
+          </div>
+          <div
+            id="con-08"
+            aria-labelledby="hed-08"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            نعم ، يحق للمتزوجة التسجيل في البرنامج في حال أنها كانت إحدى الفئات
+            التالية (مهجورة – عائل الاسرة فاقد الأهلية – عائل الاسرة سجين – عائل
+            الاسرة متغيب – متزوجة من غير سعودي ) وذلك بعد تقديم المستندات
+            الثبوتية للحالة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-09"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-09"
+            aria-controls="con-09"
+            aria-expanded="false"
+          >
+            انا غير مؤهل والسبب " يجب رفع وثائق لأثبات استقلالية المسكن" ما الحل
+            ؟
+          </div>
+          <div
+            id="con-09"
+            aria-labelledby="hed-09"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            يجب رفع وثائق استقلالية المسكن وهي عقد الايجار الموحد من منصة ايجار
+            او صك الملكية للسكن او مشهد اثبات سكن جامعي او احد المعاهد او
+            الكليات العسكرية ومن ثم رفع اعتراض على نتيجة الأهلية لإستكمال اجراء
+            التحقق وقبول الطلب للدخول في دورة الاهلية القادمة
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-10"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-10"
+            aria-controls="con-10"
+            aria-expanded="false"
+          >
+            ابنائي سعوديين تحت السن المسموح لهم بالتسجيل , ماهي الطريقة
+            للاستفادة من الدعم ؟
+          </div>
+          <div
+            id="con-10"
+            aria-labelledby="hed-10"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            في حال كانت الأم غير سعودية مطلقة أو أرملة ولديها إثبات إحتضان أو صك
+            ولاية على ابنائها أو حصر ورثة يتم التواصل مع مركز اتصال برنامج حساب
+            المواطن ورفع طلب من اجل التسجيل في البرنامج
+          </div>
+
+          <div
+            data-toggle="collapse"
+            id="hed-11"
+            class="bg-light mb-2 p-2"
+            role="tabpanel"
+            style="cursor: pointer;"
+            data-target="#con-11"
+            aria-controls="con-11"
+            aria-expanded="false"
+          >
+            ماذا يعني الايبان البنكي غير صالح ؟
+          </div>
+          <div
+            id="con-11"
+            aria-labelledby="hed-11"
+            class="collapse bg-light px-2 border-cyan-r"
+            data-parent="#a-root"
+          >
+            اذا كان الايبان البنكي للمستفيد غير مطابق للهوية عند التحقق مع مؤسسة
+            النقد السعودي فإن حالة الايبان تكون (غير صالح)
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <div class="d-flex justify-content-end">
+        <a href="#youtube">
+          <img class="ml-4" src="../static/img/youtube.svg" alt="youtube" />
+        </a>
+        <a href="#twitter">
+          <img class="ml-4" src="../static/img/twitter.svg" alt="twitter" />
+        </a>
+        <div class="p-1 pr-3 d-none d-lg-block twitter_text_big">
+          يمكنك متابعة حساب المواطن عبر تويتر لمتابعة آخر مستجدات المستحقات
+          والمواعيد
+        </div>
+        <div class="p-1 pr-3 d-lg-none twitter_text">
+          تابعنا لمزيد من الأخبار
+        </div>
+        <div class="p-1 twitter_id">@citizenaccount</div>
+      </div>
+    </div>
+
+    <footer class="mt-5 py-sm-4">
+      <div class="container">
+        <div class="row w-75 text-center text-white pb-2">
+          <a
+            class="col col-12 col-xl-4 pt-4 p-xl-0 text-xl-right text-white"
+            href="#"
+          >
+            جميع الحقوق محفوظة © 2020
+          </a>
+          <div class="w-100 p-2 d-xl-none"></div>
+          <a class="col col-4 col-xl-2 p-0 text-white" href="#"
+            >الاسئلة الشائعة</a
+          >
+          <a class="col col-4 col-xl-2 p-0 text-white" href="#"
+            >سياسة الخصوصية</a
+          >
+          <a class="col col-4 col-xl-2 p-0 text-white" href="#"
+            >الشروط والأحكام</a
+          >
+          <div class="w-100 p-2 d-xl-none"></div>
+          <a href="#android" class="col col-6 col-xl-1 android">
+            <img
+              class="d-block w-100 mx-auto"
+              src="../static/img/android.svg"
+              alt="android app"
+              style="width:35px !important; height:35px !important;"
+            />
+          </a>
+          <a href="#apple" class="col col-6 col-xl-1 apple">
+            <img
+              class="d-block w-100 mx-auto"
+              src="../static/img/apple.svg"
+              alt="apple app"
+              style="width:35px !important; height:35px !important;"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../static/bootstrap-4.4.1-dist/js/jquery-3.4.1.min.js"></script>
+    <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+    <script src="../static/js/main.js"></script>
+  </body>
+</html>
